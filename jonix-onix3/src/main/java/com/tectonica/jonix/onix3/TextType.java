@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Text type code</h1>
- * <p>
- * An ONIX code which identifies the type of text which is sent in the &lt;Text&gt; element. Mandatory in each
- * occurrence of the &lt;TextContent&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 153</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x426&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;TextType&gt;04&lt;/TextType&gt;</tt> (Table of contents)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TextContent}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈
- * {@link TextType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈ {@link TextType}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈ {@link TextType}</li>
  * </ul>
  */

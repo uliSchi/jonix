@@ -34,20 +34,9 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference sponsor composite</h1>
- * <p>
- * A repeatable group of data elements which together identify a sponsor of a conference.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferenceSponsor&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;conferencesponsor&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Conference sponsor composite</h1><p>A repeatable group of data elements which together identify a sponsor of a
+ * conference.</p><table border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;ConferenceSponsor&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;conferencesponsor&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -165,9 +154,8 @@ public class ConferenceSponsor implements OnixSuperComposite, Serializable {
     private ConferenceSponsorIdentifier conferenceSponsorIdentifier = ConferenceSponsorIdentifier.EMPTY;
 
     /**
-     * <p>
-     * A repeatable group of data elements which together carry a coded identifier for a sponsor of a conference.
-     * </p>
+     * <p>A repeatable group of data elements which together carry a coded identifier for a sponsor of a
+     * conference.</p>
      * Jonix-Comment: this field is required
      */
     public ConferenceSponsorIdentifier conferenceSponsorIdentifier() {
@@ -178,9 +166,7 @@ public class ConferenceSponsor implements OnixSuperComposite, Serializable {
     private PersonName personName = PersonName.EMPTY;
 
     /**
-     * <p>
-     * The name of a person, used here for a personal sponsor of a conference.
-     * </p>
+     * <p>The name of a person, used here for a personal sponsor of a conference.</p>
      * Jonix-Comment: this field is optional
      */
     public PersonName personName() {
@@ -191,9 +177,7 @@ public class ConferenceSponsor implements OnixSuperComposite, Serializable {
     private CorporateName corporateName = CorporateName.EMPTY;
 
     /**
-     * <p>
-     * The name of a corporate body, used here for a corporate sponsor of a conference.
-     * </p>
+     * <p>The name of a corporate body, used here for a corporate sponsor of a conference.</p>
      * Jonix-Comment: this field is optional
      */
     public CorporateName corporateName() {

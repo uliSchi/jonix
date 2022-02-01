@@ -34,28 +34,14 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Publisher’s product number</h1>
- * <p>
- * A product code assigned by the publisher of a product, not taken from a recognized standard numbering scheme.
- * Optional and non-repeating. To be used only when the product does not have a number from a recognized industry
- * standard scheme (<em>eg</em> ISBN or ISMN), but may occur together with an EAN-13 number. <strong>The
- * &lt;ProductIdentifier&gt; composite on a later page provides a more general method of handling this and other product
- * codes, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 35 characters.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PublisherProductNo&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b007&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Publisher’s product number</h1><p>A product code assigned by the publisher of a product, not taken from a
+ * recognized standard numbering scheme. Optional and non-repeating. To be used only when the product does not have a
+ * number from a recognized industry standard scheme (<em>eg</em> ISBN or ISMN), but may occur together with an EAN-13
+ * number. <strong>The &lt;ProductIdentifier&gt; composite on a later page provides a more general method of handling
+ * this and other product codes, and is to be preferred.</strong></p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 35
+ * characters.</td></tr><tr><td>Reference name</td><td><tt>&lt;PublisherProductNo&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b007&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -105,9 +91,7 @@ public class PublisherProductNo implements OnixElement<String>, Serializable {
      * This is the raw content of PublisherProductNo. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 35 characters.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 35 characters.<p> (type: NonEmptyString)
      */
     public String value;
 

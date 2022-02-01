@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event status</h1>
- * <p>
- * An ONIX code which specifies the status of a promotional event. Optional within each instance of the
- * &lt;PromotionalEvent&gt; composite, and non-repeatable.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, single character</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 246</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventStatus&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x549&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EventStatus&gt;A&lt;/EventStatus&gt;</tt> (Announced)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EventOccurrence}&gt;</li>
@@ -71,13 +39,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence} ⯈ {@link EventStatus}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventStatus}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link EventStatus}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventStatus}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class EventStatus implements OnixElement<EventStatuss>, Serializable {
     private static final long serialVersionUID = 1L;

@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price code type name</h1>
- * <p>
- * A name which identifies a proprietary price code type. Must be used when, and only when the code in the
- * &lt;PriceCodeType&gt; element indicates a proprietary scheme, <i>eg</i> a retailer’s price banding scheme. Optional
- * and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceCodeTypeName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x477&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x477&gt;Retailer
- * Inc. Ebook Tier Number&lt;/x477&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PriceCoded}&gt;</li>
@@ -72,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceCoded} ⯈ {@link PriceCodeTypeName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceCoded} ⯈ {@link PriceCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceCoded} ⯈ {@link PriceCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceCoded} ⯈ {@link PriceCodeTypeName}</li>
  * </ul>
  */
 public class PriceCodeTypeName implements OnixElement<String>, Serializable {
@@ -109,8 +73,6 @@ public class PriceCodeTypeName implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of PriceCodeTypeName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 50 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

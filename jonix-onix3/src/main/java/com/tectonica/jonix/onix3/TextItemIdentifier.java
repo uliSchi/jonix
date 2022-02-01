@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Text item identifier composite</h1>
- * <p>
- * A repeatable group of data elements which together define an identifier of a text item in accordance with a specified
- * scheme. The composite is optional.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextItemIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;textitemidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TextItem}&gt;</li>
@@ -59,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈
- * {@link TextItemIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link TextItemIdentifier}</li>
  * </ul>
  */
 public class TextItemIdentifier
@@ -159,10 +138,6 @@ public class TextItemIdentifier
     private TextItemIDType textItemIDType = TextItemIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in &lt;IDValue&gt; is taken. Mandatory in each
-     * occurrence of the &lt;TextItemIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public TextItemIDType textItemIDType() {
@@ -173,10 +148,6 @@ public class TextItemIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in &lt;TextItemIDType&gt;. Mandatory in each occurrence of the
-     * &lt;TextItemIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -187,11 +158,6 @@ public class TextItemIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be included when, and only when, the code in &lt;TextItemIDType&gt;
-     * indicates a proprietary scheme, <i>eg</i> a publisher’s own code. Optional and non-repeating
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

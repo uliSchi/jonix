@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Stock quantity code type name</h1>
- * <p>
- * A name that identifies a proprietary stock quantity coding scheme when the code in the &lt;StockQuantityCodeType&gt;
- * element indicates a proprietary scheme, <em>eg</em> a wholesaler’s own code. Optional, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Free text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;StockQuantityCodeTypeName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j296&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j296&gt;Ingram&lt;/j296&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Stock quantity code type name</h1><p>A name that identifies a proprietary stock quantity coding scheme when the
+ * code in the &lt;StockQuantityCodeType&gt; element indicates a proprietary scheme, <em>eg</em> a wholesaler’s own
+ * code. Optional, and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Free text, suggested
+ * maximum length 50 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;StockQuantityCodeTypeName&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j296&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j296&gt;Ingram&lt;/j296&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -65,8 +47,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈ {@link StockQuantityCoded} ⯈
- * {@link StockQuantityCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈ {@link StockQuantityCoded} ⯈ {@link StockQuantityCodeTypeName}</li>
  * </ul>
  *
  * @since Onix-2.13
@@ -103,12 +84,10 @@ public class StockQuantityCodeTypeName implements OnixElement<String>, Serializa
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of StockQuantityCodeTypeName. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of StockQuantityCodeTypeName. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Free text, suggested maximum length 50 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Free text, suggested maximum length 50 characters<p> (type: NonEmptyString)
      */
     public String value;
 

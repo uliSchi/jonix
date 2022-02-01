@@ -40,9 +40,8 @@ interface CodeList32 {
  * Description: Complexity scheme identifier
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist32">ONIX
- *      Codelist 32 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist32">ONIX
+ * Codelist 32 in Reference Guide</a>
  */
 public enum ComplexitySchemeIdentifiers implements OnixCodelist, CodeList32 {
     /**
@@ -62,15 +61,13 @@ public enum ComplexitySchemeIdentifiers implements OnixCodelist, CodeList32 {
     Fry_Readability_score("03", "Fry Readability score"),
 
     /**
-     * UK Institute of Education Book Bands for Guided Reading scheme (see
-     * https://www.ucl.ac.uk/reading-recovery-europe/ilc/publications/which-book-why). &lt;ComplexityCode&gt; is a
-     * color, eg 'Pink A' or 'Copper'
+     * UK Institute of Education Book Bands for Guided Reading scheme (see https://www.ucl.ac.uk/reading-recovery-europe/ilc/publications/which-book-why).
+     * &lt;ComplexityCode&gt; is a color, eg 'Pink A' or 'Copper'
      */
     IoE_Book_Band("04", "IoE Book Band"),
 
     /**
-     * &lt;ComplexityCode&gt; is a code from 'A' to Z+'. See
-     * http://www.fountasandpinnellleveledbooks.com/aboutLeveledTexts.aspx
+     * &lt;ComplexityCode&gt; is a code from 'A' to Z+'. See http://www.fountasandpinnellleveledbooks.com/aboutLeveledTexts.aspx
      */
     Fountas_Pinnell_Text_Level_Gradient("05", "Fountas & Pinnell Text Level Gradient"),
 
@@ -103,7 +100,23 @@ public enum ComplexitySchemeIdentifiers implements OnixCodelist, CodeList32 {
     /**
      * Used for books aimed at K-2 literacy intervention. &lt;ComplexityCode&gt; is an integer between 1 and 20
      */
-    Reading_Recovery_Level("10", "Reading Recovery Level");
+    Reading_Recovery_Level("10", "Reading Recovery Level"),
+
+    /**
+     * Swedish 'l&#228;sbarhetsindex' readability index used in Scandinavia. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    LIX("11", "LIX"),
+
+    /**
+     * Lexile Audio measure from MetaMetrics' Framework for Listening. The code in &lt;ComplexityCode&gt; indicates the
+     * difficulty of comprehension of audio material (for example 600L or 1030L). For use in ONIX 3.0 only. See
+     * https://lexile.global/the-lexile-framework-for-listening/
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Lexile_Audio_measure("12", "Lexile Audio measure");
 
     public final String code;
     public final String description;

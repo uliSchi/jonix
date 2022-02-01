@@ -29,7 +29,7 @@ import java.util.Map;
  */
 
 /**
- * marker interface to assist in IDE navigation to code-list 143 (CPSIA or other US hazard warning type)
+ * marker interface to assist in IDE navigation to code-list 143 (US CPSIA or other international hazard warning type)
  */
 interface CodeList143 {
 }
@@ -37,14 +37,13 @@ interface CodeList143 {
 /**
  * <code>Enum</code> that corresponds to ONIX <b>Codelist 143</b>
  * <p>
- * Description: CPSIA or other US hazard warning type
+ * Description: US CPSIA or other international hazard warning type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist143">ONIX
- *      Codelist 143 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist143">ONIX
+ * Codelist 143 in Reference Guide</a>
  */
-public enum CpsiaOrOtherUsHazardWarningTypes implements OnixCodelist, CodeList143 {
+public enum UsCpsiaOrOtherInternationalHazardWarningTypes implements OnixCodelist, CodeList143 {
     /**
      * Required on applicable products sold in the US
      */
@@ -119,6 +118,34 @@ public enum CpsiaOrOtherUsHazardWarningTypes implements OnixCodelist, CodeList14
     No_flashing_hazard_warning_necessary("14", "No flashing hazard warning necessary"),
 
     /**
+     * Product makes loud, sudden, repetitive or other sounds which may trigger seizures in sensitive people
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    WARNING_Sound_hazard("15", "WARNING – Sound hazard"),
+
+    /**
+     * To be used when a supplier wishes to make a clear statement that no such warning is applicable to product
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    No_sound_hazard_warning_necessary("16", "No sound hazard warning necessary"),
+
+    /**
+     * Products simulates (via visual effects) the experience of motion, which may cause nausea in sensitive people
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    WARNING_Motion_simulation_hazard("17", "WARNING – Motion simulation hazard"),
+
+    /**
+     * To be used when a supplier wishes to make a clear statement that no such warning is applicable to product
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    No_motion_simulation_hazard_warning_necessary("18", "No motion simulation hazard warning necessary"),
+
+    /**
      * Required on applicable products sold in California. Must be accompanied in &lt;ProductFormFeatureDescription&gt;
      * by specific additional text as displayed on product or packaging. For example, &#8220;WARNING: This product can
      * expose you to chemicals including [chemical name], which is known to the State of California to cause cancer. For
@@ -151,7 +178,7 @@ public enum CpsiaOrOtherUsHazardWarningTypes implements OnixCodelist, CodeList14
     public final String code;
     public final String description;
 
-    CpsiaOrOtherUsHazardWarningTypes(String code, String description) {
+    UsCpsiaOrOtherInternationalHazardWarningTypes(String code, String description) {
         this.code = code;
         this.description = description;
     }
@@ -166,16 +193,16 @@ public enum CpsiaOrOtherUsHazardWarningTypes implements OnixCodelist, CodeList14
         return description;
     }
 
-    private static volatile Map<String, CpsiaOrOtherUsHazardWarningTypes> map;
+    private static volatile Map<String, UsCpsiaOrOtherInternationalHazardWarningTypes> map;
 
-    private static Map<String, CpsiaOrOtherUsHazardWarningTypes> map() {
-        Map<String, CpsiaOrOtherUsHazardWarningTypes> result = map;
+    private static Map<String, UsCpsiaOrOtherInternationalHazardWarningTypes> map() {
+        Map<String, UsCpsiaOrOtherInternationalHazardWarningTypes> result = map;
         if (result == null) {
-            synchronized (CpsiaOrOtherUsHazardWarningTypes.class) {
+            synchronized (UsCpsiaOrOtherInternationalHazardWarningTypes.class) {
                 result = map;
                 if (result == null) {
                     result = new HashMap<>();
-                    for (CpsiaOrOtherUsHazardWarningTypes e : values()) {
+                    for (UsCpsiaOrOtherInternationalHazardWarningTypes e : values()) {
                         result.put(e.code, e);
                     }
                     map = result;
@@ -185,7 +212,7 @@ public enum CpsiaOrOtherUsHazardWarningTypes implements OnixCodelist, CodeList14
         return result;
     }
 
-    public static CpsiaOrOtherUsHazardWarningTypes byCode(String code) {
+    public static UsCpsiaOrOtherInternationalHazardWarningTypes byCode(String code) {
         if (code == null || code.isEmpty()) {
             return null;
         }

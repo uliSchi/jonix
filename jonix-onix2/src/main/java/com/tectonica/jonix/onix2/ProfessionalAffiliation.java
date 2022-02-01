@@ -36,21 +36,10 @@ import java.util.Arrays;
  */
 
 /**
- * <h1>Professional affiliation composite</h1>
- * <p>
- * A repeatable group of data elements which together identify a contributor’s professional position and/or affiliation,
- * allowing multiple positions and affiliations to be specified.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProfessionalAffiliation&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;professionalaffiliation&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Professional affiliation composite</h1><p>A repeatable group of data elements which together identify a
+ * contributor’s professional position and/or affiliation, allowing multiple positions and affiliations to be
+ * specified.</p><table border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;ProfessionalAffiliation&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;professionalaffiliation&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -60,12 +49,10 @@ import java.util.Arrays;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link ProfessionalAffiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈
- * {@link ProfessionalAffiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -170,10 +157,8 @@ public class ProfessionalAffiliation implements OnixDataComposite<JonixProfessio
     private ProfessionalPosition professionalPosition = ProfessionalPosition.EMPTY;
 
     /**
-     * <p>
-     * A professional position held by a contributor to the product at the time of its creation. Optional and
-     * non-repeating.
-     * </p>
+     * <p>A professional position held by a contributor to the product at the time of its creation. Optional and
+     * non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public ProfessionalPosition professionalPosition() {
@@ -184,10 +169,9 @@ public class ProfessionalAffiliation implements OnixDataComposite<JonixProfessio
     private Affiliation affiliation = Affiliation.EMPTY;
 
     /**
-     * <p>
-     * An organisation to which a contributor to the product was affiliated at the time of its creation, and – if the
-     * &lt;ProfessionalPosition&gt; element is also present – where s/he held that position. Optional and non-repeating.
-     * </p>
+     * <p>An organisation to which a contributor to the product was affiliated at the time of its creation, and – if the
+     * &lt;ProfessionalPosition&gt; element is also present – where s/he held that position. Optional and
+     * non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public Affiliation affiliation() {

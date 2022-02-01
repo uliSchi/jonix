@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product content type code</h1>
- * <p>
- * An ONIX code which indicates a content type included in a product. The element is intended to be used in particular
- * for digital products, to specify content types other than the primary type, or to list content types when none is
- * singled out as the primary type. Optional, and repeatable to list multiple content types.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 81</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductContentType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b385&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ProductContentType&gt;11&lt;/ProductContentType&gt;</tt> (Musical notation)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -73,8 +40,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductContentType}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈
- * {@link ProductContentType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link ProductContentType}</li>
  * </ul>
  */
 public class ProductContentType implements OnixElement<ProductContentTypes>, Serializable {

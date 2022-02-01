@@ -37,22 +37,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Name composite</h1>
- * <p>
- * A repeatable group of data elements which together represent a personal name, and specify its type. The &lt;Name&gt;
- * composite may be used to send alternate names for the same person, <em>eg</em> to handle such cases as Ian Rankin
- * writing as Jack Harvey.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Name&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;name&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Name composite</h1><p>A repeatable group of data elements which together represent a personal name, and specify
+ * its type. The &lt;Name&gt; composite may be used to send alternate names for the same person, <em>eg</em> to handle
+ * such cases as Ian Rankin writing as Jack Harvey.</p><table border='1' cellpadding='3'><tr><td>Reference
+ * name</td><td><tt>&lt;Name&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;name&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -210,10 +198,8 @@ public class Name implements OnixSuperComposite, Serializable {
     private PersonNameType personNameType = PersonNameType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the type of the person name sent in an occurrence of the &lt;Name&gt; composite.
-     * Mandatory in each occurrence of the composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code indicating the type of the person name sent in an occurrence of the &lt;Name&gt; composite.
+     * Mandatory in each occurrence of the composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public PersonNameType personNameType() {
@@ -234,11 +220,9 @@ public class Name implements OnixSuperComposite, Serializable {
     private PersonNameInverted personNameInverted = PersonNameInverted.EMPTY;
 
     /**
-     * <p>
-     * The name of a person who contributed to the creation of the product, presented in inverted order, with the
+     * <p>The name of a person who contributed to the creation of the product, presented in inverted order, with the
      * element used for alphabetical sorting placed first. Optional and non-repeating: see Group&nbsp;PR.8 introductory
-     * text for valid options.
-     * </p>
+     * text for valid options.</p>
      * Jonix-Comment: this field is optional
      */
     public PersonNameInverted personNameInverted() {
@@ -249,11 +233,9 @@ public class Name implements OnixSuperComposite, Serializable {
     private TitlesBeforeNames titlesBeforeNames = TitlesBeforeNames.EMPTY;
 
     /**
-     * <p>
-     * The first part of a structured name of a person who contributed to the creation of the product: qualifications
+     * <p>The first part of a structured name of a person who contributed to the creation of the product: qualifications
      * and/or titles preceding a person’s names, <em>eg</em> Professor or HRH Prince or Saint. Optional and
-     * non-repeating: see Group&nbsp;PR.8 introductory text for valid options.
-     * </p>
+     * non-repeating: see Group&nbsp;PR.8 introductory text for valid options.</p>
      * Jonix-Comment: this field is optional
      */
     public TitlesBeforeNames titlesBeforeNames() {
@@ -264,10 +246,8 @@ public class Name implements OnixSuperComposite, Serializable {
     private NamesBeforeKey namesBeforeKey = NamesBeforeKey.EMPTY;
 
     /**
-     * <p>
-     * The second part of a structured name of a person who contributed to the creation of the product: name(s) and/or
-     * initial(s) preceding a person’s key name(s), <em>eg</em> James J. Optional and non-repeating.
-     * </p>
+     * <p>The second part of a structured name of a person who contributed to the creation of the product: name(s)
+     * and/or initial(s) preceding a person’s key name(s), <em>eg</em> James J. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public NamesBeforeKey namesBeforeKey() {
@@ -278,11 +258,9 @@ public class Name implements OnixSuperComposite, Serializable {
     private PrefixToKey prefixToKey = PrefixToKey.EMPTY;
 
     /**
-     * <p>
-     * The third part of a structured name of a person who contributed to the creation of the product: a prefix which
+     * <p>The third part of a structured name of a person who contributed to the creation of the product: a prefix which
      * precedes the key name(s) but which is not to be treated as part of the key name, <em>eg</em> van in Ludwig van
-     * Beethoven. Optional and non-repeating.
-     * </p>
+     * Beethoven. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public PrefixToKey prefixToKey() {
@@ -293,11 +271,9 @@ public class Name implements OnixSuperComposite, Serializable {
     private KeyNames keyNames = KeyNames.EMPTY;
 
     /**
-     * <p>
-     * The fourth part of a structured name of a person who contributed to the creation of the product: key name(s),
+     * <p>The fourth part of a structured name of a person who contributed to the creation of the product: key name(s),
      * <em>ie</em> the name elements normally used to open an entry in an alphabetical list, <em>eg</em> Smith or Garcia
-     * Marquez or Madonna or Francis de Sales (in Saint Francis de Sales). Optional and non-repeating.
-     * </p>
+     * Marquez or Madonna or Francis de Sales (in Saint Francis de Sales). Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public KeyNames keyNames() {
@@ -308,10 +284,9 @@ public class Name implements OnixSuperComposite, Serializable {
     private NamesAfterKey namesAfterKey = NamesAfterKey.EMPTY;
 
     /**
-     * <p>
-     * The fifth part of a structured name of a person who contributed to the creation of the product: name suffix, or
-     * name(s) following a person’s key name(s), <em>eg</em> Ibrahim (in Anwar Ibrahim). Optional and non-repeating.
-     * </p>
+     * <p>The fifth part of a structured name of a person who contributed to the creation of the product: name suffix,
+     * or name(s) following a person’s key name(s), <em>eg</em> Ibrahim (in Anwar Ibrahim). Optional and
+     * non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public NamesAfterKey namesAfterKey() {
@@ -322,10 +297,8 @@ public class Name implements OnixSuperComposite, Serializable {
     private SuffixToKey suffixToKey = SuffixToKey.EMPTY;
 
     /**
-     * <p>
-     * The sixth part of a structured name of a person who contributed to the creation of the product: a suffix
-     * following a person’s key name(s), <em>eg</em> Jr or III. Optional and non-repeating.
-     * </p>
+     * <p>The sixth part of a structured name of a person who contributed to the creation of the product: a suffix
+     * following a person’s key name(s), <em>eg</em> Jr or III. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public SuffixToKey suffixToKey() {
@@ -336,10 +309,8 @@ public class Name implements OnixSuperComposite, Serializable {
     private LettersAfterNames lettersAfterNames = LettersAfterNames.EMPTY;
 
     /**
-     * <p>
-     * The seventh part of a structured name of a person who contributed to the creation of the product: qualifications
-     * and honors following a person’s names, <em>eg</em> CBE FRS. Optional and non-repeating.
-     * </p>
+     * <p>The seventh part of a structured name of a person who contributed to the creation of the product:
+     * qualifications and honors following a person’s names, <em>eg</em> CBE FRS. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public LettersAfterNames lettersAfterNames() {
@@ -350,10 +321,8 @@ public class Name implements OnixSuperComposite, Serializable {
     private TitlesAfterNames titlesAfterNames = TitlesAfterNames.EMPTY;
 
     /**
-     * <p>
-     * The eighth part of a structured name of a person who contributed to the creation of the product: titles following
-     * a person’s names, <em>eg</em> Duke of Edinburgh. Optional and non-repeating.
-     * </p>
+     * <p>The eighth part of a structured name of a person who contributed to the creation of the product: titles
+     * following a person’s names, <em>eg</em> Duke of Edinburgh. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public TitlesAfterNames titlesAfterNames() {
@@ -361,15 +330,13 @@ public class Name implements OnixSuperComposite, Serializable {
         return titlesAfterNames;
     }
 
-    private ListOfOnixDataCompositeWithKey<PersonNameIdentifier, JonixPersonNameIdentifier,
-        PersonNameIdentifierTypes> personNameIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<PersonNameIdentifier, JonixPersonNameIdentifier, PersonNameIdentifierTypes>
+        personNameIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A repeatable group of data elements which together specify a party name identifier, used here to carry an
+     * <p>A repeatable group of data elements which together specify a party name identifier, used here to carry an
      * identifier for a name given in an occurrence of the &lt;Contributor&gt; composite. Optional: see Group&nbsp;PR.8
-     * introductory text for valid options.
-     * </p>
+     * introductory text for valid options.</p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<PersonNameIdentifier, JonixPersonNameIdentifier, PersonNameIdentifierTypes>

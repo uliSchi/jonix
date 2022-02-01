@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Position on list</h1>
- * <p>
- * The position that a product has reached on a bestseller list specified in &lt;ListName&gt;. Optional and
- * non-repeating. The &lt;ListName&gt; element must also be present if &lt;PositionOnList&gt; is included.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive integer, suggested maximum length 3 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PositionOnList&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x433&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;PositionOnList&gt;1&lt;/PositionOnList&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CitedContent}&gt;</li>
@@ -65,10 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈
- * {@link PositionOnList}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈
- * {@link PositionOnList}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈ {@link PositionOnList}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈ {@link PositionOnList}</li>
  * </ul>
  */
 public class PositionOnList implements OnixElement<Integer>, Serializable {
@@ -100,8 +70,6 @@ public class PositionOnList implements OnixElement<Integer>, Serializable {
     /**
      * This is the raw content of PositionOnList. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive integer, suggested maximum length 3 digits
      * <p>
      * (type: dt.StrictPositiveInteger)
      */

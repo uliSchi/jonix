@@ -42,9 +42,8 @@ interface CodeList78 {
  * Jonix-Comment: Deprecated in Onix3
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_36.html#codelist78">ONIX
- *      Codelist 78 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_36.html#codelist78">ONIX
+ * Codelist 78 in Reference Guide</a>
  */
 public enum ProductFormDetailsList78 implements OnixCodelist, CodeList78 {
     /**
@@ -200,7 +199,8 @@ public enum ProductFormDetailsList78 implements OnixCodelist, CodeList78 {
     /**
      * In North America, a category of paperback characterized partly by page size and partly by target market and terms
      * of trade. AKA 'quality paperback', and including textbooks. Most paperback books sold in North America except
-     * 'mass-market' (B101) and 'tall rack' (B107) are correctly described with this code. Use with Product Form code BC
+     * 'mass-market' (B101) and 'tall rack' (B107) are correctly described with this code. Use with Product Form code
+     * BC
      */
     Trade_paperback_US("B102", "Trade paperback (US)"),
 
@@ -840,7 +840,8 @@ public enum ProductFormDetailsList78 implements OnixCodelist, CodeList78 {
     _3_2("E223", "3:2"),
 
     /**
-     * Use for fixed-format e-books optimised for displays with a 16:10 aspect ratio (eg 1440x900, 2560x1600 pixels etc)
+     * Use for fixed-format e-books optimised for displays with a 16:10 aspect ratio (eg 1440x900, 2560x1600 pixels
+     * etc)
      */
     _16_10("E224", "16:10"),
 

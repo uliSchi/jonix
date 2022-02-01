@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price type qualifier</h1>
- * <p>
- * An ONIX code which further specifies the type of price, <em>eg</em> member price, reduced price when purchased as
- * part of a set. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 59</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceQualifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j261&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;PriceQualifier&gt;01&lt;/PriceQualifier&gt;</tt> Member price</td>
- * </tr>
- * </table>
+ * <h1>Price type qualifier</h1><p>An ONIX code which further specifies the type of price, <em>eg</em> member price,
+ * reduced price when purchased as part of a set. Optional and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric digits</td></tr><tr><td>Codelist</td><td>List
+ * 59</td></tr><tr><td>Reference name</td><td><tt>&lt;PriceQualifier&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j261&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;PriceQualifier&gt;01&lt;/PriceQualifier&gt;</tt>
+ * Member price</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,8 +50,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceQualifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link PriceQualifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceQualifier}</li>
  * </ul>
  */
 public class PriceQualifier implements OnixElement<PriceTypeQualifiers>, Serializable {

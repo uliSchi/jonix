@@ -32,39 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Reissue description</h1>
- * <p>
- * Text explaining the nature of the reissue. Optional and non-repeating. Deprecated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 500 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReissueDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j366&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j366&gt;Timed to coincide 'day and date' with theatrical release
- * of film.&lt;/j366&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Reissue}&gt;</li>
@@ -72,13 +39,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link ReissueDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link ReissueDescription}</li>
  * </ul>
- *
- * @deprecated
  */
-@Deprecated
 public class ReissueDescription implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -112,9 +75,6 @@ public class ReissueDescription implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ReissueDescription. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 500 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

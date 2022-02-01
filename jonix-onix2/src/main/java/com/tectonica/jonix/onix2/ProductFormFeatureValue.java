@@ -34,61 +34,19 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product form feature value</h1>
- * <p>
- * A controlled value that describes a product form feature. Presence or absence of this element depends on the
- * &lt;ProductFormFeatureType&gt;, since some product form features (<em>eg</em> thumb index) do not require an
- * accompanying value, while others (<em>eg</em> text font) require free text in &lt;ProductFormFeatureDescription&gt;.
- * Non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Dependent on the scheme specified in &lt;ProductFormFeatureType&gt;</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>Dependent on the scheme specified in &lt;ProductFormFeatureType&gt;</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>For binding color, see List 98</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>For page edge color, see List 98</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>For text font, use free text in &lt;ProductFormFeatureDescription&gt;, which may include font name and/or
- * size</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>For special cover material, see List 99</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>For DVD region codes, see List 76</td>
- * </tr>
- * <tr>
- * <td></td>
- * <td>Further features with corresponding code lists may be added from time to time without a re-issue of this
- * document: see the latest release of Code List 79.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductFormFeatureValue&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b335&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b335&gt;BLK&lt;/b335&gt;</tt> Black (binding color)</td>
- * </tr>
- * </table>
+ * <h1>Product form feature value</h1><p>A controlled value that describes a product form feature. Presence or absence
+ * of this element depends on the &lt;ProductFormFeatureType&gt;, since some product form features (<em>eg</em> thumb
+ * index) do not require an accompanying value, while others (<em>eg</em> text font) require free text in
+ * &lt;ProductFormFeatureDescription&gt;. Non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Dependent
+ * on the scheme specified in &lt;ProductFormFeatureType&gt;</td></tr><tr><td>Codelist</td><td>Dependent on the scheme
+ * specified in &lt;ProductFormFeatureType&gt;</td></tr><tr><td></td><td>For binding color, see List
+ * 98</td></tr><tr><td></td><td>For page edge color, see List 98</td></tr><tr><td></td><td>For text font, use free text
+ * in &lt;ProductFormFeatureDescription&gt;, which may include font name and/or size</td></tr><tr><td></td><td>For
+ * special cover material, see List 99</td></tr><tr><td></td><td>For DVD region codes, see List
+ * 76</td></tr><tr><td></td><td>Further features with corresponding code lists may be added from time to time without a
+ * re-issue of this document: see the latest release of Code List 79.</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;ProductFormFeatureValue&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;b335&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b335&gt;BLK&lt;/b335&gt;</tt>
+ * Black (binding color)</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -98,10 +56,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductFormFeature} ⯈ {@link ProductFormFeatureValue}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContainedItem} ⯈ {@link ProductFormFeature} ⯈
- * {@link ProductFormFeatureValue}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link ProductFormFeature} ⯈
- * {@link ProductFormFeatureValue}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContainedItem} ⯈ {@link ProductFormFeature} ⯈ {@link ProductFormFeatureValue}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link ProductFormFeature} ⯈ {@link ProductFormFeatureValue}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -138,12 +94,10 @@ public class ProductFormFeatureValue implements OnixElement<String>, Serializabl
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ProductFormFeatureValue. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of ProductFormFeatureValue. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Dependent on the scheme specified in &lt;ProductFormFeatureType&gt;
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Dependent on the scheme specified in &lt;ProductFormFeatureType&gt;<p> (type: NonEmptyString)
      */
     public String value;
 

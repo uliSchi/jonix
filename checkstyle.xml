@@ -36,7 +36,7 @@
     <module name="LineLength">
         <property name="fileExtensions" value="java"/>
         <property name="max" value="120"/>
-        <property name="ignorePattern" value="^package.*|^import.*|&lt;td&gt;|a href|href|http://|https://|ftp://"/>
+        <property name="ignorePattern" value="^package.*|^import.*|&lt;td&gt;|&lt;li&gt;|a href|href|http://|https://|ftp://"/>
     </module>
     <module name="SuppressWithPlainTextCommentFilter"/>
 

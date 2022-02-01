@@ -34,32 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sender contact email address</h1>
- * <p>
- * A text field giving the email address for a contact person in the sender organization who is responsible for the
- * content of the message. Optional and non-repeating.
- * </p>
- * <p class="new214">
- * The text is not limited to ASCII characters.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length ASCII text, suggested maximum 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;FromEmail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;m283&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;m283&gt;jackie.brown@bigpublisher.co.uk&lt;/m283&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Sender contact email address</h1><p>A text field giving the email address for a contact person in the sender
+ * organization who is responsible for the content of the message. Optional and non-repeating.</p><p class="new214">The
+ * text is not limited to ASCII characters.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * ASCII text, suggested maximum 100 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;FromEmail&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;m283&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;m283&gt;jackie.brown@bigpublisher.co.uk&lt;/m283&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +85,7 @@ public class FromEmail implements OnixElement<String>, Serializable {
      * This is the raw content of FromEmail. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length ASCII text, suggested maximum 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length ASCII text, suggested maximum 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

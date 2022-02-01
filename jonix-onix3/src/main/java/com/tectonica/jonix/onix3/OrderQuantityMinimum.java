@@ -30,39 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Minimum order quantity</h1>
- * <p>
- * The minimum quantity of the product that may be ordered in a single order placed with the supplier. Optional. If
- * omitted, any number may be ordered.
- * </p>
- * <p>
- * If supplied without a succeeding Minimum initial order quantity, the Minimum order quantity applies to all orders for
- * the product. If followed by a Minimum initial order quantity, the Minimum order quantity applies to the second and
- * subsequent orders for the product.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive integer, suggested maximum length 4 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OrderQuantityMinimum&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x532&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x532&gt;6&lt;/x532&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplyDetail}&gt;</li>
@@ -70,11 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈
- * {@link OrderQuantityMinimum}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link OrderQuantityMinimum}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class OrderQuantityMinimum implements OnixElement<Integer>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -105,8 +69,6 @@ public class OrderQuantityMinimum implements OnixElement<Integer>, Serializable 
     /**
      * This is the raw content of OrderQuantityMinimum. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive integer, suggested maximum length 4 digits
      * <p>
      * (type: dt.StrictPositiveInteger)
      */

@@ -110,16 +110,16 @@ public class OnixClassGen {
         p.printf("%s\n", Comments.Copyright);
         p.printf("package %s;\n", packageName);
         p.print("\n");
+        p.printf("import %s.*;\n", GenUtil.COMMON_PACKAGE);
+        p.printf("import %s.OnixComposite.*;\n", GenUtil.COMMON_PACKAGE);
+        p.printf("import %s.codelist.*;\n", GenUtil.COMMON_PACKAGE);
+        p.printf("import %s.struct.*;\n", GenUtil.COMMON_PACKAGE);
+        p.print("\n");
         p.print("import java.io.Serializable;\n");
         p.print("import java.util.List;\n");
         p.print("import java.util.ArrayList;\n");
         p.print("import java.util.Arrays;\n");
         p.print("import java.util.Collections;\n");
-        p.print("\n");
-        p.printf("import %s.*;\n", GenUtil.COMMON_PACKAGE);
-        p.printf("import %s.OnixComposite.*;\n", GenUtil.COMMON_PACKAGE);
-        p.printf("import %s.codelist.*;\n", GenUtil.COMMON_PACKAGE);
-        p.printf("import %s.struct.*;\n", GenUtil.COMMON_PACKAGE);
         p.print("\n");
         p.printf("%s\n", Comments.AutoGen);
 
@@ -326,10 +326,11 @@ public class OnixClassGen {
         p.printf("%s\n", Comments.Copyright);
         p.printf("package %s;\n", packageName);
         p.print("\n");
-        p.print("import java.io.Serializable;\n");
         p.printf("import %s.JPU;\n", GenUtil.COMMON_PACKAGE);
         p.printf("import %s.OnixElement;\n", GenUtil.COMMON_PACKAGE);
         p.printf("import %s.codelist.*;\n", GenUtil.COMMON_PACKAGE);
+        p.print("\n");
+        p.print("import java.io.Serializable;\n");
         p.print("\n");
         p.printf("%s\n", Comments.AutoGen);
 
@@ -338,8 +339,7 @@ public class OnixClassGen {
         String valueType = element.isSpaceable ? String.format("java.util.Set<%s>", ti.javaType) : ti.javaType;
 
         printOnixDocs(p, element);
-        p.printf("public class %s implements OnixElement<%s>, Serializable\n", element.name, valueType);
-        p.printf("{\n");
+        p.printf("public class %s implements OnixElement<%s>, Serializable {\n", element.name, valueType);
 
         declareConstsAndAttributes(p, element);
 
@@ -362,7 +362,7 @@ public class OnixClassGen {
             p.printf("     * %s\n", ti.comment);
             p.printf("     */\n");
         }
-        p.printf("   public %s value;\n", valueType);
+        p.printf("    public %s value;\n", valueType);
 
         // declare internal accessor to value
         p.print("\n");

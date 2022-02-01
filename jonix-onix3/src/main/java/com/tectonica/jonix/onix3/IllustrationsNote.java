@@ -32,43 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Illustrations and other contents note</h1>
- * <p>
- * For books or other text media only, this data element carries text stating the number and type of illustrations. The
- * text may also include other content items, <i>eg</i> maps, bibliography, tables, index <i>etc</i>. Optional, and
- * repeatable if parallel notes are provided in multiple languages. The <i>language</i> attribute is optional for a
- * single instance of &lt;IllustrationsNote&gt;, but must be included in each instance if &lt;IllustrationsNote&gt; is
- * repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;IllustrationsNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b062&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b062&gt;500 illustrations, 210 in full
- * color&lt;/b062&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -112,9 +75,6 @@ public class IllustrationsNote implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of IllustrationsNote. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Resource link</h1>
- * <p>
- * A URL which provides a link to cited content which is accessible in digital form. Optional, and repeatable if the
- * resource can be linked in more than one way, <i>eg</i> by URL or DOI, or where a cited resource is available in
- * multiple parallel languages. Where multiple languages are used, all repeats must carry the <i>language</i> attribute.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Uniform Resource Locator, expressed in full URI syntax in accordance with W3C standards, suggested maximum length
- * 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ResourceLink&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x435&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x435&gt;https://www.zzzzzzzz.com/resource.htm&lt;/x435&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CitedContent}&gt;</li>
@@ -73,16 +39,13 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈
- * {@link ResourceLink}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈
- * {@link ResourceLink}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource}
- * ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈
- * {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ResourceLink}</li>
  * </ul>
  */
 public class ResourceLink implements OnixElement<String>, Serializable {
@@ -116,9 +79,6 @@ public class ResourceLink implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ResourceLink. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Uniform Resource Locator, expressed in full URI syntax in accordance with W3C standards, suggested
-     * maximum length 300 characters
      * <p>
      * (type: dt.NonEmptyURI)
      */

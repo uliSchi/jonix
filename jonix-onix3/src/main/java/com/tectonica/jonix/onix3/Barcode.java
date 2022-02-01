@@ -31,27 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Barcode composite</h1>
- * <p>
- * A group of data elements which together specify a barcode type and its position on a product. Optional: expected to
- * be used only in North America. Repeatable if more than one type of barcode is carried on a single product. The
- * absence of this composite does <em>not</em> mean that a product is not bar-coded.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Barcode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;barcode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Product}&gt;</li>
@@ -152,10 +131,6 @@ public class Barcode implements OnixDataComposite<JonixBarcode>, Serializable {
     private BarcodeType barcodeType = BarcodeType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating whether, and in what form, a barcode is carried on a product. Mandatory in any instance
-     * of the &lt;Barcode&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public BarcodeType barcodeType() {
@@ -166,12 +141,6 @@ public class Barcode implements OnixDataComposite<JonixBarcode>, Serializable {
     private PositionOnProduct positionOnProduct = PositionOnProduct.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating a position on a product; in this case, the position in which a barcode appears. Required
-     * if the &lt;BarcodeType&gt; element indicates that the barcode appears on the product, even if the position is
-     * ‘unknown’. Omitted if the &lt;BarcodeType&gt; element specifies that the product does not carry a barcode.
-     * Non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PositionOnProduct positionOnProduct() {

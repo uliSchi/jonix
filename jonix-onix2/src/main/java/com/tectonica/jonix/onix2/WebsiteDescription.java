@@ -34,26 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Website description</h1>
- * <p>
- * Free text describing the nature of the website which is linked through the &lt;WebsiteLink&gt; element. Optional and
- * non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see ONIX for
- * Books - Product Information Message - XML Message Specification, Section 7)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;WebsiteDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b294&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Website description</h1><p>Free text describing the nature of the website which is linked through the
+ * &lt;WebsiteLink&gt; element. Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * text, suggested maximum length 300 characters (XHTML is enabled in this element - see ONIX for Books - Product
+ * Information Message - XML Message Specification, Section 7)</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;WebsiteDescription&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;b294&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -65,27 +50,18 @@ import java.io.Serializable;
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Conference} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MarketRepresentation} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MarketRepresentation} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Publisher} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Publisher} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Publisher} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Publisher} ⯈ {@link Website} ⯈
- * {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Publisher} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Publisher} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Publisher} ⯈ {@link Website} ⯈ {@link WebsiteDescription}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -126,9 +102,7 @@ public class WebsiteDescription implements OnixElement<String>, Serializable {
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see
-     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)<p> (type: XHTML)
      */
     public String value;
 

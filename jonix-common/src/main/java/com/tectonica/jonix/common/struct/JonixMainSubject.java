@@ -29,9 +29,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;MainSubject></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;MainSubject></code>.<p>It can be retrieved from
+ * the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixMainSubject implements JonixStruct, Serializable {
@@ -41,23 +40,17 @@ public class JonixMainSubject implements JonixStruct, Serializable {
 
     /**
      * Raw Format: Free form. Suggested maximum length 10 characters, for consistency with other version number
-     * elements.
-     * <p>
-     * (type: NonEmptyString)
+     * elements. <p> (type: NonEmptyString)
      */
     public String subjectSchemeVersion;
 
     /**
-     * Raw Format: Variable-length, alphanumeric, suggested maximum length 20 characters.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length, alphanumeric, suggested maximum length 20 characters. <p> (type: NonEmptyString)
      */
     public String subjectCode;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 100 characters.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters. <p> (type: NonEmptyString)
      */
     public String subjectHeadingText;
 }

@@ -34,31 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Amount of price taxable at tax rate 1</h1>
- * <p>
- * The amount of the unit price of the product, excluding tax, which is taxable at the rate specified by
- * &lt;TaxRateCode1&gt; and/or &lt;TaxRatePercent1&gt;. This may be the whole of the unit price before tax, if the item
- * carries tax at the same rate on the whole price; or part of the unit price in the case of a mixed tax rate product.
- * See notes on &lt;TaxRateCode1&gt;.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length real number, with an explicit decimal point where required.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TaxableAmount1&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j155&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j155&gt;10.64&lt;/j155&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Amount of price taxable at tax rate 1</h1><p>The amount of the unit price of the product, excluding tax, which is
+ * taxable at the rate specified by &lt;TaxRateCode1&gt; and/or &lt;TaxRatePercent1&gt;. This may be the whole of the
+ * unit price before tax, if the item carries tax at the same rate on the whole price; or part of the unit price in the
+ * case of a mixed tax rate product. See notes on &lt;TaxRateCode1&gt;.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable length real number, with an explicit decimal point where
+ * required.</td></tr><tr><td>Reference name</td><td><tt>&lt;TaxableAmount1&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j155&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j155&gt;10.64&lt;/j155&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,8 +50,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link TaxableAmount1}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link TaxableAmount1}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link TaxableAmount1}</li>
  * </ul>
  */
 public class TaxableAmount1 implements OnixElement<String>, Serializable {
@@ -107,9 +88,8 @@ public class TaxableAmount1 implements OnixElement<String>, Serializable {
      * This is the raw content of TaxableAmount1. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable length real number, with an explicit decimal point where required.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable length real number, with an explicit decimal point where required.<p> (type:
+     * NonEmptyString)
      */
     public String value;
 

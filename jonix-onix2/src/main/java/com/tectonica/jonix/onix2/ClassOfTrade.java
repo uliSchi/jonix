@@ -34,31 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Class of trade USA only</h1>
- * <p>
- * Text indicating the class of trade to which the price carried in an occurrence of the &lt;Price&gt; composite is
- * applicable, <em>eg</em> Institutional, General trade, Wholesale distributor, which may be represented by a suitable
- * code or abbreviation agreed between trading partners. This element should be used only in the absence of a “Default
- * class of trade” &lt;m193&gt; in the message header, or when the class of trade is other than the default.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ClassOfTrade&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j149&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ClassOfTrade&gt;gen&lt;/ClassOfTrade&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Class of trade USA only</h1><p>Text indicating the class of trade to which the price carried in an occurrence of
+ * the &lt;Price&gt; composite is applicable, <em>eg</em> Institutional, General trade, Wholesale distributor, which may
+ * be represented by a suitable code or abbreviation agreed between trading partners. This element should be used only
+ * in the absence of a “Default class of trade” &lt;m193&gt; in the message header, or when the class of trade is other
+ * than the default.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Text, suggested maximum length 50
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;ClassOfTrade&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j149&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;ClassOfTrade&gt;gen&lt;/ClassOfTrade&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,8 +50,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link ClassOfTrade}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link ClassOfTrade}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link ClassOfTrade}</li>
  * </ul>
  */
 public class ClassOfTrade implements OnixElement<String>, Serializable {
@@ -107,9 +88,7 @@ public class ClassOfTrade implements OnixElement<String>, Serializable {
      * This is the raw content of ClassOfTrade. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Text, suggested maximum length 50 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Text, suggested maximum length 50 characters<p> (type: NonEmptyString)
      */
     public String value;
 

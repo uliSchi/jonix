@@ -35,26 +35,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price condition composite</h1>
- * <p>
- * An optional group of data elements which together specify a condition relating to a price, repeatable in order to
- * specify multiple conditions.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceCondition&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;pricecondition&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -62,10 +42,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceCondition}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceCondition}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceCondition}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceCondition}</li>
  * </ul>
  */
 public class PriceCondition implements OnixSuperComposite, Serializable {
@@ -163,10 +141,6 @@ public class PriceCondition implements OnixSuperComposite, Serializable {
     private PriceConditionType priceConditionType = PriceConditionType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a type of price condition. Mandatory in each occurrence of the &lt;PriceCondition&gt;
-     * composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public PriceConditionType priceConditionType() {
@@ -178,10 +152,6 @@ public class PriceCondition implements OnixSuperComposite, Serializable {
         PriceConditionQuantityTypes> priceConditionQuantitys = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * An optional and repeatable group of data elements which together specify a price condition quantity, for example
-     * a minimum number of copies, or a period of time for which updates are supplied or must be purchased.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public
@@ -195,11 +165,6 @@ public class PriceCondition implements OnixSuperComposite, Serializable {
         ProductIdentifierTypes> productIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together define an identifier of a product in accordance with a specified scheme.
-     * Optional, and used here if and only if &lt;PriceConditionType&gt; has a value that requires specification of a
-     * linked product upon which the price is dependent. Repeatable with different identifiers for the same product.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier, ProductIdentifierTypes>

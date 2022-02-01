@@ -31,43 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event name</h1>
- * <p>
- * The name of an event or series of events to which the product is related. This element is mandatory in each
- * occurrence of the &lt;Event&gt; composite, and repeatable to provide parallel names for a single event in multiple
- * languages (<i>eg</i> ‘United Nations Climate Change Conference’ and «&nbsp;Conférences des Nations unies sur les
- * changements climatiques&nbsp;»). The <i>language</i> attribute is optional for a single instance of
- * &lt;EventName&gt;, but must be included in each instance if &lt;EventName&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x516&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x516
- * language=&quot;fre&quot;&gt;Conf&#233;rences des Nations unies sur les changements climatiques&lt;/x516&gt; (United
- * Nations Climate Change Conference)</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Event}&gt;</li>
@@ -77,11 +40,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Event} ⯈ {@link EventName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventName}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class EventName implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -114,8 +74,6 @@ public class EventName implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of EventName. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

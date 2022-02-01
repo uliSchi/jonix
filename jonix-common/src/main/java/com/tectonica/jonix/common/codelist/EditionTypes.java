@@ -40,9 +40,8 @@ interface CodeList21 {
  * Description: Edition type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist21">ONIX
- *      Codelist 21 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist21">ONIX
+ * Codelist 21 in Reference Guide</a>
  */
 public enum EditionTypes implements OnixCodelist, CodeList21 {
     /**
@@ -91,7 +90,7 @@ public enum EditionTypes implements OnixCodelist, CodeList21 {
 
     /**
      * An edition in which two or more works also published separately are combined in a single volume; AKA 'omnibus'
-     * edition (fr: 'int&#232;grale')
+     * edition (fr: 'int&#233;grale')
      */
     Combined_volume("CMB", "Combined volume"),
 
@@ -187,9 +186,19 @@ public enum EditionTypes implements OnixCodelist, CodeList21 {
 
     /**
      * A limited edition in which each copy is individually numbered, and the actual number of copies is strictly
-     * limited. Use &lt;EditionStatement&gt; to give details of the number of copies printed
+     * limited. Note that the supplier may limit the number of orders fulfilled per retail outlet. Use
+     * &lt;EditionStatement&gt; to give details of the number of copies printed
      */
     Edition_with_numbered_copies("NUM", "Edition with numbered copies"),
+
+    /**
+     * A product published in any form of soft cover, that at the time of publication, has or had no counterpart in any
+     * other format, and that is or was not expected to have such a counterpart for a reasonable time (recommended at
+     * least 30 days following publication). For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Paperback_original("PBO", "Paperback original"),
 
     /**
      * In the US, a book that was previously bound, normally as a paperback, and has been rebound with a library-quality
@@ -250,7 +259,8 @@ public enum EditionTypes implements OnixCodelist, CodeList21 {
 
     /**
      * A limited edition in which each copy is not individually numbered - but where the actual number of copies is
-     * strictly limited. Use &lt;EditionStatement&gt; to give details of the number of copies printed
+     * strictly limited. Note that the supplier may limit the number of orders fulfilled per retail outlet. Use
+     * &lt;EditionStatement&gt; to give details of the number of copies printed
      */
     Edition_with_unnumbered_copies("UNN", "Edition with unnumbered copies"),
 
@@ -263,7 +273,14 @@ public enum EditionTypes implements OnixCodelist, CodeList21 {
      * Content includes notes by various commentators, and/or includes and compares several variant texts of the same
      * work
      */
-    Variorum_edition("VAR", "Variorum edition");
+    Variorum_edition("VAR", "Variorum edition"),
+
+    /**
+     * Readaloud edition - specifially intended and designed for reading aloud (to children). For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Vorleseb_cher("VOR", "Vorlesebücher");
 
     public final String code;
     public final String description;

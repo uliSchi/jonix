@@ -33,26 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sender composite</h1>
- * <p>
- * A group of data elements which together specify the sender of an ONIX for Books message. Mandatory in any ONIX for
- * Books message, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Sender&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;sender&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Header}&gt;</li>
@@ -131,6 +111,10 @@ public class Sender implements OnixSuperComposite, Serializable {
                 case ContactName.shortname:
                     contactName = new ContactName(e);
                     break;
+                case TelephoneNumber.refname:
+                case TelephoneNumber.shortname:
+                    telephoneNumber = new TelephoneNumber(e);
+                    break;
                 case EmailAddress.refname:
                 case EmailAddress.shortname:
                     emailAddress = new EmailAddress(e);
@@ -158,15 +142,10 @@ public class Sender implements OnixSuperComposite, Serializable {
     // MEMBERS
     /////////////////////////////////////////////////////////////////////////////////
 
-    private ListOfOnixDataCompositeWithKey<SenderIdentifier, JonixSenderIdentifier,
-        NameIdentifierTypes> senderIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<SenderIdentifier, JonixSenderIdentifier, NameIdentifierTypes>
+        senderIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together define an identifier of the sender. The composite is optional, and
-     * repeatable if more than one identifier of different types is sent; but <em>either</em> a &lt;SenderName&gt;
-     * <em>or</em> a &lt;SenderIdentifier&gt; <em>must</em> be included.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<SenderIdentifier, JonixSenderIdentifier, NameIdentifierTypes>
@@ -178,11 +157,6 @@ public class Sender implements OnixSuperComposite, Serializable {
     private SenderName senderName = SenderName.EMPTY;
 
     /**
-     * <p>
-     * The name of the sender organization, which should always be stated in a standard form agreed with the addressee.
-     * Optional and non-repeating; but <em>either</em> a &lt;SenderName&gt; element <em>or</em> a
-     * &lt;SenderIdentifier&gt; composite <em>must</em> be included.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public SenderName senderName() {
@@ -193,10 +167,6 @@ public class Sender implements OnixSuperComposite, Serializable {
     private ContactName contactName = ContactName.EMPTY;
 
     /**
-     * <p>
-     * Free text giving the name, department, phone number, <i>etc</i> for a contact person in the sender organization
-     * who is responsible for the content of the message. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ContactName contactName() {
@@ -204,13 +174,19 @@ public class Sender implements OnixSuperComposite, Serializable {
         return contactName;
     }
 
+    private TelephoneNumber telephoneNumber = TelephoneNumber.EMPTY;
+
+    /**
+     * Jonix-Comment: this field is optional
+     */
+    public TelephoneNumber telephoneNumber() {
+        _initialize();
+        return telephoneNumber;
+    }
+
     private EmailAddress emailAddress = EmailAddress.EMPTY;
 
     /**
-     * <p>
-     * A text field giving the e-mail address for a contact person in the sender organization who is responsible for the
-     * content of the message. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public EmailAddress emailAddress() {

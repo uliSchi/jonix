@@ -32,37 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference thematic title</h1>
- * <p>
- * The thematic title of an individual conference in a series that has a conference series name in the
- * &lt;ConferenceName&gt; element. Optional and non-repeating.
- * </p>
- * <p>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields - but is strongly discouraged</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferenceTheme&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b342&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Conference}&gt;</li>
@@ -70,13 +39,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈
- * {@link ConferenceTheme}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈ {@link ConferenceTheme}</li>
  * </ul>
- *
- * @deprecated
  */
-@Deprecated
 public class ConferenceTheme implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -110,9 +75,6 @@ public class ConferenceTheme implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ConferenceTheme. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields - but is strongly discouraged
      * <p>
      * (type: XHTML)
      */

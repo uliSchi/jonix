@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Unnamed person(s)</h1>
- * <p>
- * An ONIX code allowing a positive indication to be given when authorship is unknown or anonymous, or when as a matter
- * of editorial policy only a limited number of contributors are named. Optional and non-repeating: see Group&nbsp;P.7
- * introductory text for valid options. Use here in preference to P.7.47, where it is deprecated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 19</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;UnnamedPersons&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b249&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b249&gt;02&lt;/b249&gt;</tt> (Anonymous)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Contributor}&gt;</li>
@@ -71,17 +38,11 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Contributor} ⯈
- * {@link UnnamedPersons}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link UnnamedPersons}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor}
- * ⯈ {@link UnnamedPersons}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈
- * {@link UnnamedPersons}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Contributor} ⯈ {@link UnnamedPersons}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link UnnamedPersons}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor} ⯈ {@link UnnamedPersons}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈ {@link UnnamedPersons}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class UnnamedPersons implements OnixElement<UnnamedPersonss>, Serializable {
     private static final long serialVersionUID = 1L;

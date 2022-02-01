@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Epublication type description</h1>
- * <p>
- * A free text description of an epublication type. Optional and non-repeating, and can occur only if the
- * &lt;EpubType&gt; field is present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubTypeDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b213&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EpubTypeDescription&gt;Adobe Ebook
- * Reader&lt;/EpubTypeDescription&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Epublication type description</h1><p>A free text description of an epublication type. Optional and non-repeating,
+ * and can occur only if the &lt;EpubType&gt; field is present.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum 200
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;EpubTypeDescription&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b213&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;EpubTypeDescription&gt;Adobe Ebook
+ * Reader&lt;/EpubTypeDescription&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +88,7 @@ public class EpubTypeDescription implements OnixElement<String>, Serializable {
      * This is the raw content of EpubTypeDescription. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum 200 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum 200 characters<p> (type: NonEmptyString)
      */
     public String value;
 

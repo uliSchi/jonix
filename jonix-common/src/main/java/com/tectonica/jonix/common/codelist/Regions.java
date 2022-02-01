@@ -40,9 +40,8 @@ interface CodeList49 {
  * Description: Region - based on ISO 3166-2
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist49">ONIX
- *      Codelist 49 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist49">ONIX
+ * Codelist 49 in Reference Guide</a>
  */
 public enum Regions implements OnixCodelist, CodeList49 {
     Australian_Capital_Territory("AU-CT", "Australian Capital Territory"),
@@ -141,7 +140,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Inner_Mongolia_Autonomous_Region("CN-NM", "Inner Mongolia Autonomous Region"),
+    Nei_Mongol_Autonomous_Region("CN-NM", "Nei Mongol Autonomous Region"),
 
     /**
      * For use in ONIX 3.0 only
@@ -246,7 +245,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Guangxi_Zhuang_Autonomous_Region("CN-GX", "Guangxi Zhuang Autonomous Region"),
+    Guangxi_Zhuangzu_Autonomous_Region("CN-GX", "Guangxi Zhuangzu Autonomous Region"),
 
     /**
      * For use in ONIX 3.0 only
@@ -316,14 +315,14 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Ningxia_Hui_Autonomous_Region("CN-NX", "Ningxia Hui Autonomous Region"),
+    Ningxia_Huizu_Autonomous_Region("CN-NX", "Ningxia Huizu Autonomous Region"),
 
     /**
      * For use in ONIX 3.0 only
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Xinjiang_Uyghur_Autonomous_Region("CN-XJ", "Xinjiang Uyghur Autonomous Region"),
+    Xinjiang_Uygur_Autonomous_Region("CN-XJ", "Xinjiang Uygur Autonomous Region"),
 
     /**
      * Prefer code TW (Taiwan, Province of China) from List 91. For use in ONIX 3.0 only
@@ -379,7 +378,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Inner_Mongolia_Autonomous_Region_("CN-15", "Inner Mongolia Autonomous Region"),
+    Inner_Mongolia_Autonomous_Region("CN-15", "Inner Mongolia Autonomous Region"),
 
     /**
      * Deprecated in favor of CN-LN
@@ -484,7 +483,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Guangxi_Zhuang_Autonomous_Region_("CN-45", "Guangxi Zhuang Autonomous Region"),
+    Guangxi_Zhuang_Autonomous_Region("CN-45", "Guangxi Zhuang Autonomous Region"),
 
     /**
      * Deprecated in favor of CN-HI
@@ -554,14 +553,14 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Ningxia_Hui_Autonomous_Region_("CN-64", "Ningxia Hui Autonomous Region"),
+    Ningxia_Hui_Autonomous_Region("CN-64", "Ningxia Hui Autonomous Region"),
 
     /**
      * Deprecated in favor of CN-XJ
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Xinjiang_Uyghur_Autonomous_Region_("CN-65", "Xinjiang Uyghur Autonomous Region"),
+    Xinjiang_Uyghur_Autonomous_Region("CN-65", "Xinjiang Uyghur Autonomous Region"),
 
     /**
      * Deprecated in favor of CN-TW, but prefer code TW (Taiwan, Province of China) from List 91
@@ -1123,8 +1122,8 @@ public enum Regions implements OnixCodelist, CodeList49 {
      * writing, this is a synonym for 'AT BE CY EE FI FR DE ES GR IE IT LT LU LV MT NL PT SI SK' (the official Eurozone
      * 19), plus 'AD MC SM VA ME' and Kosovo (other Euro-using countries in continental Europe). Note some other
      * territories using the Euro, but outside continental Europe are excluded from this list, and may need to be
-     * specified separately. ONLY valid in ONIX 3, and ONLY within P.26 -&#160;and this use is itself DEPRECATED. Use of
-     * an explicit list of countries instead of ECZ is strongly encouraged
+     * specified separately. ONLY valid in ONIX 3, and ONLY within P.26 - and this use is itself DEPRECATED. Use of an
+     * explicit list of countries instead of ECZ is strongly encouraged
      */
     Eurozone("ECZ", "Eurozone"),
 
@@ -1156,7 +1155,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
     /**
      * Jonix-Comment: Deprecated in Onix3
      */
-    Inner_Mongolia_Autonomous_Region__("CN-15", "Inner Mongolia Autonomous Region"),
+    Inner_Mongolia_Autonomous_Region_("CN-15", "Inner Mongolia Autonomous Region"),
 
     /**
      * Jonix-Comment: Deprecated in Onix3
@@ -1231,7 +1230,7 @@ public enum Regions implements OnixCodelist, CodeList49 {
     /**
      * Jonix-Comment: Deprecated in Onix3
      */
-    Guangxi_Zhuang_Autonomous_Region__("CN-45", "Guangxi Zhuang Autonomous Region"),
+    Guangxi_Zhuang_Autonomous_Region_("CN-45", "Guangxi Zhuang Autonomous Region"),
 
     /**
      * Jonix-Comment: Deprecated in Onix3
@@ -1281,12 +1280,12 @@ public enum Regions implements OnixCodelist, CodeList49 {
     /**
      * Jonix-Comment: Deprecated in Onix3
      */
-    Ningxia_Hui_Autonomous_Region__("CN-64", "Ningxia Hui Autonomous Region"),
+    Ningxia_Hui_Autonomous_Region_("CN-64", "Ningxia Hui Autonomous Region"),
 
     /**
      * Jonix-Comment: Deprecated in Onix3
      */
-    Xinjiang_Uyghur_Autonomous_Region__("CN-65", "Xinjiang Uyghur Autonomous Region"),
+    Xinjiang_Uyghur_Autonomous_Region_("CN-65", "Xinjiang Uyghur Autonomous Region"),
 
     /**
      * Prefer code TW (Taiwan, Province of China) from List 91

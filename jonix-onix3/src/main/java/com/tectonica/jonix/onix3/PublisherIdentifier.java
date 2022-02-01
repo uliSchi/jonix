@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Publisher identifier composite</h1>
- * <p>
- * An optional group of data elements which together define the identifier of a publisher name. Optional, but mandatory
- * if the &lt;Publisher&gt; composite does not carry a &lt;PublisherName&gt;. The composite it repeatable in order to
- * specify multiple identifiers for the same publisher.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PublisherIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;publisheridentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Publisher}&gt;</li>
@@ -60,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link Publisher} ⯈
- * {@link PublisherIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link Publisher} ⯈ {@link PublisherIdentifier}</li>
  * </ul>
  */
 public class PublisherIdentifier
@@ -160,10 +138,6 @@ public class PublisherIdentifier
     private PublisherIDType publisherIDType = PublisherIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;PublisherIdentifier&gt; composite.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public PublisherIDType publisherIDType() {
@@ -174,10 +148,6 @@ public class PublisherIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in the &lt;PublisherIDType&gt; element. Mandatory in each occurrence
-     * of the &lt;PublisherIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -188,11 +158,6 @@ public class PublisherIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be included when, and only when, the code in the
-     * &lt;PublisherIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

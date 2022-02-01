@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Copyright statement type</h1>
- * <p>
- * An optional ONIX code indicating the type of right covered by the statement, typically a copyright or neighbouring
- * right. If omitted, the default is that the statement represents a copyright.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, one letter</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 219</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CopyrightType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x512&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;CopyrightType&gt;P&lt;/CopyrightType&gt;</tt> (&#8471; phonogram right)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CopyrightStatement}&gt;</li>
@@ -70,11 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈
- * {@link CopyrightType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈ {@link CopyrightType}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class CopyrightType implements OnixElement<RightsTypes>, Serializable {
     private static final long serialVersionUID = 1L;

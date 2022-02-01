@@ -34,30 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Pack or carton quantity</h1>
- * <p>
- * The quantity in each carton or binder’s pack in stock currently held by the supplier. (This element is placed in
- * Group&nbsp;PR.24 since it cannot be assumed that pack quantities will be the same for stock held at different
- * suppliers.)
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length integer, suggested maximum length four digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PackQuantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j145&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j145&gt;24&lt;/j145&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Pack or carton quantity</h1><p>The quantity in each carton or binder’s pack in stock currently held by the
+ * supplier. (This element is placed in Group&nbsp;PR.24 since it cannot be assumed that pack quantities will be the
+ * same for stock held at different suppliers.)</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * integer, suggested maximum length four digits</td></tr><tr><td>Reference name</td><td><tt>&lt;PackQuantity&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j145&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j145&gt;24&lt;/j145&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -104,9 +85,7 @@ public class PackQuantity implements OnixElement<String>, Serializable {
      * This is the raw content of PackQuantity. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length integer, suggested maximum length four digits
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, suggested maximum length four digits<p> (type: NonEmptyString)
      */
     public String value;
 

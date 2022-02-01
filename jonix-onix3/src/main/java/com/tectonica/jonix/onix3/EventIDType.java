@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event identifier type</h1>
- * <p>
- * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Since there is
- * no suitable standard event identifier scheme, the only valid option is to use a proprietary identifier. Mandatory in
- * each occurrence of the &lt;EventIdentifier&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 244</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventIDType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x547&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EventIDType&gt;01&lt;/EventIDType&gt;</tt> (Proprietary)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EventIdentifier}&gt;</li>
@@ -71,13 +38,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence} ⯈ {@link EventIdentifier} ⯈ {@link EventIDType}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventIdentifier} ⯈ {@link EventIDType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link EventIdentifier} ⯈ {@link EventIDType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventIdentifier} ⯈ {@link EventIDType}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class EventIDType implements OnixElement<EventIdentifierTypes>, Serializable {
     private static final long serialVersionUID = 1L;

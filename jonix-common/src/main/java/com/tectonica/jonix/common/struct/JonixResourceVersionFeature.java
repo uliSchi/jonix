@@ -31,9 +31,8 @@ import java.util.List;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ResourceVersionFeature></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ResourceVersionFeature></code>.<p>It can be
+ * retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixResourceVersionFeature implements JonixKeyedStruct<ResourceVersionFeatureTypes>, Serializable {
@@ -45,16 +44,11 @@ public class JonixResourceVersionFeature implements JonixKeyedStruct<ResourceVer
     public ResourceVersionFeatureTypes resourceVersionFeatureType;
 
     /**
-     * Raw Format: Dependent on the scheme specified in &lt;ResourceFeatureType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String featureValue;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 300 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
-     * <p>
      * (type: XHTML)
      */
     public List<String> featureNotes;

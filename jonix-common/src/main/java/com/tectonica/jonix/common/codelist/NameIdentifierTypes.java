@@ -40,9 +40,8 @@ interface CodeList44 {
  * Description: Name identifier type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist44">ONIX
- *      Codelist 44 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist44">ONIX
+ * Codelist 44 in Reference Guide</a>
  */
 public enum NameIdentifierTypes implements OnixCodelist, CodeList44 {
     /**
@@ -109,9 +108,9 @@ public enum NameIdentifierTypes implements OnixCodelist, CodeList44 {
     PND("17", "PND"),
 
     /**
-     * A control number assigned to a Library of Congress Name Authority record
+     * A control number assigned to a Library of Congress Control Number (LCCN) Name Authority / NACO record
      */
-    LCCN("18", "LCCN"),
+    NACO("18", "NACO"),
 
     /**
      * Publisher identifier administered by Japanese ISBN Agency
@@ -120,8 +119,8 @@ public enum NameIdentifierTypes implements OnixCodelist, CodeList44 {
 
     /**
      * Gemeinsame K&#246;rperschaftsdatei - Corporate Body Authority File in the German-speaking countries. See
-     * http://www.dnb.de/standardisierung/normdateien/gkd.htm (German) or
-     * http://www.dnb.de/eng/standardisierung/normdateien/gkd.htm (English). DEPRECATED in favor of the GND
+     * http://www.dnb.de/standardisierung/normdateien/gkd.htm (German) or http://www.dnb.de/eng/standardisierung/normdateien/gkd.htm
+     * (English). DEPRECATED in favor of the GND
      */
     GKD("20", "GKD"),
 
@@ -140,9 +139,8 @@ public enum NameIdentifierTypes implements OnixCodelist, CodeList44 {
      * Identifier for a business organization for VAT purposes, eg within the EU's VIES system. See
      * http://ec.europa.eu/taxation_customs/vies/faqvies.do for EU VAT ID formats, which vary from country to country.
      * Generally these consist of a two-letter country code followed by the 8-12 digits of the national VAT ID. Some
-     * countries include one or two letters within their VAT ID. See
-     * http://en.wikipedia.org/wiki/VAT_identification_number for non-EU countries that maintain similar identifiers.
-     * Spaces, dashes etc should be omitted
+     * countries include one or two letters within their VAT ID. See http://en.wikipedia.org/wiki/VAT_identification_number
+     * for non-EU countries that maintain similar identifiers. Spaces, dashes etc should be omitted
      */
     VAT_Identity_Number("23", "VAT Identity Number"),
 
@@ -222,7 +220,16 @@ public enum NameIdentifierTypes implements OnixCodelist, CodeList44 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    GRID("37", "GRID");
+    GRID("37", "GRID"),
+
+    /**
+     * Party ID from Identifiers and Standards for Higher Education and Research (fr: Identifiants et
+     * R&#233;f&#233;rentiels pour l'enseignement sup&#233;rieur et la recherche). For use on ONIX 3.0 only. See
+     * https://www.idref.fr
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    IDRef("38", "IDRef");
 
     public final String code;
     public final String description;

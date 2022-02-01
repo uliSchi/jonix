@@ -30,9 +30,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PublisherIdentifier></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PublisherIdentifier></code>.<p>It can be
+ * retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPublisherIdentifier implements JonixKeyedStruct<NameIdentifierTypes>, Serializable {
@@ -44,15 +43,11 @@ public class JonixPublisherIdentifier implements JonixKeyedStruct<NameIdentifier
     public NameIdentifierTypes publisherIDType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idTypeName;
 
     /**
-     * Raw Format: According to the identifier type specified in &lt;SenderIDType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idValue;

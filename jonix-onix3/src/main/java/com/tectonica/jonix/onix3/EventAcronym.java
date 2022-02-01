@@ -31,41 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event acronym</h1>
- * <p>
- * An acronym used as a short form of the name of an event or series of events given in the &lt;EventName&gt; element.
- * Optional, and repeatable to provide parallel acronyms for a single event in multiple languages. The <i>language</i>
- * attribute is optional for a single instance of &lt;EventAcronym&gt;, but must be included in each instance if
- * &lt;EventAcronym&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 20 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventAcronym&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x517&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EventAcronym&gt;UNFCCC
- * COP21&lt;/EventAcronym&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Event}&gt;</li>
@@ -75,8 +40,6 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Event} ⯈ {@link EventAcronym}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class EventAcronym implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -109,8 +72,6 @@ public class EventAcronym implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of EventAcronym. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 20 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

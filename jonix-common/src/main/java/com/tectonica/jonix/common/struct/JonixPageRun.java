@@ -29,24 +29,18 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;PageRun></code> and Onix3
- * <code>&lt;PageRun></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;PageRun></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPageRun implements JonixStruct, Serializable {
     public static final JonixPageRun EMPTY = new JonixPageRun();
 
     /**
-     * Raw Format: Variable length alphanumeric, suggested maximum length 20 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String firstPageNumber;
 
     /**
-     * Raw Format: Variable length alphanumeric, suggested maximum length 20 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String lastPageNumber;

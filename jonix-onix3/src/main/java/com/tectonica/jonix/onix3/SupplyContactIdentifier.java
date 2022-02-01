@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Supply contact identifier composite</h1>
- * <p>
- * A group of data elements which together specify an identifier for the supply contact. The composite is optional, and
- * repeatable if more than one identifier of different types is sent; but either a &lt;SupplyContactName&gt; or a
- * &lt;SupplyContactIdentifier&gt; <em>must</em> be included.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SupplyContactIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;supplycontactidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplyContact}&gt;</li>
@@ -60,11 +39,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link SupplyContact} ⯈
- * {@link SupplyContactIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link SupplyContact} ⯈ {@link SupplyContactIdentifier}</li>
  * </ul>
- *
- * @since Onix-3.04
  */
 public class SupplyContactIdentifier
     implements OnixDataCompositeWithKey<JonixSupplyContactIdentifier, NameIdentifierTypes>, Serializable {
@@ -162,10 +138,6 @@ public class SupplyContactIdentifier
     private SupplyContactIDType supplyContactIDType = SupplyContactIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a scheme from which an identifier in the &lt;IDValue&gt; element is taken. Mandatory in
-     * each occurrence of the &lt;SupplyContactIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public SupplyContactIDType supplyContactIDType() {
@@ -176,10 +148,6 @@ public class SupplyContactIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;SupplyContactIDType&gt; element. Mandatory in each occurrence of
-     * the &lt;SupplyContactIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -190,11 +158,6 @@ public class SupplyContactIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be included when, and only when, the code in the
-     * &lt;SupplyContactIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

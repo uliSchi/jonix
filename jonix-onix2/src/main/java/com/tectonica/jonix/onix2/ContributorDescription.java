@@ -34,31 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Contributor description</h1>
- * <p>
- * Brief text describing a contributor to the product, at the publisher’s discretion. Optional and non-repeating. It may
- * be used with either a person or corporate name, to draw attention to any aspect of a contributor’s background which
- * supports the promotion of the book.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ContributorDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b048&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b048&gt;Skipper of the winning crew in the
- * Americas Cup, 1998&lt;/b048&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Contributor description</h1><p>Brief text describing a contributor to the product, at the publisher’s discretion.
+ * Optional and non-repeating. It may be used with either a person or corporate name, to draw attention to any aspect of
+ * a contributor’s background which supports the promotion of the book.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 200
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;ContributorDescription&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b048&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b048&gt;Skipper of the winning crew in the
+ * Americas Cup, 1998&lt;/b048&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,12 +50,10 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link ContributorDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link ContributorDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link ContributorDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ContributorDescription}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ContributorDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈
- * {@link ContributorDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link ContributorDescription}</li>
  * </ul>
  */
 public class ContributorDescription implements OnixElement<String>, Serializable {
@@ -108,12 +88,10 @@ public class ContributorDescription implements OnixElement<String>, Serializable
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ContributorDescription. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of ContributorDescription. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 200 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 200 characters<p> (type: NonEmptyString)
      */
     public String value;
 

@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>First page number</h1>
- * <p>
- * The number of the page on which a text item begins in a paginated product. Optional and non-repeating; required when
- * the text item is being referenced as part of a structured table of contents.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length alphanumeric, suggested maximum length 20 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;FirstPageNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b286&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b286&gt;vii&lt;/b286&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>First page number</h1><p>The number of the page on which a text item begins in a paginated product. Optional and
+ * non-repeating; required when the text item is being referenced as part of a structured table of contents.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length alphanumeric, suggested maximum length 20
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;FirstPageNumber&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b286&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b286&gt;vii&lt;/b286&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -67,8 +49,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link FirstPageNumber}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link PageRun} ⯈
- * {@link FirstPageNumber}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link PageRun} ⯈ {@link FirstPageNumber}</li>
  * </ul>
  */
 public class FirstPageNumber implements OnixElement<String>, Serializable {
@@ -106,9 +87,7 @@ public class FirstPageNumber implements OnixElement<String>, Serializable {
      * This is the raw content of FirstPageNumber. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length alphanumeric, suggested maximum length 20 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length alphanumeric, suggested maximum length 20 characters<p> (type: NonEmptyString)
      */
     public String value;
 

@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference place</h1>
- * <p>
- * The place of a conference to which the product is related. Optional and non-repeating. <strong>The &lt;Conference&gt;
- * composite below provides a more general method of handling conference detail, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferencePlace&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b055&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ConferencePlace&gt;Aix-les-Bains&lt;/ConferencePlace&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Conference place</h1><p>The place of a conference to which the product is related. Optional and non-repeating.
+ * <strong>The &lt;Conference&gt; composite below provides a more general method of handling conference detail, and is
+ * to be preferred.</strong></p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested
+ * maximum length 100 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;ConferencePlace&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b055&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;ConferencePlace&gt;Aix-les-Bains&lt;/ConferencePlace&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -108,9 +90,7 @@ public class ConferencePlace implements OnixElement<String>, Serializable {
      * This is the raw content of ConferencePlace. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

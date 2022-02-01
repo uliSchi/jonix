@@ -31,9 +31,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceDate></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceDate></code>.<p>It can be retrieved from the
+ * composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPriceDate implements JonixKeyedStruct<PriceDateRoles>, Serializable {
@@ -47,8 +46,6 @@ public class JonixPriceDate implements JonixKeyedStruct<PriceDateRoles>, Seriali
     public DateFormats dateFormat;
 
     /**
-     * Raw Format: As specified by the value in the dateformat attribute, in &lt;DateFormat&gt;, or the default YYYYMMDD
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String date;

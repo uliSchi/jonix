@@ -40,9 +40,8 @@ interface CodeList139 {
  * Description: ONIX retail sales outlet IDs
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist139">ONIX
- *      Codelist 139 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist139">ONIX
+ * Codelist 139 in Reference Guide</a>
  */
 public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
     _24Symbols("SYM", "24Symbols"),
@@ -325,7 +324,7 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Ellibs_com("ELL", "Ellibs.com"),
+    Elisa_Kirja_Kuukausitilaus("ELK", "Elisa Kirja Kuukausitilaus"),
 
     /**
      * For use in ONIX 3.0 only
@@ -333,6 +332,20 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * Jonix-Comment: Introduced in Onix3
      */
     Elisa("ELS", "Elisa"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Ellibs_com("ELL", "Ellibs.com"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Axiell_ELibU("ELU", "Axiell ELibU"),
 
     Empik("EMP", "Empik"),
 
@@ -382,6 +395,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * Jonix-Comment: Introduced in Onix3
      */
     Internet_Bookshop_Italia("IBS", "Internet Bookshop Italia"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Inl_sningstj_nst("ILT", "Inläsningstjänst"),
 
     Izneo("IZN", "Izneo"),
 
@@ -433,6 +453,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
     Kortext("KOR", "Kortext"),
 
     Kroger("KRG", "Kroger"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Legible_com("LEG", "Legible.com"),
 
     /**
      * For use in ONIX 3.0 only
@@ -500,6 +527,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      */
     Numilog("NUM", "Numilog"),
 
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Odilo_us("ODL", "Odilo.us"),
+
     Office_Depot("OFD", "Office Depot"),
 
     Office_Max("OFM", "Office Max"),
@@ -530,6 +564,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * Jonix-Comment: Introduced in Onix3
      */
     Pokkaritukku("POK", "Pokkaritukku"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Podit_Oy("POY", "Podit Oy"),
 
     Pottery_Barn("PTB", "Pottery Barn"),
 
@@ -583,6 +624,16 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
 
     Sequencity("SEQ", "Sequencity"),
 
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Sesamy("SES", "Sesamy"),
+
+    /**
+     * Jonix-Comment: Introduced in Onix3
+     */
     Shanghai_Book_Traders("SBT", "Shanghai Book Traders"),
 
     Skoobe("SKB", "Skoobe"),
@@ -608,6 +659,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * Jonix-Comment: Introduced in Onix3
      */
     Suomalainen_Plus("SPL", "Suomalainen Plus"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Supla_("SUP", "Supla+"),
 
     /**
      * For use in ONIX 3.0 only
@@ -668,6 +726,13 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
      * Formerly Virgin Megastores (UK)
      */
     Zavvi("ZVV", "Zavvi"),
+
+    /**
+     * For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Publisher_s_own_direct_sales("PUB", "Publisher’s own direct sales"),
 
     /**
      * Include retailer name in &lt;SalesOutletName&gt;
@@ -789,7 +854,12 @@ public enum OnixRetailSalesOutletIdss implements OnixCodelist, CodeList139 {
     /**
      * Jonix-Comment: Deprecated in Onix3
      */
-    Safeway_("SFW", "Safeway");
+    Safeway_("SFW", "Safeway"),
+
+    /**
+     * Jonix-Comment: Deprecated in Onix3
+     */
+    Shanghai_Book_Traders_("SBT", "Shanghai Book Traders");
 
     public final String code;
     public final String description;

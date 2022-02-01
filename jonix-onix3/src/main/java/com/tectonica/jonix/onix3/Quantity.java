@@ -30,35 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Usage quantity (digital products)</h1>
- * <p>
- * A numeric value representing the maximum permitted quantity of a particular type of usage. Mandatory in each
- * occurrence of the &lt;EpubUsageLimit&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive real number, with explicit decimal point when required, or zero, as appropriate for the units specified
- * in &lt;EpubUsageUnit&gt;</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Quantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x320&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;Quantity&gt;10&lt;/Quantity&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Discount}&gt;</li>
@@ -69,20 +40,13 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link Discount} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link Discount} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceConstraint} ⯈ {@link PriceConstraintLimit} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceCondition} ⯈ {@link PriceConditionQuantity} ⯈ {@link Quantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈
- * {@link EpubUsageLimit} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link Discount} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link Discount} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity} ⯈ {@link Quantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈ {@link EpubUsageLimit} ⯈ {@link Quantity}</li>
  * </ul>
  */
 public class Quantity implements OnixElement<Double>, Serializable {
@@ -114,9 +78,6 @@ public class Quantity implements OnixElement<Double>, Serializable {
     /**
      * This is the raw content of Quantity. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive real number, with explicit decimal point when required, or zero, as appropriate for the
-     * units specified in &lt;EpubUsageUnit&gt;
      * <p>
      * (type: dt.PositiveDecimal)
      */

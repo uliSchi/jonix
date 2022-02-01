@@ -40,9 +40,8 @@ interface CodeList9 {
  * Description: Product classification type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist9">ONIX
- *      Codelist 9 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist9">ONIX
+ * Codelist 9 in Reference Guide</a>
  */
 public enum ProductClassificationTypes implements OnixCodelist, CodeList9 {
     /**
@@ -57,7 +56,8 @@ public enum ProductClassificationTypes implements OnixCodelist, CodeList9 {
     UNSPSC("02", "UNSPSC"),
 
     /**
-     * UK Revenue and Customs classifications, based on the Harmonized System
+     * UK Revenue and Customs classifications, based on the Harmonized System (8 or 10 digits, without punctuation, for
+     * export and import respectively)
      */
     HMRC("03", "HMRC"),
 
@@ -102,8 +102,7 @@ public enum ProductClassificationTypes implements OnixCodelist, CodeList9 {
 
     /**
      * Common Procurement Vocabulary, uses to describe requirements for tender for public tendering and procurement
-     * within the EU. Code is a nine digit number (including the check digit). See
-     * http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=URISERV:l22008
+     * within the EU. Code is a nine digit number (including the check digit). See http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=URISERV:l22008
      */
     CPV("11", "CPV"),
 
@@ -114,6 +113,22 @@ public enum ProductClassificationTypes implements OnixCodelist, CodeList9 {
      * Jonix-Comment: Introduced in Onix3
      */
     PKWiU("12", "PKWiU"),
+
+    /**
+     * US HTS (or HTSA) commodity codes for import of goods into USA (10 digits, without punctuation). For use in ONIX
+     * 3.0 only. See https://hts.usitc.gov/current
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    HTSUS("13", "HTSUS"),
+
+    /**
+     * US Schedule B commodity codes for export from USA (10 digits, without punctuation). For use in ONIX 3.0 only. See
+     * http://uscensus.prod.3ceonline.com
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    US_Schedule_B("14", "US Schedule B"),
 
     /**
      * Typologie de march&#233; g&#233;r&#233; par Electre (Market segment code maintained by Electre)

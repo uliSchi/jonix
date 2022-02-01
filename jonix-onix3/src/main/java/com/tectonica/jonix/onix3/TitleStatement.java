@@ -32,38 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Collection title statement</h1>
- * <p>
- * Free text showing how the collection title should be presented in any display, particularly when a standard
- * concatenation of individual title elements from Group&nbsp;P.5 (in the order specified by the &lt;SequenceNumber&gt;
- * data elements) would not give a satisfactory result. Optional and non-repeating. When this field is sent, the
- * recipient should use it to replace all collection title detail sent in Group&nbsp;P.5 for display purposes only. The
- * individual collection title element detail <em>must</em> also be sent, for indexing and retrieval purposes.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 1000 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TitleStatement&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x478&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TitleDetail}&gt;</li>
@@ -71,15 +39,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈
- * {@link TitleStatement}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈
- * {@link TitleStatement}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈
- * {@link TitleStatement}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleStatement}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈ {@link TitleStatement}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈ {@link TitleStatement}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class TitleStatement implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -114,9 +77,6 @@ public class TitleStatement implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of TitleStatement. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 1000 characters. XHTML is enabled in this element -
-     * see Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

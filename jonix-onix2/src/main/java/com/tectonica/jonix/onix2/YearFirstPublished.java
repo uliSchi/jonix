@@ -34,29 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Year first published</h1>
- * <p>
- * The year when the work first appeared in any language or edition, if different from the copyright year. Optional and
- * non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Date as year only (YYYY)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;YearFirstPublished&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b088&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;YearFirstPublished&gt;1845&lt;/YearFirstPublished&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Year first published</h1><p>The year when the work first appeared in any language or edition, if different from
+ * the copyright year. Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Date as
+ * year only (YYYY)</td></tr><tr><td>Reference name</td><td><tt>&lt;YearFirstPublished&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b088&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;YearFirstPublished&gt;1845&lt;/YearFirstPublished&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -103,9 +84,7 @@ public class YearFirstPublished implements OnixElement<String>, Serializable {
      * This is the raw content of YearFirstPublished. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Date as year only (YYYY)
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Date as year only (YYYY)<p> (type: NonEmptyString)
      */
     public String value;
 

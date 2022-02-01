@@ -30,36 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Tax amount</h1>
- * <p>
- * The amount of tax chargeable at the rate specified in an occurrence of the &lt;Tax&gt; composite. Optional and
- * non-repeating; but either &lt;TaxRatePercent&gt; or &lt;TaxAmount&gt; or both must be present in each occurrence of
- * the &lt;Tax&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive real number, with explicit decimal point when required, or zero, suggested maximum length 12
- * characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TaxAmount&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x474&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;TaxAmount&gt;1.86&lt;/TaxAmount&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Tax}&gt;</li>
@@ -67,10 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link Tax} ⯈ {@link TaxAmount}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link Tax} ⯈ {@link TaxAmount}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link Tax} ⯈ {@link TaxAmount}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link Tax} ⯈ {@link TaxAmount}</li>
  * </ul>
  */
 public class TaxAmount implements OnixElement<Double>, Serializable {
@@ -102,9 +70,6 @@ public class TaxAmount implements OnixElement<Double>, Serializable {
     /**
      * This is the raw content of TaxAmount. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive real number, with explicit decimal point when required, or zero, suggested maximum length 12
-     * characters
      * <p>
      * (type: dt.PositiveDecimal)
      */

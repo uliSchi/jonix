@@ -34,33 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Agent role</h1>
- * <p>
- * An ONIX code identifying the role of an agent in relation to the product in the specified market, <em>eg</em>
- * Exclusive sales agent, Local publisher, <em>etc</em>. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits.</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 69</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AgentRole&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j402&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;AgentRole&gt;07&lt;/AgentRole&gt;</tt> Local publisher</td>
- * </tr>
- * </table>
+ * <h1>Agent role</h1><p>An ONIX code identifying the role of an agent in relation to the product in the specified
+ * market, <em>eg</em> Exclusive sales agent, Local publisher, <em>etc</em>. Optional and non-repeating.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric digits.</td></tr><tr><td>Codelist</td><td>List
+ * 69</td></tr><tr><td>Reference name</td><td><tt>&lt;AgentRole&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j402&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;AgentRole&gt;07&lt;/AgentRole&gt;</tt>
+ * Local publisher</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -109,9 +88,7 @@ public class AgentRole implements OnixElement<String>, Serializable {
      * This is the raw content of AgentRole. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Fixed-length, two numeric digits.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, two numeric digits.<p> (type: NonEmptyString)
      */
     public String value;
 

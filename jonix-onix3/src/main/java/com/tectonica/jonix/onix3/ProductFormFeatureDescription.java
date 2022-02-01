@@ -31,42 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product form feature description</h1>
- * <p>
- * If the &lt;ProductFormFeatureType&gt; requires free text rather than a code value, or if the code in
- * &lt;ProductFormFeatureValue&gt; does not adequately describe the feature, a short text description may be added.
- * Optional, and repeatable to provide parallel descriptive text in multiple languages. The <i>language</i> attribute is
- * optional for a single instance of &lt;ProductFormFeatureDescription&gt;, but must be included in each instance if
- * &lt;ProductFormFeatureDescription&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 500 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductFormFeatureDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b336&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b336&gt;11pt
- * Helvetica&lt;/b336&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductFormFeature}&gt;</li>
@@ -74,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductFormFeature} ⯈
- * {@link ProductFormFeatureDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈
- * {@link ProductFormFeature} ⯈ {@link ProductFormFeatureDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductFormFeature} ⯈ {@link ProductFormFeatureDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link ProductFormFeature} ⯈ {@link ProductFormFeatureDescription}</li>
  * </ul>
  */
 public class ProductFormFeatureDescription implements OnixElement<String>, Serializable {
@@ -109,10 +71,8 @@ public class ProductFormFeatureDescription implements OnixElement<String>, Seria
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ProductFormFeatureDescription. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 500 characters
+     * This is the raw content of ProductFormFeatureDescription. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: dt.NonEmptyString)
      */

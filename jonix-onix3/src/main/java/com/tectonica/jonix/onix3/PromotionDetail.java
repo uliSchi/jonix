@@ -32,29 +32,6 @@ import java.util.List;
  */
 
 /**
- * <h1>Promotion detail composite</h1>
- * <p>
- * The promotion detail block comprises the single data Group P.27. The block as a whole is optional and non-repeating,
- * and is used only when there is a need to describe various promotional events intended to promote the product in a
- * structured way. When used, the block usually consists of one or more instances of &lt;PromotionalEvent&gt;. It may be
- * empty <em>only</em> within a partial or ‘block update’ (Notification or update type&nbsp;04, see&nbsp;P.1.2), when
- * the intention is to remove all previously-supplied promotion detail.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PromotionDetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;promotiondetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Product}&gt;</li>
@@ -64,8 +41,6 @@ import java.util.List;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class PromotionDetail implements OnixSuperComposite, Serializable {
     private static final long serialVersionUID = 1L;
@@ -154,20 +129,6 @@ public class PromotionDetail implements OnixSuperComposite, Serializable {
     private List<PromotionalEvent> promotionalEvents = Collections.emptyList();
 
     /**
-     * <p>
-     * An group of data elements which together describe a promotional event or series of event occurrences such as an
-     * author tour. Optional in any occurrence of the &lt;PromotionDetail&gt; composite, but it may be omitted only
-     * within a partial or ‘block update’ (Notification or update type 04, see&nbsp;P.1.2) when the intention is to
-     * remove all previously supplied promotional event detail. When used normally, it is repeatable to describe
-     * multiple events linked to promotion of the product.
-     * </p>
-     * <p>
-     * The promotional event composite must contain at least one &lt;EventOccurrence&gt;. It may optionally contain one
-     * or more contributors to the event, listing those that are also contributors to the product using
-     * &lt;ContributorReference&gt; and those that are <em>not</em> contributors to the product using
-     * &lt;Contributor&gt;. If there are no contributors to the event of either type, an optional &lt;NoContributor/&gt;
-     * flag may be included instead.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public List<PromotionalEvent> promotionalEvents() {

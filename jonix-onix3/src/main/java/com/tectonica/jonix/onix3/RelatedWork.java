@@ -33,26 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Related work composite</h1>
- * <p>
- * A group of data elements which together describe a work which has a specified relationship to a content item.
- * Optional and repeatable.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;RelatedWork&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;relatedwork&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link RelatedMaterial}&gt;</li>
@@ -155,10 +135,6 @@ public class RelatedWork implements OnixSuperComposite, Serializable {
     private WorkRelationCode workRelationCode = WorkRelationCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the nature of the relationship between a product and a work. Mandatory in each
-     * occurrence of the &lt;RelatedWork&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public WorkRelationCode workRelationCode() {
@@ -170,11 +146,6 @@ public class RelatedWork implements OnixSuperComposite, Serializable {
         ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together define an identifier of a work in accordance with a specified scheme.
-     * Mandatory in each occurrence of the &lt;RelatedWork&gt; composite, and repeatable if two or more identifiers for
-     * the same work are sent using different identifier schemes (<i>eg</i> ISTC and DOI).
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<WorkIdentifier, JonixWorkIdentifier, WorkIdentifierTypes> workIdentifiers() {

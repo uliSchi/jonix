@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product relation code</h1>
- * <p>
- * An ONIX code which identifies the nature of the relationship between two products, <i>eg</i> ‘replaced-by’. Mandatory
- * in each occurrence of the &lt;RelatedProduct&gt; composite, and repeatable where the related product has multiple
- * types of relationship to the product described.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 51</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductRelationCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x455&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x455&gt;06&lt;/x455&gt;</tt> (Alternative format)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link RelatedProduct}&gt;</li>
@@ -71,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedMaterial} ⯈ {@link RelatedProduct} ⯈
- * {@link ProductRelationCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link RelatedProduct} ⯈
- * {@link ProductRelationCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedMaterial} ⯈ {@link RelatedProduct} ⯈ {@link ProductRelationCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link RelatedProduct} ⯈ {@link ProductRelationCode}</li>
  * </ul>
  */
 public class ProductRelationCode implements OnixElement<ProductRelations>, Serializable {

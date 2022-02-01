@@ -31,44 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Digital product technical protection</h1>
- * <p>
- * An ONIX code specifying whether a digital product has DRM or other technical protection features. Optional, and
- * repeatable if a product has two or more kinds of protection (<i>ie</i> different parts of a product are protected in
- * different ways).
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 144</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubTechnicalProtection&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x317&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x317&gt;03&lt;/x317&gt;</tt> (Has digital watermarking)</td>
- * </tr>
- * <tr>
- * <td>Notes</td>
- * <td>'Epub' ('e-publication') here and in other element names below refers to any digital product, and has no
- * necessary link with the .epub file format developed by the IDPF</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -78,10 +40,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubTechnicalProtection}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link EpubTechnicalProtection}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link EpubTechnicalProtection}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link EpubTechnicalProtection}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link EpubTechnicalProtection}</li>
  * </ul>
  */
 public class EpubTechnicalProtection implements OnixElement<EpublicationTechnicalProtections>, Serializable {

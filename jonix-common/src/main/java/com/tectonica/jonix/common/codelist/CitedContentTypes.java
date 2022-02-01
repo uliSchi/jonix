@@ -37,9 +37,8 @@ interface CodeList156 {
  * Description: Cited content type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist156">ONIX
- *      Codelist 156 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist156">ONIX
+ * Codelist 156 in Reference Guide</a>
  */
 public enum CitedContentTypes implements OnixCodelist, CodeList156 {
     /**
@@ -55,7 +54,7 @@ public enum CitedContentTypes implements OnixCodelist, CodeList156 {
     Media_mention("03", "Media mention"),
 
     /**
-     * (North America) Inclusion in a program such as 'Chicago Reads', 'Seattle Reads'
+     * Inclusion in a program such as 'Chicago Reads', 'Seattle Reads', 'Canada Reads', 'One Dublin, one book'
      */
     _One_locality_one_book_program("04", "‘One locality, one book’ program"),
 
@@ -65,7 +64,15 @@ public enum CitedContentTypes implements OnixCodelist, CodeList156 {
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
-    Curated_list("05", "Curated list");
+    Curated_list("05", "Curated list"),
+
+    /**
+     * For example a third party podcast episode, social media message, newsletter issue, other commentary (see also
+     * code 03 for very brief items)
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Commentary_discussion("06", "Commentary / discussion");
 
     public final String code;
     public final String description;

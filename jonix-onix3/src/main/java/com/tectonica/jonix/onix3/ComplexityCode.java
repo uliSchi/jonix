@@ -30,35 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Complexity code</h1>
- * <p>
- * A code specifying the level of complexity of a text. Mandatory in each occurrence of the &lt;Complexity&gt;
- * composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length alphanumeric, suggested maximum length 20 characters, according to the code type specified in the
- * &lt;ComplexitySchemeIdentifier&gt; element</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ComplexityCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b078&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ComplexityCode&gt;880L&lt;/ComplexityCode&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Complexity}&gt;</li>
@@ -66,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Complexity} ⯈
- * {@link ComplexityCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Complexity} ⯈ {@link ComplexityCode}</li>
  * </ul>
  */
 public class ComplexityCode implements OnixElement<String>, Serializable {
@@ -99,9 +69,6 @@ public class ComplexityCode implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ComplexityCode. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length alphanumeric, suggested maximum length 20 characters, according to the code type
-     * specified in the &lt;ComplexitySchemeIdentifier&gt; element
      * <p>
      * (type: dt.NonEmptyString)
      */

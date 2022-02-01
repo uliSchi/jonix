@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Study Bible type</h1>
- * <p>
- * An ONIX code identifying a particular study version of a Bible or selected Biblical text, for example ‘Life
- * Application’. Optional and non-repeating. Some study Bibles are available in different editions based on different
- * text versions.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, three letters</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 84</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;StudyBibleType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b389&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b389&gt;OXF&lt;/b389&gt;</tt> (Oxford Annotated)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Bible}&gt;</li>
@@ -71,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈ {@link Bible} ⯈
- * {@link StudyBibleType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈ {@link Bible} ⯈ {@link StudyBibleType}</li>
  * </ul>
  */
 public class StudyBibleType implements OnixElement<StudyBibleTypes>, Serializable {

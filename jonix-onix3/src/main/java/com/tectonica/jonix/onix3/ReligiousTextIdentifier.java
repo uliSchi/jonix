@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Religious text identifier</h1>
- * <p>
- * An ONIX code indicating a religious text other than the Bible. Mandatory in each occurrence of the
- * &lt;ReligiousText&gt; composite that does <em>not</em> include a &lt;Bible&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 88</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReligiousTextIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b376&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ReligiousText}&gt;</li>
@@ -65,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈
- * {@link ReligiousTextIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈ {@link ReligiousTextIdentifier}</li>
  * </ul>
  */
 public class ReligiousTextIdentifier implements OnixElement<String>, Serializable {
@@ -96,10 +67,8 @@ public class ReligiousTextIdentifier implements OnixElement<String>, Serializabl
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ReligiousTextIdentifier. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Fixed length, two digits
+     * This is the raw content of ReligiousTextIdentifier. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: List88)
      */

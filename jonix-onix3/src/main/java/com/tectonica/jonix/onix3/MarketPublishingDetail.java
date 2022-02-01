@@ -36,26 +36,6 @@ import java.util.List;
  */
 
 /**
- * <h1>Market publishing detail composite</h1>
- * <p>
- * A group of data elements which together give details of the publishing status of a product within a specified market.
- * Optional and non-repeating within an occurrence of the &lt;ProductSupply&gt; block.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MarketPublishingDetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;marketpublishingdetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductSupply}&gt;</li>
@@ -194,10 +174,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private MarketPublishingStatus marketPublishingStatus = MarketPublishingStatus.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the status of a published product in a specified market. Mandatory in each
-     * occurrence of the &lt;MarketPublishingDetail&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public MarketPublishingStatus marketPublishingStatus() {
@@ -208,11 +184,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private PromotionContact promotionContact = PromotionContact.EMPTY;
 
     /**
-     * <p>
-     * Free text giving the name, department, phone number, e-mail address etc for a promotional contact person for the
-     * product. Optional and non-repeating. Deprecated, in favor of providing this information via the
-     * &lt;ProductContact&gt; composite.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PromotionContact promotionContact() {
@@ -223,10 +194,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private List<PublisherRepresentative> publisherRepresentatives = Collections.emptyList();
 
     /**
-     * <p>
-     * A repeatable group of data elements which together identify a publisher representative in a specified market.
-     * Optional, and repeated only if the publisher has two or more representatives.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public List<PublisherRepresentative> publisherRepresentatives() {
@@ -237,11 +204,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private List<ProductContact> productContacts = Collections.emptyList();
 
     /**
-     * <p>
-     * A group of data elements which together specify an organization (which may or may not be the publisher’s
-     * representative) responsible for dealing with enquiries related to the product in the market. Optional, and
-     * repeatable in order to specify multiple contacts.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public List<ProductContact> productContacts() {
@@ -253,13 +215,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
         ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text that describes the status of a product in a specified market, when the code in
-     * &lt;MarketPublishingStatus&gt; is insufficient. Optional, but when used, must be accompanied by the
-     * &lt;MarketPublishingStatus&gt; element. Repeatable if parallel text is provided in multiple languages. The
-     * <i>language</i> attribute is optional for a single instance of &lt;MarketPublishingStatusNote&gt;, but must be
-     * included in each instance if &lt;MarketPublishingStatusNote&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<MarketPublishingStatusNote, String> marketPublishingStatusNotes() {
@@ -271,12 +226,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
         ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together specify a date associated with the publishing status of the product in a
-     * specified market, <i>eg</i> ‘local publication date’. Optional, but if known, a date of publication <em>must</em>
-     * be specified either here as a ‘local pubdate’ or in P.20. Other dates relating to the publication of the product
-     * in the specific market may be sent in further repeats of the composite.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<MarketDate, JonixMarketDate, PublishingDateRoles> marketDates() {
@@ -287,11 +236,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private ListOfOnixElement<PromotionCampaign, String> promotionCampaigns = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text describing the promotion and adverting campaign for the product. Optional, and repeatable if parallel
-     * text is provided in multiple languages. The <i>language</i> attribute is optional for a single instance of
-     * &lt;PromotionCampaign&gt;, but must be included in each instance if &lt;PromotionCampaign&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<PromotionCampaign, String> promotionCampaigns() {
@@ -302,12 +246,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private ListOfOnixElement<InitialPrintRun, String> initialPrintRuns = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * In advance information about a new book, free text detailing the number of copies which will be printed and any
-     * related aspects of the initial publishing effort. Optional, and repeatable if parallel text is provided in
-     * multiple languages. The <i>language</i> attribute is optional for a single instance of &lt;InitialPrintRun&gt;,
-     * but must be included in each instance if &lt;InitialPrintRun&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<InitialPrintRun, String> initialPrintRuns() {
@@ -318,18 +256,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private ListOfOnixElement<ReprintDetail, String> reprintDetails = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text used to give details of the reprint history as part of the promotion of a book. Optional, and
-     * repeatable if parallel text is provided in multiple languages. The <i>language</i> attribute is optional for a
-     * single instance of &lt;ReprintDetail&gt;, but must be included in each instance if &lt;ReprintDetail&gt; is
-     * repeated.
-     * </p>
-     * <p>
-     * (For compatibility purposes, &lt;ReprintDetail&gt; is also repeatable – without the <i>language</i> attribute, or
-     * with the same <i>language</i> attribute – to give information about successive reprintings, but this is
-     * deprecated in favor of a single &lt;ReprintDetail&gt; instance [or a single instance per language] and use of the
-     * XHTML &lt;dl&gt; list structure.)
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<ReprintDetail, String> reprintDetails() {
@@ -340,12 +266,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private ListOfOnixElement<CopiesSold, String> copiesSolds = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text detailing the number of copies already sold, <i>eg</i> for a new paperback, the copies sold in
-     * hardback. Optional, and repeatable if parallel text is provided in multiple languages. The <i>language</i>
-     * attribute is optional for a single instance of &lt;CopiesSold&gt;, but must be included in each instance if
-     * &lt;CopiesSold&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<CopiesSold, String> copiesSolds() {
@@ -356,11 +276,6 @@ public class MarketPublishingDetail implements OnixSuperComposite, Serializable 
     private ListOfOnixElement<BookClubAdoption, String> bookClubAdoptions = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text describing the adoption of the product as a book club selection. Optional, and repeatable if parallel
-     * text is provided in multiple languages. The <i>language</i> attribute is optional for a single instance of
-     * &lt;BookClubAdoption&gt;, but must be included in each instance if &lt;BookClubAdoption&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<BookClubAdoption, String> bookClubAdoptions() {

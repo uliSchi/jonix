@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Digital product license name</h1>
- * <p>
- * The name or title of the license. Mandatory in any &lt;EpubLicense&gt; composite, and repeatable to provide the
- * license name in multiple languages. The <i>language</i> attribute is optional for a single instance of
- * &lt;EpubLicenseName&gt;, but must be included in each instance if &lt;EpubLicenseName&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubLicenseName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x511&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x511&gt;Elsevier
- * e-book EULA v5&lt;/x511&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EpubLicense}&gt;</li>
@@ -72,15 +38,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubLicense} ⯈
- * {@link EpubLicenseName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link EpubLicense} ⯈ {@link EpubLicenseName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link EpubLicense} ⯈ {@link EpubLicenseName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubLicense} ⯈ {@link EpubLicenseName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link EpubLicense} ⯈ {@link EpubLicenseName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link EpubLicense} ⯈ {@link EpubLicenseName}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class EpubLicenseName implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -113,8 +74,6 @@ public class EpubLicenseName implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of EpubLicenseName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 100 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

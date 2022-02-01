@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Measure type code</h1>
- * <p>
- * An ONIX code indicating the dimension which is specified by an occurrence of the measure composite. Mandatory in each
- * occurrence of the &lt;Measure&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 48</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MeasureTypeCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;c093&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;c093&gt;01&lt;/c093&gt;</tt> Height</td>
- * </tr>
- * </table>
+ * <h1>Measure type code</h1><p>An ONIX code indicating the dimension which is specified by an occurrence of the measure
+ * composite. Mandatory in each occurrence of the &lt;Measure&gt; composite, and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric digits</td></tr><tr><td>Codelist</td><td>List
+ * 48</td></tr><tr><td>Reference name</td><td><tt>&lt;MeasureTypeCode&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;c093&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;c093&gt;01&lt;/c093&gt;</tt>
+ * Height</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>

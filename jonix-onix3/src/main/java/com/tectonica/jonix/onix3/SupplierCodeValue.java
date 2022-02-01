@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Supplier code value</h1>
- * <p>
- * A supplier-defined code of the type specified in the &lt;SupplierCodeType&gt; element. Mandatory in each occurrence
- * of the &lt;SupplierOwnCoding&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>According to the supplier's own format for the code type specified in &lt;SupplierCodeType&gt;</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SupplierCodeValue&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x459&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x459&gt;B&lt;/x459&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplierOwnCoding}&gt;</li>
@@ -65,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link SupplierOwnCoding}
- * ⯈ {@link SupplierCodeValue}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link SupplierOwnCoding} ⯈ {@link SupplierCodeValue}</li>
  * </ul>
  */
 public class SupplierCodeValue implements OnixElement<String>, Serializable {
@@ -98,8 +69,6 @@ public class SupplierCodeValue implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of SupplierCodeValue. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: According to the supplier's own format for the code type specified in &lt;SupplierCodeType&gt;
      * <p>
      * (type: dt.NonEmptyString)
      */

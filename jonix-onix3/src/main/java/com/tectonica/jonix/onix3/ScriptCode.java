@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Script code</h1>
- * <p>
- * A code identifying the script in which the language is represented. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, four letters. Note that ISO 15924 specifies that script codes shall be sent as one upper case
- * followed by three lower case letters</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>ISO 15924 four-letter script codes List 121</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ScriptCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x420&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ScriptCode&gt;Cyrl&lt;/ScriptCode&gt;</tt> (Cyrillic)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Language}&gt;</li>
@@ -71,8 +39,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Language} ⯈ {@link ScriptCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Language} ⯈
- * {@link ScriptCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Language} ⯈ {@link ScriptCode}</li>
  * </ul>
  */
 public class ScriptCode implements OnixElement<TextScripts>, Serializable {

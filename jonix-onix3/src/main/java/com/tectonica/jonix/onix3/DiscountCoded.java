@@ -32,32 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Discount code composite</h1>
- * <p>
- * An optional group of data elements which together define a discount code from a specified scheme, and repeatable to
- * allow different discount code schemes to be supported without defining additional data elements.
- * </p>
- * <p>
- * A discount code is generally used when the exact percentage discount (or commission, in an agency business model)
- * that a code represents may vary from reseller to reseller (or from agent to agent), or if terms must be kept
- * confidential. If the discount (or commission) is the same for all resellers (or agents) and need not be kept
- * confidential, use &lt;Discount&gt; and &lt;DiscountPercent&gt; instead.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DiscountCoded&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;discountcoded&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -65,10 +39,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link DiscountCoded}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link DiscountCoded}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link DiscountCoded}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link DiscountCoded}</li>
  * </ul>
  */
 public class DiscountCoded implements OnixDataCompositeWithKey<JonixDiscountCoded, DiscountCodeTypes>, Serializable {
@@ -165,10 +137,6 @@ public class DiscountCoded implements OnixDataCompositeWithKey<JonixDiscountCode
     private DiscountCodeType discountCodeType = DiscountCodeType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the value in the &lt;DiscountCode&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;DiscountCoded&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public DiscountCodeType discountCodeType() {
@@ -179,10 +147,6 @@ public class DiscountCoded implements OnixDataCompositeWithKey<JonixDiscountCode
     private DiscountCode discountCode = DiscountCode.EMPTY;
 
     /**
-     * <p>
-     * A discount code from the scheme specified in the &lt;DiscountCodeType&gt; element. Mandatory in each occurrence
-     * of the &lt;DiscountCoded&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public DiscountCode discountCode() {
@@ -193,11 +157,6 @@ public class DiscountCoded implements OnixDataCompositeWithKey<JonixDiscountCode
     private DiscountCodeTypeName discountCodeTypeName = DiscountCodeTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary discount code. Must be used when, and only when the code in the
-     * &lt;DiscountCodeType&gt; element indicates a proprietary scheme, <i>eg</i> a wholesaler’s own code. Optional and
-     * non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DiscountCodeTypeName discountCodeTypeName() {

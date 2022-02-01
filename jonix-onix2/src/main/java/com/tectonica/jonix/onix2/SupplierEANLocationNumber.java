@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Supplier EAN location number</h1>
- * <p>
- * An EAN-13 location number identifying a supply source from which the product may be ordered by a trade customer. Now
- * also known as an “EAN-UCC Global Location Number” or GLN. Optional, but each occurrence of the &lt;SupplyDetail&gt;
- * composite must carry either at least one supplier identifier, or a &lt;SupplierName&gt;.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, thirteen numeric digits, of which the last is a check digit.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SupplierEANLocationNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j135&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;SupplierEANLocationNumber&gt;5012340098745&lt;/SupplierEANLocationNumber&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Supplier EAN location number</h1><p>An EAN-13 location number identifying a supply source from which the product
+ * may be ordered by a trade customer. Now also known as an “EAN-UCC Global Location Number” or GLN. Optional, but each
+ * occurrence of the &lt;SupplyDetail&gt; composite must carry either at least one supplier identifier, or a
+ * &lt;SupplierName&gt;.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, thirteen numeric
+ * digits, of which the last is a check digit.</td></tr><tr><td>Reference name</td><td><tt>&lt;SupplierEANLocationNumber&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j135&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;SupplierEANLocationNumber&gt;5012340098745&lt;/SupplierEANLocationNumber&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,8 +50,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link SupplierEANLocationNumber}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link NewSupplier} ⯈
- * {@link SupplierEANLocationNumber}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link NewSupplier} ⯈ {@link SupplierEANLocationNumber}</li>
  * </ul>
  */
 public class SupplierEANLocationNumber implements OnixElement<String>, Serializable {
@@ -104,12 +85,10 @@ public class SupplierEANLocationNumber implements OnixElement<String>, Serializa
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of SupplierEANLocationNumber. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of SupplierEANLocationNumber. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Fixed-length, thirteen numeric digits, of which the last is a check digit.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, thirteen numeric digits, of which the last is a check digit.<p> (type: NonEmptyString)
      */
     public String value;
 

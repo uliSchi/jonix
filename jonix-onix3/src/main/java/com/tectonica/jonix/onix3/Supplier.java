@@ -36,26 +36,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Supplier composite</h1>
- * <p>
- * A group of data elements which together identify a specific supplier. Mandatory in each occurrence of the
- * &lt;SupplyDetail&gt; composite, and not repeatable.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Supplier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;supplier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplyDetail}&gt;</li>
@@ -176,11 +156,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private SupplierRole supplierRole = SupplierRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the role of the supplier in relation to the product, <i>eg</i> Publisher, Publisher’s
-     * exclusive distributor, <i>etc</i>. Mandatory in each occurrence of the &lt;Supplier&gt; composite, and
-     * non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public SupplierRole supplierRole() {
@@ -188,16 +163,10 @@ public class Supplier implements OnixSuperComposite, Serializable {
         return supplierRole;
     }
 
-    private ListOfOnixDataCompositeWithKey<SupplierIdentifier, JonixSupplierIdentifier,
-        SupplierIdentifierTypes> supplierIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<SupplierIdentifier, JonixSupplierIdentifier, SupplierIdentifierTypes>
+        supplierIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together specify an identifier of the supplier in accordance with a specified
-     * scheme, and repeatable to allow different types of supplier identifier to be included without defining additional
-     * data elements. Optional, but each occurrence of the &lt;Supplier&gt; composite must carry <em>either</em> at
-     * least one supplier identifier, <em>or</em> a &lt;SupplierName&gt;, <em>or</em> both.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<SupplierIdentifier, JonixSupplierIdentifier, SupplierIdentifierTypes>
@@ -209,10 +178,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private SupplierName supplierName = SupplierName.EMPTY;
 
     /**
-     * <p>
-     * The name of a supply source from which the product may be ordered by a trade customer. Optional and
-     * non-repeating; required if no supplier identifier is sent.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public SupplierName supplierName() {
@@ -223,11 +188,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<TelephoneNumber, String> telephoneNumbers = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * A telephone number of a supply source from which the product may be ordered by a trade customer. Optional and
-     * repeatable. Deprecated in this context, in favor of providing contact details in the &lt;SupplyContact&gt;
-     * composite.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<TelephoneNumber, String> telephoneNumbers() {
@@ -238,11 +198,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<FaxNumber, String> faxNumbers = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * A fax number of a supply source from which the product may be ordered by a trade customer. Optional and
-     * repeatable. Deprecated in this context, in favor of providing contact details in the &lt;SupplyContact&gt;
-     * composite.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<FaxNumber, String> faxNumbers() {
@@ -253,11 +208,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<EmailAddress, String> emailAddresss = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * An e-mail address for a supply source from which the product may be ordered by a trade customer. Optional and
-     * repeatable. Deprecated in this context, in favor of providing contact details in the &lt;SupplyContact&gt;
-     * composite.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<EmailAddress, String> emailAddresss() {
@@ -268,11 +218,6 @@ public class Supplier implements OnixSuperComposite, Serializable {
     private ListOfOnixDataComposite<Website, JonixWebsite> websites = ListOfOnixDataComposite.empty();
 
     /**
-     * <p>
-     * An optional group of data elements which together identify and provide a pointer to a website which is related to
-     * the organization identified in an occurrence of the &lt;Supplier&gt; composite. Repeatable in order to provide
-     * links to multiple websites.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataComposite<Website, JonixWebsite> websites() {

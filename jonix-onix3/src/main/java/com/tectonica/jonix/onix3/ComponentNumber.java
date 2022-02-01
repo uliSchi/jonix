@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Component number</h1>
- * <p>
- * The number (if any) which is given to the content item in the product, in the form (<i>eg</i> Arabic or Roman) in
- * which it is given in the product. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length alphanumeric, suggested maximum length 20 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ComponentNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b289&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ComponentNumber&gt;XX&lt;/ComponentNumber&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ContentItem}&gt;</li>
@@ -65,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈
- * {@link ComponentNumber}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link ComponentNumber}</li>
  * </ul>
  */
 public class ComponentNumber implements OnixElement<String>, Serializable {
@@ -98,8 +69,6 @@ public class ComponentNumber implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ComponentNumber. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length alphanumeric, suggested maximum length 20 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

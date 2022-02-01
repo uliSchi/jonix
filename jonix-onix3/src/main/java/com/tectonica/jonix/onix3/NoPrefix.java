@@ -30,35 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>“No prefix” indicator</h1>
- * <p>
- * An empty element that provides a positive indication that a title element does not include any prefix that is ignored
- * for sorting purposes. Optional and non-repeating, and must only be used when &lt;TitleWithoutPrefix&gt; is used and
- * no &lt;TitlePrefix&gt; element is present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>XML empty element</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NoPrefix&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x501&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;NoPrefix/&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TitleElement}&gt;</li>
@@ -66,15 +37,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈
- * {@link NoPrefix}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link NoPrefix}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link NoPrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link NoPrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link NoPrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link NoPrefix}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class NoPrefix implements OnixFlag, Serializable {
     private static final long serialVersionUID = 1L;

@@ -30,9 +30,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;EpubLicenseExpression></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;EpubLicenseExpression></code>.<p>It can be
+ * retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixEpubLicenseExpression implements JonixKeyedStruct<LicenseExpressionTypes>, Serializable {
@@ -44,15 +43,11 @@ public class JonixEpubLicenseExpression implements JonixKeyedStruct<LicenseExpre
     public LicenseExpressionTypes epubLicenseExpressionType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String epubLicenseExpressionTypeName;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 300 characters
-     * <p>
      * (type: dt.NonEmptyURI)
      */
     public String epubLicenseExpressionLink;

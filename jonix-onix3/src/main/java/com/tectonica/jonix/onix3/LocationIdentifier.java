@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Location identifier composite</h1>
- * <p>
- * An optional group of data elements which together define the identifier of a stock location in accordance with a
- * specified scheme, and repeatable to allow different types of location identifier to be supported without defining
- * additional data elements..
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;LocationIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;locationidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Stock}&gt;</li>
@@ -60,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈
- * {@link LocationIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈ {@link LocationIdentifier}</li>
  * </ul>
  */
 public class LocationIdentifier
@@ -160,10 +138,6 @@ public class LocationIdentifier
     private LocationIDType locationIDType = LocationIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;LocationIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public LocationIDType locationIDType() {
@@ -174,10 +148,6 @@ public class LocationIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;LocationIDType&gt; element. Mandatory in each occurrence of the
-     * &lt;LocationIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -188,11 +158,6 @@ public class LocationIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be used when, and only when, the code in the &lt;LocationIDType&gt;
-     * element indicates a proprietary scheme, <i>eg</i> a wholesaler’s own code. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

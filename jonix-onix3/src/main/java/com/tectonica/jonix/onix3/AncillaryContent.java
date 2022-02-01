@@ -33,27 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Ancillary content composite</h1>
- * <p>
- * A group of data elements which together specify the number of illustrations or other content items of a stated type
- * which the product carries. Use of the &lt;AncillaryContent&gt; composite is optional, but is repeatable if necessary
- * to specify different types of content items.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AncillaryContent&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;ancillarycontent&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -161,10 +140,6 @@ public class AncillaryContent
     private AncillaryContentType ancillaryContentType = AncillaryContentType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the type of illustration or other content to which an occurrence of the composite
-     * refers. Mandatory in each occurrence of the &lt;AncillaryContent&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public AncillaryContentType ancillaryContentType() {
@@ -175,10 +150,6 @@ public class AncillaryContent
     private Number number = Number.EMPTY;
 
     /**
-     * <p>
-     * The number of illustrations or other content items of the type specified in &lt;AncillaryContentType&gt;.
-     * Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public Number number() {
@@ -190,13 +161,6 @@ public class AncillaryContent
         ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Text describing the type of illustration or other content to which an occurrence of the composite refers, when a
-     * code is insufficient. Optional, and repeatable if parallel descriptive text is provided in multiple languages.
-     * Required when &lt;AncillaryContentType&gt; carries the value 00. The <i>language</i> attribute is optional for a
-     * single instance of &lt;AncillaryContentDescription&gt;, but must be included in each instance if
-     * &lt;AncillaryContentDescription&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<AncillaryContentDescription, String> ancillaryContentDescriptions() {

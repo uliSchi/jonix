@@ -32,9 +32,8 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;ProductFormFeature></code> and Onix3
- * <code>&lt;ProductFormFeature></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;ProductFormFeature></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixProductFormFeature implements JonixKeyedStruct<ProductFormFeatureTypes>, Serializable {
@@ -46,15 +45,11 @@ public class JonixProductFormFeature implements JonixKeyedStruct<ProductFormFeat
     public ProductFormFeatureTypes productFormFeatureType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 500 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public List<String> productFormFeatureDescriptions;
 
     /**
-     * Raw Format: Dependent on the scheme specified in &lt;ProductFormFeatureType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String productFormFeatureValue;

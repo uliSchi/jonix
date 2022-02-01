@@ -34,31 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference description</h1>
- * <p>
- * Free text detailing all relevant information about a conference to which the product is related. If this element is
- * sent, no other fields from Group&nbsp;PR.9 must be sent. <strong>The &lt;Conference&gt; composite on a later page
- * provides a more general method of handling conference detail, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferenceDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b050&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ConferenceDescription&gt;Proceedings of
- * the 1996 International Computer Typesetting Conference&lt;/ConferenceDescription&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Conference description</h1><p>Free text detailing all relevant information about a conference to which the
+ * product is related. If this element is sent, no other fields from Group&nbsp;PR.9 must be sent. <strong>The
+ * &lt;Conference&gt; composite on a later page provides a more general method of handling conference detail, and is to
+ * be preferred.</strong></p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested
+ * maximum length 300 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;ConferenceDescription&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b050&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;ConferenceDescription&gt;Proceedings of
+ * the 1996 International Computer Typesetting Conference&lt;/ConferenceDescription&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -105,12 +87,10 @@ public class ConferenceDescription implements OnixElement<String>, Serializable 
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ConferenceDescription. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of ConferenceDescription. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

@@ -31,9 +31,7 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Audience></code> and Onix3
- * <code>&lt;Audience></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Audience></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixAudience implements JonixKeyedStruct<AudienceCodeTypes>, Serializable {
@@ -45,15 +43,11 @@ public class JonixAudience implements JonixKeyedStruct<AudienceCodeTypes>, Seria
     public AudienceCodeTypes audienceCodeType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String audienceCodeTypeName;
 
     /**
-     * Raw Format: Determined by the scheme specified in &lt;AudienceCodeType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String audienceCodeValue;

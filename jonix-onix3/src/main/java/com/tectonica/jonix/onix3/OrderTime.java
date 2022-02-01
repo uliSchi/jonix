@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Order time</h1>
- * <p>
- * The expected average number of days from receipt of order to despatch (for items ‘manufactured on demand’ or ‘only to
- * order’). Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive integer or zero, one or two digits only. Zero indicates expected 'same day' dispatch</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OrderTime&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j144&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;OrderTime&gt;7&lt;/OrderTime&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplyDetail}&gt;</li>
@@ -97,8 +69,6 @@ public class OrderTime implements OnixElement<Integer>, Serializable {
     /**
      * This is the raw content of OrderTime. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive integer or zero, one or two digits only. Zero indicates expected 'same day' dispatch
      * <p>
      * (type: dt.PositiveInteger)
      */

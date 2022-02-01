@@ -40,9 +40,8 @@ interface CodeList158 {
  * Description: Resource content type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist158">ONIX
- *      Codelist 158 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist158">ONIX
+ * Codelist 158 in Reference Guide</a>
  */
 public enum ResourceContentTypes implements OnixCodelist, CodeList158 {
     /**
@@ -69,6 +68,9 @@ public enum ResourceContentTypes implements OnixCodelist, CodeList158 {
 
     Series_logo("06", "Series logo"),
 
+    /**
+     * For example, an isolated image from the front cover (without text), image of a completed jigsaw
+     */
     Product_image_artwork("07", "Product image / artwork"),
 
     Product_logo("08", "Product logo"),
@@ -109,7 +111,10 @@ public enum ResourceContentTypes implements OnixCodelist, CodeList158 {
      */
     Review("17", "Review"),
 
-    Other_commentary_discussion("18", "Other commentary / discussion"),
+    /**
+     * For example a publisher's podcast episode, social media message, newsletter issue, other commentary
+     */
+    Commentary_discussion("18", "Commentary / discussion"),
 
     Reading_group_guide("19", "Reading group guide"),
 
@@ -266,6 +271,13 @@ public enum ResourceContentTypes implements OnixCodelist, CodeList158 {
      * Jonix-Comment: Introduced in Onix3
      */
     Rules_or_instructions("46", "Rules or instructions"),
+
+    /**
+     * Full transcript of audio or video content of the product
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Transcript("47", "Transcript"),
 
     /**
      * Link to a license covering permitted usage of the product content. Deprecated in favor of &lt;EpubLicense&gt;.

@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Measurement</h1>
- * <p>
- * The number which represents the dimension specified in &lt;MeasureType&gt; in the measure units specified in
- * &lt;MeasureUnitCode&gt;. Mandatory in each occurrence of the &lt;Measure&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive real number, with explicit decimal point when required, suggested maximum length 6 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Measurement&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;c094&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;c094&gt;8.25&lt;/c094&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Measure}&gt;</li>
@@ -66,8 +38,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Measure} ⯈ {@link Measurement}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link Measure} ⯈
- * {@link Measurement}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link Measure} ⯈ {@link Measurement}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link SupplementManifest} ⯈ {@link Measure} ⯈ {@link Measurement}</li>
  * </ul>
  */
 public class Measurement implements OnixElement<Double>, Serializable {
@@ -99,9 +71,6 @@ public class Measurement implements OnixElement<Double>, Serializable {
     /**
      * This is the raw content of Measurement. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive real number, with explicit decimal point when required, suggested maximum length 6
-     * characters
      * <p>
      * (type: dt.StrictPositiveDecimal)
      */

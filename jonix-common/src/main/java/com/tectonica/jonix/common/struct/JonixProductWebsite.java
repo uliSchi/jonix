@@ -29,9 +29,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;ProductWebsite></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;ProductWebsite></code>.<p>It can be retrieved
+ * from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixProductWebsite implements JonixStruct, Serializable {
@@ -41,16 +40,12 @@ public class JonixProductWebsite implements JonixStruct, Serializable {
 
     /**
      * Raw Format: Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see
-     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * ONIX for Books - Product Information Message - XML Message Specification, Section 7) <p> (type: XHTML)
      */
     public String productWebsiteDescription;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters <p> (type: NonEmptyString)
      */
     public String productWebsiteLink;
 }

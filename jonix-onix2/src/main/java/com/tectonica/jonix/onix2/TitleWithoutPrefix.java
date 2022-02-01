@@ -34,32 +34,14 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Title text without prefix</h1>
- * <p>
- * Full text of the distinctive title of the product, without abbreviation or abridgement, and without the title prefix.
- * Optional and non-repeating; can only be used if the &lt;TitlePrefix&gt; element is also present. <strong>The
- * &lt;Title&gt; composite on a later page provides a more general method of handling all forms of title, and is to be
- * preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TitleWithoutPrefix&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b031&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b031&gt;shameful life of Salvador
- * Dali&lt;/b031&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Title text without prefix</h1><p>Full text of the distinctive title of the product, without abbreviation or
+ * abridgement, and without the title prefix. Optional and non-repeating; can only be used if the &lt;TitlePrefix&gt;
+ * element is also present. <strong>The &lt;Title&gt; composite on a later page provides a more general method of
+ * handling all forms of title, and is to be preferred.</strong></p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 300
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;TitleWithoutPrefix&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b031&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b031&gt;shameful life of Salvador
+ * Dali&lt;/b031&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -116,9 +98,7 @@ public class TitleWithoutPrefix implements OnixElement<String>, Serializable {
      * This is the raw content of TitleWithoutPrefix. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Measure type code</h1>
- * <p>
- * An ONIX code indicating the dimension which is specified by an occurrence of the measure composite. Mandatory in each
- * occurrence of the &lt;Measure&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 48</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MeasureType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x315&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x315&gt;01&lt;/x315&gt;</tt> (Height)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Measure}&gt;</li>
@@ -71,8 +39,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Measure} ⯈ {@link MeasureType}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link Measure} ⯈
- * {@link MeasureType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link Measure} ⯈ {@link MeasureType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link SupplementManifest} ⯈ {@link Measure} ⯈ {@link MeasureType}</li>
  * </ul>
  */
 public class MeasureType implements OnixElement<MeasureTypes>, Serializable {

@@ -36,22 +36,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Market date composite</h1>
- * <p>
- * A repeatable group of data elements which together specify a date associated with the publishing status of the
- * product in the market identified in an occurrence of the &lt;MarketRepresentation&gt; composite, <em>eg</em> local
- * publication date.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MarketDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;marketdate&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Market date composite</h1><p>A repeatable group of data elements which together specify a date associated with
+ * the publishing status of the product in the market identified in an occurrence of the &lt;MarketRepresentation&gt;
+ * composite, <em>eg</em> local publication date.</p><table border='1' cellpadding='3'><tr><td>Reference
+ * name</td><td><tt>&lt;MarketDate&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;marketdate&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -168,10 +156,8 @@ public class MarketDate implements OnixDataCompositeWithKey<JonixMarketDate, Pub
     private MarketDateRole marketDateRole = MarketDateRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the significance of the date. Mandatory in each occurrence of the &lt;MarketDate&gt;
-     * composite.
-     * </p>
+     * <p>An ONIX code indicating the significance of the date. Mandatory in each occurrence of the &lt;MarketDate&gt;
+     * composite.</p>
      * Jonix-Comment: this field is required
      */
     public MarketDateRole marketDateRole() {
@@ -182,10 +168,8 @@ public class MarketDate implements OnixDataCompositeWithKey<JonixMarketDate, Pub
     private Date date = Date.EMPTY;
 
     /**
-     * <p>
-     * The date specified in the &lt;MarketDateRole&gt; field. Mandatory in each occurrence of the &lt;MarketDate&gt;
-     * composite.
-     * </p>
+     * <p>The date specified in the &lt;MarketDateRole&gt; field. Mandatory in each occurrence of the &lt;MarketDate&gt;
+     * composite.</p>
      * Jonix-Comment: this field is required
      */
     public Date date() {
@@ -196,10 +180,8 @@ public class MarketDate implements OnixDataCompositeWithKey<JonixMarketDate, Pub
     private DateFormat dateFormat = DateFormat.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and non-repeating. When
-     * omitted, the format is assumed to be YYYYMMDD.
-     * </p>
+     * <p>An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and non-repeating.
+     * When omitted, the format is assumed to be YYYYMMDD.</p>
      * Jonix-Comment: this field is optional
      */
     public DateFormat dateFormat() {

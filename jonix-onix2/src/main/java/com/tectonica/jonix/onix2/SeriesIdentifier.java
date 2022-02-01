@@ -36,22 +36,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Series identifier composite</h1>
- * <p>
- * A repeatable group of data elements which together define an identifier of a series or subseries. The composite is
- * optional, and may only repeat if two or more identifiers of different types are sent. It is not permissible to have
- * two identifiers of the same type.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SeriesIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;seriesidentifier&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Series identifier composite</h1><p>A repeatable group of data elements which together define an identifier of a
+ * series or subseries. The composite is optional, and may only repeat if two or more identifiers of different types are
+ * sent. It is not permissible to have two identifiers of the same type.</p><table border='1'
+ * cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;SeriesIdentifier&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;seriesidentifier&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -172,10 +161,8 @@ public class SeriesIdentifier
     private SeriesIDType seriesIDType = SeriesIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;SeriesIdentifier&gt; composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken.
+     * Mandatory in each occurrence of the &lt;SeriesIdentifier&gt; composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public SeriesIDType seriesIDType() {
@@ -186,10 +173,8 @@ public class SeriesIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;SeriesIDType&gt; field. Mandatory in each occurrence of the
-     * &lt;SeriesIdentifier&gt; composite, and non-repeating.
-     * </p>
+     * <p>An identifier of the type specified in the &lt;SeriesIDType&gt; field. Mandatory in each occurrence of the
+     * &lt;SeriesIdentifier&gt; composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -200,10 +185,9 @@ public class SeriesIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme when, and only when, the code in the &lt;SeriesIDType&gt;
-     * field indicates a proprietary scheme, <em>eg</em> a publisher’s own code. Optional and non-repeating.
-     * </p>
+     * <p>A name which identifies a proprietary identifier scheme when, and only when, the code in the
+     * &lt;SeriesIDType&gt; field indicates a proprietary scheme, <em>eg</em> a publisher’s own code. Optional and
+     * non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

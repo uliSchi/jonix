@@ -34,28 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Committed backorder quantity</h1>
- * <p>
- * The quantity of stock on order which is already committed to meet backorders. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length integer, suggested maximum length 7 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CBO&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j375&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;CBO&gt;244&lt;/CBO&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Committed backorder quantity</h1><p>The quantity of stock on order which is already committed to meet backorders.
+ * Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length integer,
+ * suggested maximum length 7 digits</td></tr><tr><td>Reference name</td><td><tt>&lt;CBO&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j375&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;CBO&gt;244&lt;/CBO&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -104,9 +86,7 @@ public class CBO implements OnixElement<String>, Serializable {
      * This is the raw content of CBO. Could be null if {@code exists() == false}. Use {@link #value()} instead if you
      * want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length integer, suggested maximum length 7 digits
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, suggested maximum length 7 digits<p> (type: NonEmptyString)
      */
     public String value;
 

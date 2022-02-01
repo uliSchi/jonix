@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>ISBN-10 of set</h1>
- * <p>
- * A 10-character ISBN identifying a set of which the product forms part. Optional and non-repeating. <strong>The
- * &lt;ProductIdentifier&gt; composite on the next page provides a more general method of handling this and other
- * product codes, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, 10 characters, all numeric except last character, which may be letter X</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ISBNOfSet&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b021&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b021&gt;8474339790&lt;/b021&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>ISBN-10 of set</h1><p>A 10-character ISBN identifying a set of which the product forms part. Optional and
+ * non-repeating. <strong>The &lt;ProductIdentifier&gt; composite on the next page provides a more general method of
+ * handling this and other product codes, and is to be preferred.</strong></p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, 10 characters, all numeric except last character, which may be
+ * letter X</td></tr><tr><td>Reference name</td><td><tt>&lt;ISBNOfSet&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b021&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b021&gt;8474339790&lt;/b021&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -107,9 +89,8 @@ public class ISBNOfSet implements OnixElement<String>, Serializable {
      * This is the raw content of ISBNOfSet. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Fixed-length, 10 characters, all numeric except last character, which may be letter X
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, 10 characters, all numeric except last character, which may be letter X<p> (type:
+     * NonEmptyString)
      */
     public String value;
 

@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Person name part 5: names after key names</h1>
- * <p>
- * The fifth part of a structured name of a person who contributed to the creation of the product: name suffix, or
- * name(s) following a person’s key name(s), <em>eg</em> Ibrahim (in Anwar Ibrahim). Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NamesAfterKey&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b041&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;NamesAfterKey&gt;Ibrahim&lt;/NamesAfterKey&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Person name part 5: names after key names</h1><p>The fifth part of a structured name of a person who contributed
+ * to the creation of the product: name suffix, or name(s) following a person’s key name(s), <em>eg</em> Ibrahim (in
+ * Anwar Ibrahim). Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * text, suggested maximum length 100 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;NamesAfterKey&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b041&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;NamesAfterKey&gt;Ibrahim&lt;/NamesAfterKey&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,23 +50,19 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link NamesAfterKey}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link NamesAfterKey}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈
- * {@link NamesAfterKey}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link NamesAfterKey}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PersonAsSubject} ⯈ {@link NamesAfterKey}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈
- * {@link NamesAfterKey}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link NamesAfterKey}</li>
  * </ul>
  */
 public class NamesAfterKey implements OnixElement<String>, Serializable {
@@ -122,9 +100,7 @@ public class NamesAfterKey implements OnixElement<String>, Serializable {
      * This is the raw content of NamesAfterKey. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

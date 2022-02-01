@@ -32,44 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Text source description</h1>
- * <p>
- * Brief text describing or providing context for the text author or corporate source, at the publisher’s discretion,
- * and intended to be used in addition to &lt;TextAuthor&gt; or &lt;TextSourceCorporate&gt;. Optional, and repeatable to
- * provide parallel descriptions in multiple languages. The <i>language</i> attribute is optional for a single instance
- * of &lt;TextSourceDescription&gt;, but must be included in each instance if &lt;TextSourceDescription&gt; is repeated.
- * The description may be used with either a person or corporate name, to draw attention to any aspect of the text
- * source’s background which provides context for the text in &lt;Text&gt;.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextSourceDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x557&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;TextSourceDescription textformat=&quot;05&quot;&gt;Literary
- * editor of &lt;cite&gt;The Spectator&lt;/cite&gt;&lt;/ContributorDescription&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TextContent}&gt;</li>
@@ -77,13 +39,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈
- * {@link TextSourceDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈
- * {@link TextSourceDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈ {@link TextSourceDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈ {@link TextSourceDescription}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class TextSourceDescription implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -116,11 +74,8 @@ public class TextSourceDescription implements OnixElement<String>, Serializable 
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of TextSourceDescription. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
+     * This is the raw content of TextSourceDescription. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: XHTML)
      */

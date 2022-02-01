@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Language composite</h1>
- * <p>
- * A group of data elements which together represent a language, and specify its role and, where required, whether it is
- * a country variant. Optional, and repeatable to specify multiple languages and their various roles.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Language&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;language&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -166,10 +146,6 @@ public class Language implements OnixDataCompositeWithKey<JonixLanguage, Languag
     private LanguageRole languageRole = LanguageRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the ‘role’ of a language in the context of the ONIX record. Mandatory in each occurrence
-     * of the &lt;Language&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public LanguageRole languageRole() {
@@ -180,10 +156,6 @@ public class Language implements OnixDataCompositeWithKey<JonixLanguage, Languag
     private LanguageCode languageCode = LanguageCode.EMPTY;
 
     /**
-     * <p>
-     * An ISO code indicating a language. Mandatory in each occurrence of the &lt;Language&gt; composite, and
-     * non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public LanguageCode languageCode() {
@@ -194,10 +166,6 @@ public class Language implements OnixDataCompositeWithKey<JonixLanguage, Languag
     private CountryCode countryCode = CountryCode.EMPTY;
 
     /**
-     * <p>
-     * A code identifying the country when this specifies a variant of the language, <i>eg</i> US English. Optional and
-     * non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public CountryCode countryCode() {
@@ -208,13 +176,6 @@ public class Language implements OnixDataCompositeWithKey<JonixLanguage, Languag
     private RegionCode regionCode = RegionCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the region when this specifies a variant of the language <i>eg</i> Flemish – Dutch as
-     * used in the Flemish region of Belgium. Optional and non-repeatable. A region is an area which is not a country
-     * (in the sense that it does not have a distinct country code), but which is precisely defined in geographical
-     * terms, <i>eg</i> Quebec, Scotland. If both country and region are specified, the region must be within the
-     * country. Note that US States have region codes, while US overseas territories have distinct ISO Country Codes.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public RegionCode regionCode() {
@@ -225,9 +186,6 @@ public class Language implements OnixDataCompositeWithKey<JonixLanguage, Languag
     private ScriptCode scriptCode = ScriptCode.EMPTY;
 
     /**
-     * <p>
-     * A code identifying the script in which the language is represented. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ScriptCode scriptCode() {

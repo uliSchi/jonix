@@ -32,9 +32,7 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Measure></code> and Onix3
- * <code>&lt;Measure></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Measure></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixMeasure implements JonixKeyedStruct<MeasureTypes>, Serializable {
@@ -48,9 +46,6 @@ public class JonixMeasure implements JonixKeyedStruct<MeasureTypes>, Serializabl
     public MeasureUnits measureUnitCode;
 
     /**
-     * Raw Format: Positive real number, with explicit decimal point when required, suggested maximum length 6
-     * characters
-     * <p>
      * (type: dt.StrictPositiveDecimal)
      */
     public Double measurement;

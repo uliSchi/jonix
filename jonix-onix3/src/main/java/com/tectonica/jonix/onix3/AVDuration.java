@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Duration of AV item</h1>
- * <p>
- * The duration of an audio or audiovisual item within the time-based content of a product. Optional and non-repeating,
- * but normally expected when the AV content item is being referenced as part of a structured table of contents.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AVDuration&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x544&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;AVDuration&gt;0002948&lt;/AVDuration&gt;</tt> (29 minutes and 48 seconds)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link AVItem}&gt;</li>
@@ -65,11 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈
- * {@link AVDuration}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈ {@link AVDuration}</li>
  * </ul>
- *
- * @since Onix-3.05
  */
 public class AVDuration implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -100,8 +69,6 @@ public class AVDuration implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of AVDuration. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)
      * <p>
      * (type: dt.TimeOrDuration)
      */

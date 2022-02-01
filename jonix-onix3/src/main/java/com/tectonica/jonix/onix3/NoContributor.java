@@ -30,39 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>“No authorship” indicator</h1>
- * <p>
- * An empty element that provides a positive indication that a collection has no stated authorship. Optional and
- * non-repeating. Must only be sent in a record that has no &lt;Contributor&gt; data in Group P.5.
- * </p>
- * <p>
- * <strong>The &lt;NoContributor/&gt; element is provided here for use only by those ONIX communities whose national
- * practice requires contributors to be identified at collection level.</strong> It should not be sent in a context
- * where collection contributors are normally identified in Group&nbsp;P.6.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>XML empty element</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NoContributor&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;n339&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;NoContributor/&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -75,13 +42,9 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link NoContributor}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link NoContributor}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link NoContributor}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈
- * {@link NoContributor}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link NoContributor}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link NoContributor}</li>
  * </ul>
- *
- * @since Onix-3.04
  */
 public class NoContributor implements OnixFlag, Serializable {
     private static final long serialVersionUID = 1L;

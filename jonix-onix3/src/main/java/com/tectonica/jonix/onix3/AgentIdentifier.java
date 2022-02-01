@@ -32,28 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Agent identifier composite</h1>
- * <p>
- * A group of data elements together defining the identifier of an agent or local publisher in accordance with a
- * specified scheme. Optional, but each occurrence of the &lt;PublisherRepresentative&gt; composite must carry either at
- * least one agent identifier, or an &lt;AgentName&gt;. Repeatable only if two or more identifiers are sent using
- * different schemes.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AgentIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;agentidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PublisherRepresentative}&gt;</li>
@@ -61,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link PublisherRepresentative} ⯈ {@link AgentIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link PublisherRepresentative} ⯈ {@link AgentIdentifier}</li>
  * </ul>
  */
 public class AgentIdentifier
@@ -161,10 +138,6 @@ public class AgentIdentifier
     private AgentIDType agentIDType = AgentIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;AgentIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public AgentIDType agentIDType() {
@@ -175,10 +148,6 @@ public class AgentIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;AgentIDType&gt; element. Mandatory in each occurrence of the
-     * &lt;AgentIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -189,11 +158,6 @@ public class AgentIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be included when, and only when, the code in the &lt;AgentIDType&gt;
-     * element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

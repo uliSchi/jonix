@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Usage status (digital products)</h1>
- * <p>
- * An ONIX code specifying the status of a usage of a digital product, <i>eg</i> permitted without limit, permitted with
- * limit, prohibited. Mandatory in each occurrence of the &lt;EpubUsageConstraint&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 146</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubUsageStatus&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x319&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x319&gt;03&lt;/x318&gt;</tt> (Prohibited)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EpubUsageConstraint}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈
- * {@link EpubUsageStatus}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈ {@link EpubUsageStatus}</li>
  * </ul>
  */
 public class EpubUsageStatus implements OnixElement<UsageStatuss>, Serializable {

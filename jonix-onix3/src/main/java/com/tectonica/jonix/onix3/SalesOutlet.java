@@ -33,43 +33,25 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sales outlet composite</h1>
- * <p>
- * An optional group of data elements which together identify a sales outlet to which a restriction is linked. Each
- * occurrence of the composite must include a &lt;SalesOutletIdentifier&gt; composite or a &lt;SalesOutletName&gt; or
- * both. Repeatable in order to identify multiple sales outlets subject to the restriction.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SalesOutlet&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;salesoutlet&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
+ * <li>&lt;{@link SupplementManifest}&gt;</li>
+ * <li>&lt;{@link CoverResource}&gt;</li>
  * <li>&lt;{@link SalesRestriction}&gt;</li>
+ * <li>&lt;{@link InsertResource}&gt;</li>
  * </ul>
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈
- * {@link SalesOutlet}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈
- * {@link SalesOutlet}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction}
- * ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link SupplementManifest} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link SupplementManifest} ⯈ {@link CoverManifest} ⯈ {@link CoverResource} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link CoverManifest} ⯈ {@link CoverResource} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link SupplementManifest} ⯈ {@link InsertManifest} ⯈ {@link InsertResource} ⯈ {@link SalesOutlet}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductionDetail} ⯈ {@link ProductionManifest} ⯈ {@link InsertManifest} ⯈ {@link InsertResource} ⯈ {@link SalesOutlet}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class SalesOutlet implements OnixSuperComposite, Serializable {
     private static final long serialVersionUID = 1L;
@@ -162,10 +144,6 @@ public class SalesOutlet implements OnixSuperComposite, Serializable {
         SalesOutletIdentifierTypes> salesOutletIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * An optional group of data elements which together represent a coded identification of an organization, used here
-     * to identify a sales outlet. Repeatable in order to specify multiple identifiers for the same sales outlet.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<SalesOutletIdentifier, JonixSalesOutletIdentifier, SalesOutletIdentifierTypes>
@@ -177,9 +155,6 @@ public class SalesOutlet implements OnixSuperComposite, Serializable {
     private SalesOutletName salesOutletName = SalesOutletName.EMPTY;
 
     /**
-     * <p>
-     * The name of a wholesale or retail sales outlet to which a sales restriction is linked. Non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public SalesOutletName salesOutletName() {

@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Agent name</h1>
- * <p>
- * The name of an agent or local publisher. Optional and non-repeating; required if no agent identifier is sent in an
- * occurrence of the &lt;MarketRepresentation&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AgentName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j401&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;AgentName&gt;Littlehampton Book
- * Services&lt;/AgentName&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Agent name</h1><p>The name of an agent or local publisher. Optional and non-repeating; required if no agent
+ * identifier is sent in an occurrence of the &lt;MarketRepresentation&gt; composite.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 100
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;AgentName&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j401&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;AgentName&gt;Littlehampton Book
+ * Services&lt;/AgentName&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +88,7 @@ public class AgentName implements OnixElement<String>, Serializable {
      * This is the raw content of AgentName. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

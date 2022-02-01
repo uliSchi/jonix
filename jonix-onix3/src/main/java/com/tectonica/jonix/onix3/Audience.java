@@ -20,6 +20,7 @@
 package com.tectonica.jonix.onix3;
 
 import com.tectonica.jonix.common.JPU;
+import com.tectonica.jonix.common.ListOfOnixElement;
 import com.tectonica.jonix.common.OnixComposite.OnixDataCompositeWithKey;
 import com.tectonica.jonix.common.codelist.AudienceCodeTypes;
 import com.tectonica.jonix.common.codelist.RecordSourceTypes;
@@ -32,26 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Audience composite</h1>
- * <p>
- * An optional group of data elements which together describe an audience to which the product is directed. Repeatable
- * to specify multiple distinct audiences.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Audience&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;audience&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -130,6 +111,10 @@ public class Audience implements OnixDataCompositeWithKey<JonixAudience, Audienc
                 case AudienceCodeTypeName.shortname:
                     audienceCodeTypeName = new AudienceCodeTypeName(e);
                     break;
+                case AudienceHeadingText.refname:
+                case AudienceHeadingText.shortname:
+                    audienceHeadingTexts = JPU.addToList(audienceHeadingTexts, new AudienceHeadingText(e));
+                    break;
                 default:
                     break;
             }
@@ -156,10 +141,6 @@ public class Audience implements OnixDataCompositeWithKey<JonixAudience, Audienc
     private AudienceCodeType audienceCodeType = AudienceCodeType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the code in &lt;AudienceCodeValue&gt; is taken. Mandatory in
-     * each occurrence of the &lt;Audience&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public AudienceCodeType audienceCodeType() {
@@ -170,10 +151,6 @@ public class Audience implements OnixDataCompositeWithKey<JonixAudience, Audienc
     private AudienceCodeValue audienceCodeValue = AudienceCodeValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in &lt;AudienceCodeType&gt;. Mandatory in each occurrence of the
-     * &lt;Audience&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public AudienceCodeValue audienceCodeValue() {
@@ -184,15 +161,21 @@ public class Audience implements OnixDataCompositeWithKey<JonixAudience, Audienc
     private AudienceCodeTypeName audienceCodeTypeName = AudienceCodeTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary audience code when the code in &lt;AudienceCodeType&gt; indicates a
-     * proprietary scheme, <i>eg</i> a vendor’s own code. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public AudienceCodeTypeName audienceCodeTypeName() {
         _initialize();
         return audienceCodeTypeName;
+    }
+
+    private ListOfOnixElement<AudienceHeadingText, String> audienceHeadingTexts = ListOfOnixElement.empty();
+
+    /**
+     * Jonix-Comment: this list may be empty
+     */
+    public ListOfOnixElement<AudienceHeadingText, String> audienceHeadingTexts() {
+        _initialize();
+        return audienceHeadingTexts;
     }
 
     @Override

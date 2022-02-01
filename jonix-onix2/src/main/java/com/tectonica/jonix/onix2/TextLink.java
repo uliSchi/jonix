@@ -34,25 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Other text link</h1>
- * <p>
- * A link to the text item specified in the &lt;TextTypeCode&gt; element, using the link type specified in
- * &lt;TextLinkType&gt;.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextLink&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;d106&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Other text link</h1><p>A link to the text item specified in the &lt;TextTypeCode&gt; element, using the link type
+ * specified in &lt;TextLinkType&gt;.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text,
+ * suggested maximum length 300 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;TextLink&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;d106&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -102,9 +87,7 @@ public class TextLink implements OnixElement<String>, Serializable {
      * This is the raw content of TextLink. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

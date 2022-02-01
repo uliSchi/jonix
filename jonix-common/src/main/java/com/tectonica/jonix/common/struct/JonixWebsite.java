@@ -31,26 +31,18 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Website></code> and Onix3
- * <code>&lt;Website></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Website></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixWebsite implements JonixStruct, Serializable {
     public static final JonixWebsite EMPTY = new JonixWebsite();
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 300 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
-     * <p>
      * (type: XHTML)
      */
     public List<String> websiteDescriptions;
 
     /**
-     * Raw Format: Uniform Resource Locator, expressed in full URI syntax in accordance with W3C standards, suggested
-     * maximum length 300 characters
-     * <p>
      * (type: dt.NonEmptyURI)
      */
     public List<String> websiteLinks;

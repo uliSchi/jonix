@@ -32,37 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sales restriction note</h1>
- * <p>
- * A free text field describing an ‘unspecified’ restriction, or giving more explanation of a coded restriction type.
- * Optional, and repeatable if parallel text is provided in multiple languages. The <i>language</i> attribute is
- * optional for a single instance of &lt;SalesRestrictionNote&gt;, but must be included in each instance if
- * &lt;SalesRestrictionNote&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 300 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SalesRestrictionNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x453&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SalesRestriction}&gt;</li>
@@ -70,15 +39,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈
- * {@link SalesRestrictionNote}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈
- * {@link SalesRestrictionNote}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction}
- * ⯈ {@link SalesRestrictionNote}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈ {@link SalesRestrictionNote}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈ {@link SalesRestrictionNote}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction} ⯈ {@link SalesRestrictionNote}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class SalesRestrictionNote implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -113,9 +77,6 @@ public class SalesRestrictionNote implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of SalesRestrictionNote. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 300 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

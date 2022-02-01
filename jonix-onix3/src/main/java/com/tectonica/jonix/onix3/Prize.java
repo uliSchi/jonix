@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Prize composite</h1>
- * <p>
- * An optional group of data elements which together describe a prize or award won by the contributor for a body of work
- * (rather than for this or other specific works or products). Repeatable to describe multiple prizes or awards.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Prize&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;prize&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CollateralDetail}&gt;</li>
@@ -62,15 +42,10 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link Prize}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Contributor} ⯈ {@link Prize}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link Prize}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor}
- * ⯈ {@link Prize}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈
- * {@link Prize}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Prize}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor} ⯈ {@link Prize}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈ {@link Prize}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -182,12 +157,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private ListOfOnixElement<PrizeName, String> prizeNames = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * The name of a prize or award which the product or work has received. Mandatory in each occurrence of the
-     * &lt;Prize&gt; composite, and repeatable to provide a parallel award name in multiple languages. The
-     * <i>language</i> attribute is optional for a single instance of &lt;PrizeName&gt;, but must be included in each
-     * instance if &lt;PrizeName&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixElement<PrizeName, String> prizeNames() {
@@ -198,9 +167,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private PrizeYear prizeYear = PrizeYear.EMPTY;
 
     /**
-     * <p>
-     * The year in which a prize or award was given. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PrizeYear prizeYear() {
@@ -211,9 +177,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private PrizeCountry prizeCountry = PrizeCountry.EMPTY;
 
     /**
-     * <p>
-     * An ISO standard code identifying the country in which a prize or award is given. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PrizeCountry prizeCountry() {
@@ -224,12 +187,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private PrizeRegion prizeRegion = PrizeRegion.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the region in which a prize or award is given. Optional and non-repeatable. A region is
-     * an area which is not a country, but which is precisely defined in geographical terms, <i>eg</i> Newfoundland and
-     * Labrador, Florida. If both country and region are specified, the region must be within the country. Note that US
-     * States have region codes, while US overseas territories have distinct ISO Country Codes.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PrizeRegion prizeRegion() {
@@ -240,10 +197,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private PrizeCode prizeCode = PrizeCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the achievement of the product in relation to a prize or award, <i>eg</i> winner,
-     * runner-up, shortlisted. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PrizeCode prizeCode() {
@@ -254,18 +207,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private ListOfOnixElement<PrizeStatement, String> prizeStatements = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * A short free-text description of the prize or award, intended primarily for display. Optional, and repeatable if
-     * the text is provided in more than one language. The <i>language</i> attribute is optional for a single instance
-     * of &lt;PrizeStatement&gt;, but must be included in each instance if &lt;PrizeStatement&gt; is repeated.
-     * </p>
-     * <p>
-     * &lt;PrizeStatement&gt; is intended for display purposes only. When used, a &lt;PrizeStatement&gt; must be
-     * complete in itself, <i>ie</i> it should not be treated as merely supplementary to other elements within the
-     * &lt;Prize&gt; composite. Nor should &lt;PrizeStatement&gt; be supplied <em>instead</em> of those other elements –
-     * at minimum, the &lt;PrizeCode&gt; element, and whenever appropriate the &lt;PrizeYear&gt; element should be
-     * supplied.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<PrizeStatement, String> prizeStatements() {
@@ -276,11 +217,6 @@ public class Prize implements OnixDataComposite<JonixPrize>, Serializable {
     private ListOfOnixElement<PrizeJury, String> prizeJurys = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text listing members of the jury that awarded the prize. Optional, and repeatable if the text is provided in
-     * more than one language. The <i>language</i> attribute is optional for a single instance of &lt;PrizeJury&gt;, but
-     * must be included in each instance if &lt;PrizeJury&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<PrizeJury, String> prizeJurys() {

@@ -29,25 +29,19 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;OnOrderDetail></code> and Onix3
- * <code>&lt;OnOrderDetail></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;OnOrderDetail></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code>
+ * method.
  */
 @SuppressWarnings("serial")
 public class JonixOnOrderDetail implements JonixStruct, Serializable {
     public static final JonixOnOrderDetail EMPTY = new JonixOnOrderDetail();
 
     /**
-     * Raw Format: As specified by the value in the dateformat attribute, or the default of YYYYMMDD if the attribute is
-     * missing
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String expectedDate;
 
     /**
-     * Raw Format: Positive integer or zero, suggested maximum length 7 digits
-     * <p>
      * (type: dt.PositiveInteger)
      */
     public Integer onOrder;

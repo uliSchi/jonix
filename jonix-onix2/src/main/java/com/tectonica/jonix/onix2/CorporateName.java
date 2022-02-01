@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Corporate contributor name</h1>
- * <p>
- * The name of a corporate body which contributed to the creation of the product, unstructured. Optional and
- * non-repeating: see Group&nbsp;PR.8 introductory text for valid options.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CorporateName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b047&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b047&gt;Good Housekeeping
- * Institute&lt;/b047&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Corporate contributor name</h1><p>The name of a corporate body which contributed to the creation of the product,
+ * unstructured. Optional and non-repeating: see Group&nbsp;PR.8 introductory text for valid options.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 200
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;CorporateName&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b047&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b047&gt;Good Housekeeping
+ * Institute&lt;/b047&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -73,10 +55,8 @@ import java.io.Serializable;
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link CorporateName}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link CorporateName}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link CorporateName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CopyrightStatement} ⯈ {@link CopyrightOwner} ⯈
- * {@link CorporateName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Conference} ⯈ {@link ConferenceSponsor} ⯈
- * {@link CorporateName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CopyrightStatement} ⯈ {@link CopyrightOwner} ⯈ {@link CorporateName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Conference} ⯈ {@link ConferenceSponsor} ⯈ {@link CorporateName}</li>
  * </ul>
  */
 public class CorporateName implements OnixElement<String>, Serializable {
@@ -114,9 +94,7 @@ public class CorporateName implements OnixElement<String>, Serializable {
      * This is the raw content of CorporateName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 200 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 200 characters<p> (type: NonEmptyString)
      */
     public String value;
 

@@ -34,32 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Set title</h1>
- * <p>
- * The full title of the set, without abbreviation or abridgement. Non-repeating. Either the &lt;TitleOfSet&gt; element
- * or at least one occurrence of the &lt;Title&gt; composite must occur in each occurrence of the &lt;Set&gt; composite.
- * The &lt;Title&gt; composite provides a more comprehensive representation of a set title, and allows alternative forms
- * to be sent.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TitleOfSet&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b023&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b023&gt;Lives of the
- * Artists&lt;/b023&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Set title</h1><p>The full title of the set, without abbreviation or abridgement. Non-repeating. Either the
+ * &lt;TitleOfSet&gt; element or at least one occurrence of the &lt;Title&gt; composite must occur in each occurrence of
+ * the &lt;Set&gt; composite. The &lt;Title&gt; composite provides a more comprehensive representation of a set title,
+ * and allows alternative forms to be sent.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * text, suggested maximum length 300 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;TitleOfSet&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b023&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b023&gt;Lives of the
+ * Artists&lt;/b023&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +87,7 @@ public class TitleOfSet implements OnixElement<String>, Serializable {
      * This is the raw content of TitleOfSet. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

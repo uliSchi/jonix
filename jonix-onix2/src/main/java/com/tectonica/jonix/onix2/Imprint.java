@@ -34,21 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Imprint or brand composite</h1>
- * <p>
- * A repeatable group of data elements which together identify an imprint or brand under which the product is marketed.
- * The composite must carry either a name code or a name or both.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Imprint&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;imprint&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Imprint or brand composite</h1><p>A repeatable group of data elements which together identify an imprint or brand
+ * under which the product is marketed. The composite must carry either a name code or a name or both.</p><table
+ * border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;Imprint&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;imprint&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -167,10 +156,9 @@ public class Imprint implements OnixDataCompositeUncommon, Serializable {
     private NameCodeType nameCodeType = NameCodeType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the value in the &lt;NameCodeValue&gt; element is taken.
-     * Optional and non-repeating, but mandatory if the &lt;Imprint&gt; composite does not carry an &lt;ImprintName&gt;.
-     * </p>
+     * <p>An ONIX code which identifies the scheme from which the value in the &lt;NameCodeValue&gt; element is taken.
+     * Optional and non-repeating, but mandatory if the &lt;Imprint&gt; composite does not carry an
+     * &lt;ImprintName&gt;.</p>
      * Jonix-Comment: this field is required
      */
     public NameCodeType nameCodeType() {
@@ -181,10 +169,8 @@ public class Imprint implements OnixDataCompositeUncommon, Serializable {
     private NameCodeValue nameCodeValue = NameCodeValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and only if
-     * &lt;NameCodeType&gt; is present, and non-repeating.
-     * </p>
+     * <p>A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and only if
+     * &lt;NameCodeType&gt; is present, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public NameCodeValue nameCodeValue() {
@@ -195,11 +181,9 @@ public class Imprint implements OnixDataCompositeUncommon, Serializable {
     private ImprintName imprintName = ImprintName.EMPTY;
 
     /**
-     * <p>
-     * The name of an imprint or brand under which the product is issued, as it appears on the product. Mandatory if
+     * <p>The name of an imprint or brand under which the product is issued, as it appears on the product. Mandatory if
      * there is no name code in an occurrence of the &lt;Imprint&gt; composite, and optional if a name code is included.
-     * Non-repeating.
-     * </p>
+     * Non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public ImprintName imprintName() {
@@ -210,10 +194,8 @@ public class Imprint implements OnixDataCompositeUncommon, Serializable {
     private NameCodeTypeName nameCodeTypeName = NameCodeTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt; indicates a proprietary
-     * scheme, <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.
-     * </p>
+     * <p>A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt; indicates a proprietary
+     * scheme, <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public NameCodeTypeName nameCodeTypeName() {

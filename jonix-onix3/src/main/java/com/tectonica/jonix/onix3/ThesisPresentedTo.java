@@ -31,34 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Thesis presented to</h1>
- * <p>
- * The name of an academic institution to which a thesis was presented. Optional and non-repeating, but if this element
- * is present, &lt;ThesisType&gt; must also be present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ThesisPresentedTo&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b369&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -100,8 +72,6 @@ public class ThesisPresentedTo implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ThesisPresentedTo. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 300 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

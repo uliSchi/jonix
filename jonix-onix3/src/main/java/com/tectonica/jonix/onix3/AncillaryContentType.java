@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Illustration or other content type code</h1>
- * <p>
- * An ONIX code which identifies the type of illustration or other content to which an occurrence of the composite
- * refers. Mandatory in each occurrence of the &lt;AncillaryContent&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 25</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AncillaryContentType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x423&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x423&gt;09&lt;/x423&gt;</tt> (Illustrations, unspecified)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link AncillaryContent}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AncillaryContent} ⯈
- * {@link AncillaryContentType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AncillaryContent} ⯈ {@link AncillaryContentType}</li>
  * </ul>
  */
 public class AncillaryContentType implements OnixElement<IllustrationAndOtherContentTypes>, Serializable {

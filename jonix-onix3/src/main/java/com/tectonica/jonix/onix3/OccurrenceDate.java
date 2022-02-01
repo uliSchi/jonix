@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event occurrence date</h1>
- * <p>
- * A group of data elements which together specify a date associated with the event occurrence. At least the date (and
- * typically also the time) the event occurrence begins must be specified, and other dates related to the event
- * occurrence can be sent in further repeats of the composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OccurrenceDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;occurrencedate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EventOccurrence}&gt;</li>
@@ -60,11 +39,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence} ⯈ {@link OccurrenceDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link OccurrenceDate}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class OccurrenceDate
     implements OnixDataCompositeWithKey<JonixOccurrenceDate, EventOccurrenceDateRoles>, Serializable {
@@ -162,10 +138,6 @@ public class OccurrenceDate
     private OccurrenceDateRole occurrenceDateRole = OccurrenceDateRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the significance of the date, <i>eg</i> the date of the occurrence, last date of ticket
-     * availability <i>etc</i>. Mandatory in each instance of the &lt;OccurrenceDate&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public OccurrenceDateRole occurrenceDateRole() {
@@ -176,14 +148,6 @@ public class OccurrenceDate
     private Date date = Date.EMPTY;
 
     /**
-     * <p>
-     * The date specified in the &lt;OccurrenceDateRole&gt; field. Mandatory in each occurrence of the
-     * &lt;OccurrenceDate&gt; composite, and non-repeating. &lt;Date&gt; may carry a <i>dateformat</i> attribute: if the
-     * attribute is missing, then &lt;DateFormat&gt; indicates the format of the date; if both <i>dateformat</i>
-     * attribute and &lt;DateFormat&gt; element are missing, the default format is YYYYMMDDThhmm (local time at the
-     * venue). Note that this date format may include a time zone offset (Z for times in UTC, or ±hhmm), and this should
-     * always be included where there is any doubt, <i>eg</i> when the event is available online.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Date date() {
@@ -194,10 +158,6 @@ public class OccurrenceDate
     private DateFormat dateFormat = DateFormat.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and not repeatable.
-     * Deprecated – where possible, use the <i>dateformat</i> attribute instead.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DateFormat dateFormat() {

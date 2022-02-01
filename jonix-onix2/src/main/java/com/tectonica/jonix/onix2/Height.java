@@ -34,33 +34,14 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Overall height</h1>
- * <p>
- * The overall height of the product: in the case of a book, the spine height, in the units specified in the message
- * header, &lt;DefaultLinearUnit&gt; field, defined in the <cite>ONIX for Books – Product Information Message – XML
- * Message Specification</cite>. Optional and non-repeating; but required if either &lt;Width&gt; or &lt;Thickness&gt;
- * is present. <strong>The &lt;Measure&gt; composite on a previous page provides a more general method of handling
- * measurements, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length real number, with an explicit decimal point when required, suggested maximum length 6 characters
- * including a decimal point.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Height&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;c096&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;c096&gt;8.25&lt;/c096&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Overall height</h1><p>The overall height of the product: in the case of a book, the spine height, in the units
+ * specified in the message header, &lt;DefaultLinearUnit&gt; field, defined in the <cite>ONIX for Books – Product
+ * Information Message – XML Message Specification</cite>. Optional and non-repeating; but required if either
+ * &lt;Width&gt; or &lt;Thickness&gt; is present. <strong>The &lt;Measure&gt; composite on a previous page provides a
+ * more general method of handling measurements, and is to be preferred.</strong></p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable length real number, with an explicit decimal point when required,
+ * suggested maximum length 6 characters including a decimal point.</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;Height&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;c096&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;c096&gt;8.25&lt;/c096&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -111,9 +92,7 @@ public class Height implements OnixElement<String>, Serializable {
      * you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable length real number, with an explicit decimal point when required, suggested maximum length 6
-     * characters including a decimal point.
-     * <p>
-     * (type: NonEmptyString)
+     * characters including a decimal point.<p> (type: NonEmptyString)
      */
     public String value;
 

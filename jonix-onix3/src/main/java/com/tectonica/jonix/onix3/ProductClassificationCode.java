@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product classification code</h1>
- * <p>
- * A classification code from the scheme specified in &lt;ProductClassificationType&gt;. Mandatory in each occurrence of
- * the &lt;ProductClassification&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>According to the identifier type specified in &lt;ProductClassificationType&gt;</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductClassificationCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b275&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b275&gt;55101514&lt;/b275&gt;</tt> (Sheet music in UNSPSC classification scheme)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductClassification}&gt;</li>
@@ -65,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductClassification} ⯈
- * {@link ProductClassificationCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductClassification} ⯈ {@link ProductClassificationCode}</li>
  * </ul>
  */
 public class ProductClassificationCode implements OnixElement<String>, Serializable {
@@ -96,10 +67,8 @@ public class ProductClassificationCode implements OnixElement<String>, Serializa
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ProductClassificationCode. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: According to the identifier type specified in &lt;ProductClassificationType&gt;
+     * This is the raw content of ProductClassificationCode. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: dt.NonEmptyString)
      */

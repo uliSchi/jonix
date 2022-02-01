@@ -34,25 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Promotion contact details</h1>
- * <p>
- * Free text giving the name, department, phone number, email address <em>etc</em> for a promotional contact person for
- * the product. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PromotionContact&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;k166&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Promotion contact details</h1><p>Free text giving the name, department, phone number, email address <em>etc</em>
+ * for a promotional contact person for the product. Optional and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 300
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;PromotionContact&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;k166&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -99,9 +85,7 @@ public class PromotionContact implements OnixElement<String>, Serializable {
      * This is the raw content of PromotionContact. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

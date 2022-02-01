@@ -36,21 +36,9 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Other text composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together identify and either include, or provide pointers to,
- * text related to the product.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OtherText&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;othertext&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Other text composite</h1><p>An optional and repeatable group of data elements which together identify and either
+ * include, or provide pointers to, text related to the product.</p><table border='1' cellpadding='3'><tr><td>Reference
+ * name</td><td><tt>&lt;OtherText&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;othertext&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -203,10 +191,9 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextTypeCode textTypeCode = TextTypeCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the type of text which is sent in the &lt;Text&gt; element, or referenced in the
-     * &lt;TextLink&gt; element. Mandatory in each occurrence of the &lt;OtherText&gt; composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code which identifies the type of text which is sent in the &lt;Text&gt; element, or referenced in the
+     * &lt;TextLink&gt; element. Mandatory in each occurrence of the &lt;OtherText&gt; composite, and
+     * non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public TextTypeCode textTypeCode() {
@@ -217,9 +204,7 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextLinkType textLinkType = TextLinkType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the type of link which is given in the &lt;TextLink&gt; element.
-     * </p>
+     * <p>An ONIX code which identifies the type of link which is given in the &lt;TextLink&gt; element.</p>
      * Jonix-Comment: this field is required
      */
     public TextLinkType textLinkType() {
@@ -230,10 +215,8 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextLink textLink = TextLink.EMPTY;
 
     /**
-     * <p>
-     * A link to the text item specified in the &lt;TextTypeCode&gt; element, using the link type specified in
-     * &lt;TextLinkType&gt;.
-     * </p>
+     * <p>A link to the text item specified in the &lt;TextTypeCode&gt; element, using the link type specified in
+     * &lt;TextLinkType&gt;.</p>
      * Jonix-Comment: this field is required
      */
     public TextLink textLink() {
@@ -244,13 +227,11 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextFormat textFormat = TextFormat.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the format of text which is sent in the &lt;Text&gt; element, or referenced in the
-     * &lt;TextLink&gt; element. Optional and non-repeating. <strong>It is now possible to use a “textformat” attribute
-     * in the &lt;Text&gt; element for this purpose, and this is the recommended practise when the text is sent in the
-     * ONIX record. The &lt;TextFormat&gt; element may still be used when the text is held outside the ONIX record, and
-     * referenced by the &lt;TextLink&gt; element.</strong>
-     * </p>
+     * <p>An ONIX code which identifies the format of text which is sent in the &lt;Text&gt; element, or referenced in
+     * the &lt;TextLink&gt; element. Optional and non-repeating. <strong>It is now possible to use a “textformat”
+     * attribute in the &lt;Text&gt; element for this purpose, and this is the recommended practise when the text is
+     * sent in the ONIX record. The &lt;TextFormat&gt; element may still be used when the text is held outside the ONIX
+     * record, and referenced by the &lt;TextLink&gt; element.</strong></p>
      * Jonix-Comment: this field is optional
      */
     public TextFormat textFormat() {
@@ -261,15 +242,11 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private Text text = Text.EMPTY;
 
     /**
-     * <p>
-     * The text specified in the &lt;TextTypeCode&gt; element, if it is suitable to be sent in full as part of the ONIX
-     * record. Either the &lt;Text&gt; element or both of the &lt;TextLinkType&gt; and &lt;TextLink&gt; elements must be
-     * present in any occurrence of the &lt;OtherText&gt; composite. Non-repeating.
-     * </p>
-     * <p>
-     * The &lt;Text&gt; element may carry any of the following ONIX attributes: <i>textformat, language,
-     * transliteration, textcase</i>.
-     * </p>
+     * <p>The text specified in the &lt;TextTypeCode&gt; element, if it is suitable to be sent in full as part of the
+     * ONIX record. Either the &lt;Text&gt; element or both of the &lt;TextLinkType&gt; and &lt;TextLink&gt; elements
+     * must be present in any occurrence of the &lt;OtherText&gt; composite. Non-repeating.</p><p>The &lt;Text&gt;
+     * element may carry any of the following ONIX attributes: <i>textformat, language, transliteration,
+     * textcase</i>.</p>
      * Jonix-Comment: this field is optional
      */
     public Text text() {
@@ -280,10 +257,8 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextAuthor textAuthor = TextAuthor.EMPTY;
 
     /**
-     * <p>
-     * The name of the author of text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element,
-     * <em>eg</em> if it is a review or promotional quote.
-     * </p>
+     * <p>The name of the author of text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt;
+     * element, <em>eg</em> if it is a review or promotional quote.</p>
      * Jonix-Comment: this field is optional
      */
     public TextAuthor textAuthor() {
@@ -294,10 +269,9 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextSourceCorporate textSourceCorporate = TextSourceCorporate.EMPTY;
 
     /**
-     * <p>
-     * The name of a company or corporate body responsible for the text sent in the &lt;Text&gt; element, or referenced
-     * in the &lt;TextLink&gt; element, <em>eg</em> if it is part of a Reading Group Guide. Optional and non-repeating.
-     * </p>
+     * <p>The name of a company or corporate body responsible for the text sent in the &lt;Text&gt; element, or
+     * referenced in the &lt;TextLink&gt; element, <em>eg</em> if it is part of a Reading Group Guide. Optional and
+     * non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public TextSourceCorporate textSourceCorporate() {
@@ -308,10 +282,8 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextSourceTitle textSourceTitle = TextSourceTitle.EMPTY;
 
     /**
-     * <p>
-     * The title of a publication from which the text sent in the &lt;Text&gt; element, or referenced in the
-     * &lt;TextLink&gt; element, was taken, <em>eg</em> if it is a review quote. Optional and non-repeating.
-     * </p>
+     * <p>The title of a publication from which the text sent in the &lt;Text&gt; element, or referenced in the
+     * &lt;TextLink&gt; element, was taken, <em>eg</em> if it is a review quote. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public TextSourceTitle textSourceTitle() {
@@ -322,10 +294,8 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private TextPublicationDate textPublicationDate = TextPublicationDate.EMPTY;
 
     /**
-     * <p>
-     * The date on which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, was
-     * published. Optional and non-repeating.
-     * </p>
+     * <p>The date on which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, was
+     * published. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public TextPublicationDate textPublicationDate() {
@@ -336,11 +306,9 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private StartDate startDate = StartDate.EMPTY;
 
     /**
-     * <p>
-     * The date from which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, is
+     * <p>The date from which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, is
      * intended to be used, <em>eg</em> for date-limited promotions. Optional and non-repeating, but either both or
-     * neither of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.
-     * </p>
+     * neither of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.</p>
      * Jonix-Comment: this field is optional
      */
     public StartDate startDate() {
@@ -351,11 +319,9 @@ public class OtherText implements OnixDataCompositeWithKey<JonixOtherText, Other
     private EndDate endDate = EndDate.EMPTY;
 
     /**
-     * <p>
-     * The date until which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, is
+     * <p>The date until which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, is
      * intended to be used, <em>eg</em> for date-limited promotions. Optional and non-repeating, but either both or
-     * neither of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.
-     * </p>
+     * neither of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.</p>
      * Jonix-Comment: this field is optional
      */
     public EndDate endDate() {

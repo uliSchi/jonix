@@ -31,9 +31,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;Title></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;Title></code>.<p>It can be retrieved from the
+ * composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixTitle implements JonixKeyedStruct<TitleTypes>, Serializable {
@@ -45,39 +44,29 @@ public class JonixTitle implements JonixKeyedStruct<TitleTypes>, Serializable {
     public TitleTypes titleType;
 
     /**
-     * Raw Format: Variable-length integer, suggested maximum 3 digits
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, suggested maximum 3 digits <p> (type: NonEmptyString)
      */
     public String abbreviatedLength;
 
     public TextCaseFlags textCaseFlag;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum 300 characters <p> (type: NonEmptyString)
      */
     public String titleText;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 20 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 20 characters <p> (type: NonEmptyString)
      */
     public String titlePrefix;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters <p> (type: NonEmptyString)
      */
     public String titleWithoutPrefix;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters <p> (type: NonEmptyString)
      */
     public String subtitle;
 

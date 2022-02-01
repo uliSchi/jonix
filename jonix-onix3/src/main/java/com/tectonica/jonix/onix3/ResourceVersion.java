@@ -36,27 +36,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Resource version composite</h1>
- * <p>
- * A group of data elements which together describe a single version of a supporting resource, for example a particular
- * format of a cover image. At least one instance is mandatory in each occurrence of the &lt;SupportingResource&gt;
- * composite, and the composite should be repeated as necessary if the resource is offered in multiple versions.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ResourceVersion&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;resourceversion&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupportingResource}&gt;</li>
@@ -64,12 +43,11 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource}
- * ⯈ {@link ResourceVersion}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈
- * {@link ResourceVersion}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion}</li>
  * </ul>
  */
 public class ResourceVersion implements OnixSuperComposite, Serializable {
@@ -171,10 +149,6 @@ public class ResourceVersion implements OnixSuperComposite, Serializable {
     private ResourceForm resourceForm = ResourceForm.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the form of a version of a supporting resource. Mandatory in each occurrence of the
-     * &lt;ResourceVersion&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ResourceForm resourceForm() {
@@ -185,12 +159,6 @@ public class ResourceVersion implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<ResourceLink, String> resourceLinks = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * A URL which provides a link to a supporting resource. Mandatory in each occurrence of the &lt;ResourceVersion&gt;
-     * composite, and repeatable if the resource can be linked in more than one way, <i>eg</i> by URL or DOI, or where a
-     * supporting resource is available in multiple parallel languages. Where multiple languages are used, all repeats
-     * must carry the <i>language</i> attribute.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixElement<ResourceLink, String> resourceLinks() {
@@ -202,12 +170,6 @@ public class ResourceVersion implements OnixSuperComposite, Serializable {
         ResourceVersionFeatureTypes> resourceVersionFeatures = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together describe a feature of a supporting resource which is specific to a
-     * particular version in which the resource is offered. Formally optional, but it is unlikely that a supporting
-     * resource version could be adequately described without specifying some of its features. Repeatable in order to
-     * specify multiple features of the version of the resource.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public
@@ -221,11 +183,6 @@ public class ResourceVersion implements OnixSuperComposite, Serializable {
         ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * An optional group of data elements which together specify a date associated with a supporting resource version,
-     * <i>eg</i> the date until which the resource version will be available for download. Repeatable to specify
-     * different dates with their various roles.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<ContentDate, JonixContentDate, ContentDateRoles> contentDates() {

@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Bible text feature</h1>
- * <p>
- * An ONIX code specifying a feature of a Bible text not covered elsewhere, <i>eg</i> red letter. Optional, and
- * repeatable to specify multiple features.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two letters</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 97</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;BibleTextFeature&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b357&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;BibleTextFeature&gt;RL&lt;/BibleTextFeature&gt;</tt> (Red letter)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Bible}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈ {@link Bible} ⯈
- * {@link BibleTextFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ReligiousText} ⯈ {@link Bible} ⯈ {@link BibleTextFeature}</li>
  * </ul>
  */
 public class BibleTextFeature implements OnixElement<BibleTextFeatures>, Serializable {

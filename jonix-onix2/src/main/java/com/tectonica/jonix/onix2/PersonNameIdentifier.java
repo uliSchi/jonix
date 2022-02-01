@@ -36,22 +36,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Person name identifier composite</h1>
- * <p>
- * A repeatable group of data elements which together specify a party name identifier, used here to carry an identifier
- * for a name given in an occurrence of the &lt;Contributor&gt; composite. Optional: see Group&nbsp;PR.8 introductory
- * text for valid options.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PersonNameIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;personnameidentifier&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Person name identifier composite</h1><p>A repeatable group of data elements which together specify a party name
+ * identifier, used here to carry an identifier for a name given in an occurrence of the &lt;Contributor&gt; composite.
+ * Optional: see Group&nbsp;PR.8 introductory text for valid options.</p><table border='1'
+ * cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;PersonNameIdentifier&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;personnameidentifier&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -63,27 +52,19 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈
- * {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link Name} ⯈ {@link PersonNameIdentifier}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link PersonNameIdentifier}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonNameIdentifier}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonNameIdentifier}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link PersonNameIdentifier}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PersonAsSubject} ⯈ {@link PersonNameIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈
- * {@link PersonNameIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link PersonAsSubject} ⯈ {@link PersonNameIdentifier}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -193,10 +174,8 @@ public class PersonNameIdentifier
     private PersonNameIDType personNameIDType = PersonNameIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;PersonNameIdentifier&gt; composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken.
+     * Mandatory in each occurrence of the &lt;PersonNameIdentifier&gt; composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public PersonNameIDType personNameIDType() {
@@ -207,10 +186,8 @@ public class PersonNameIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in the &lt;PersonNameIDType&gt; element. Mandatory in each
-     * occurrence of the composite, and non-repeating.
-     * </p>
+     * <p>A code value taken from the scheme specified in the &lt;PersonNameIDType&gt; element. Mandatory in each
+     * occurrence of the composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -221,10 +198,8 @@ public class PersonNameIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme when, and only when, the code in the
-     * &lt;PersonNameIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
+     * <p>A name which identifies a proprietary identifier scheme when, and only when, the code in the
+     * &lt;PersonNameIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

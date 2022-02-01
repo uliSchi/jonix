@@ -31,44 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Subject scheme identifier</h1>
- * <p>
- * An ONIX code which identifies the category scheme which is used in an occurrence of the &lt;Subject&gt; composite.
- * Mandatory in each occurrence of the composite, and non-repeating.
- * </p>
- * <p>
- * For category schemes that use code values, use the associated &lt;SubjectCode&gt; element to carry the value (if so
- * required, the &lt;SubjectHeadingText&gt; element can be used simultaneously to carry the text equivalent of the
- * code). For schemes that use text headings, use the &lt;SubjectHeadingText&gt; element to carry the text of the
- * category heading.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two alphanumeric characters</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 27</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SubjectSchemeIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b067&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b067&gt;03&lt;/b067&gt;</tt> (US Library of Congress classification)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Subject}&gt;</li>
@@ -76,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Subject} ⯈
- * {@link SubjectSchemeIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Subject} ⯈
- * {@link SubjectSchemeIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Subject} ⯈ {@link SubjectSchemeIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Subject} ⯈ {@link SubjectSchemeIdentifier}</li>
  * </ul>
  */
 public class SubjectSchemeIdentifier implements OnixElement<SubjectSchemeIdentifiers>, Serializable {

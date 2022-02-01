@@ -30,9 +30,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;SupplierOwnCoding></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;SupplierOwnCoding></code>.<p>It can be retrieved
+ * from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixSupplierOwnCoding implements JonixKeyedStruct<SupplierOwnCodeTypes>, Serializable {
@@ -44,15 +43,11 @@ public class JonixSupplierOwnCoding implements JonixKeyedStruct<SupplierOwnCodeT
     public SupplierOwnCodeTypes supplierCodeType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String supplierCodeTypeName;
 
     /**
-     * Raw Format: According to the supplier's own format for the code type specified in &lt;SupplierCodeType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String supplierCodeValue;

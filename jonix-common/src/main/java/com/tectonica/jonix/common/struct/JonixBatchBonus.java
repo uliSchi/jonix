@@ -29,24 +29,19 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;BatchBonus></code> and Onix3
- * <code>&lt;BatchBonus></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;BatchBonus></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code>
+ * method.
  */
 @SuppressWarnings("serial")
 public class JonixBatchBonus implements JonixStruct, Serializable {
     public static final JonixBatchBonus EMPTY = new JonixBatchBonus();
 
     /**
-     * Raw Format: Positive integer, suggested maximum length 4 digits
-     * <p>
      * (type: dt.StrictPositiveInteger)
      */
     public Integer batchQuantity;
 
     /**
-     * Raw Format: Positive integer, suggested maximum length 4 digits
-     * <p>
      * (type: dt.StrictPositiveInteger)
      */
     public Integer freeQuantity;

@@ -31,9 +31,8 @@ import java.util.List;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;AncillaryContent></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;AncillaryContent></code>.<p>It can be retrieved
+ * from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixAncillaryContent implements JonixKeyedStruct<IllustrationAndOtherContentTypes>, Serializable {
@@ -45,16 +44,11 @@ public class JonixAncillaryContent implements JonixKeyedStruct<IllustrationAndOt
     public IllustrationAndOtherContentTypes ancillaryContentType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 100 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
-     * <p>
      * (type: XHTML)
      */
     public List<String> ancillaryContentDescriptions;
 
     /**
-     * Raw Format: Positive integer or zero, suggested maximum length 6 digits
-     * <p>
      * (type: dt.PositiveInteger)
      */
     public Integer number;

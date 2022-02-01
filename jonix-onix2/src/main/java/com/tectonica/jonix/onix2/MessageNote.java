@@ -34,32 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Message note</h1>
- * <p>
- * Free text giving additional information about the message. Optional and non-repeating.
- * </p>
- * <p class="new214">
- * The text is not limited to ASCII characters.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length ASCII text, suggested maximum 500 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MessageNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;m183&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MessageNote&gt;Updates for titles to be
- * published September 2000&lt;/MessageNote&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Message note</h1><p>Free text giving additional information about the message. Optional and non-repeating.</p><p
+ * class="new214">The text is not limited to ASCII characters.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length ASCII text, suggested maximum 500
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;MessageNote&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;m183&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;MessageNote&gt;Updates for titles to be
+ * published September 2000&lt;/MessageNote&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +86,7 @@ public class MessageNote implements OnixElement<String>, Serializable {
      * This is the raw content of MessageNote. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length ASCII text, suggested maximum 500 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length ASCII text, suggested maximum 500 characters<p> (type: NonEmptyString)
      */
     public String value;
 

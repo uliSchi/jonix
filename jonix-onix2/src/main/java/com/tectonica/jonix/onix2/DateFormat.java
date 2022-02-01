@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Date format</h1>
- * <p>
- * An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and non-repeating. When
- * omitted, the format is assumed to be YYYYMMDD.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 55</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DateFormat&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j260&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;DateFormat&gt;05&lt;/DateFormat&gt;</tt> YYYY</td>
- * </tr>
- * </table>
+ * <h1>Date format</h1><p>An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and
+ * non-repeating. When omitted, the format is assumed to be YYYYMMDD.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric digits</td></tr><tr><td>Codelist</td><td>List
+ * 55</td></tr><tr><td>Reference name</td><td><tt>&lt;DateFormat&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j260&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;DateFormat&gt;05&lt;/DateFormat&gt;</tt>
+ * YYYY</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -73,17 +52,12 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link DateFormat}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MarketRepresentation} ⯈ {@link MarketDate} ⯈
- * {@link DateFormat}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MarketRepresentation} ⯈ {@link MarketDate} ⯈ {@link DateFormat}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link DateFormat}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link DateFormat}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link DateFormat}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link DateFormat}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link DateFormat}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link DateFormat}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link DateFormat}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link DateFormat}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link DateFormat}</li>
  * </ul>
  *
  * @since Onix-2.1

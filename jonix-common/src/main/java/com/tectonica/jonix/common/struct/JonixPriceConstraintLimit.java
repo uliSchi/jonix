@@ -29,18 +29,14 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceConstraintLimit></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceConstraintLimit></code>.<p>It can be
+ * retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPriceConstraintLimit implements JonixStruct, Serializable {
     public static final JonixPriceConstraintLimit EMPTY = new JonixPriceConstraintLimit();
 
     /**
-     * Raw Format: Positive real number, with explicit decimal point when required, or zero, as appropriate for the
-     * units specified in &lt;EpubUsageUnit&gt;
-     * <p>
      * (type: dt.PositiveDecimal)
      */
     public Double quantity;

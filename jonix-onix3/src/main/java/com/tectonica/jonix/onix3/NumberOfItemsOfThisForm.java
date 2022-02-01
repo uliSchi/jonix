@@ -30,36 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Number of items of a specified form (product part)</h1>
- * <p>
- * When product parts are listed as a specified number of <em>different</em> items in a specified form, without
- * identifying the individual items, &lt;NumberOfItemsOfThisForm&gt; must be used to carry the quantity, even if the
- * number is ‘1’. Consequently the element is mandatory and non-repeating in an occurrence of the &lt;ProductPart&gt;
- * composite if &lt;NumberOfCopies&gt; is not present; and it must not be used if &lt;ProductIdentifier&gt; is present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive integer, suggested maximum length 4 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NumberOfItemsOfThisForm&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x322&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x322&gt;3&lt;/x322&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductPart}&gt;</li>
@@ -67,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈
- * {@link NumberOfItemsOfThisForm}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link NumberOfItemsOfThisForm}</li>
  * </ul>
  */
 public class NumberOfItemsOfThisForm implements OnixElement<Integer>, Serializable {
@@ -98,10 +67,8 @@ public class NumberOfItemsOfThisForm implements OnixElement<Integer>, Serializab
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of NumberOfItemsOfThisForm. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive integer, suggested maximum length 4 digits
+     * This is the raw content of NumberOfItemsOfThisForm. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: dt.StrictPositiveInteger)
      */

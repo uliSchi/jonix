@@ -36,21 +36,9 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Measure composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together identify a measurement and the units in which it is
- * expressed.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Measure&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;measure&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Measure composite</h1><p>An optional and repeatable group of data elements which together identify a measurement
+ * and the units in which it is expressed.</p><table border='1' cellpadding='3'><tr><td>Reference
+ * name</td><td><tt>&lt;Measure&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;measure&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -165,10 +153,8 @@ public class Measure implements OnixDataCompositeWithKey<JonixMeasure, MeasureTy
     private MeasureTypeCode measureTypeCode = MeasureTypeCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the dimension which is specified by an occurrence of the measure composite. Mandatory in
-     * each occurrence of the &lt;Measure&gt; composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code indicating the dimension which is specified by an occurrence of the measure composite. Mandatory
+     * in each occurrence of the &lt;Measure&gt; composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public MeasureTypeCode measureTypeCode() {
@@ -179,10 +165,9 @@ public class Measure implements OnixDataCompositeWithKey<JonixMeasure, MeasureTy
     private Measurement measurement = Measurement.EMPTY;
 
     /**
-     * <p>
-     * The number which represents the dimension specified in &lt;MeasureTypeCode&gt; in the measure units specified in
-     * &lt;MeasureUnitCode&gt;. Mandatory in each occurrence of the &lt;Measure&gt; composite, and non-repeating.
-     * </p>
+     * <p>The number which represents the dimension specified in &lt;MeasureTypeCode&gt; in the measure units specified
+     * in &lt;MeasureUnitCode&gt;. Mandatory in each occurrence of the &lt;Measure&gt; composite, and
+     * non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public Measurement measurement() {
@@ -193,11 +178,9 @@ public class Measure implements OnixDataCompositeWithKey<JonixMeasure, MeasureTy
     private MeasureUnitCode measureUnitCode = MeasureUnitCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the measure unit in which dimensions are given. Mandatory in each occurrence of the
+     * <p>An ONIX code indicating the measure unit in which dimensions are given. Mandatory in each occurrence of the
      * &lt;Measure&gt; composite, and non-repeating. This element must follow the dimension to which the measure unit
-     * applies. See example below.
-     * </p>
+     * applies. See example below.</p>
      * Jonix-Comment: this field is required
      */
     public MeasureUnitCode measureUnitCode() {

@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sales rights type code</h1>
- * <p>
- * An ONIX code which identifies the type of sales right or exclusion which applies in the territories which are
- * associated with it. Mandatory in each occurrence of the &lt;SalesRights&gt; composite, and non-repeating. Values
- * include: for sale with exclusive rights, for sale with non-exclusive rights, not for sale.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 46</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SalesRightsType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b089&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;SalesRightsType&gt;02&lt;/SalesRightsType&gt;</tt> (For sale with non-exclusive rights in the specified
- * territory)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SalesRights}&gt;</li>
@@ -72,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈
- * {@link SalesRightsType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRightsType}</li>
  * </ul>
  */
 public class SalesRightsType implements OnixElement<SalesRightsTypes>, Serializable {

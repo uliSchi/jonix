@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Complexity scheme identifier</h1>
- * <p>
- * An ONIX code specifying the scheme from which the value in &lt;ComplexityCode&gt; is taken. Mandatory in each
- * occurrence of the &lt;Complexity&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 32</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ComplexitySchemeIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b077&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b077&gt;06&lt;/b077&gt;</tt> (Lexile measure)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Complexity}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Complexity} ⯈
- * {@link ComplexitySchemeIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Complexity} ⯈ {@link ComplexitySchemeIdentifier}</li>
  * </ul>
  */
 public class ComplexitySchemeIdentifier implements OnixElement<ComplexitySchemeIdentifiers>, Serializable {

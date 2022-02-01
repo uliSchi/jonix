@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Record source identifier composite</h1>
- * <p>
- * A group of data elements which together define an identifier of the organization which is the source of the ONIX
- * record. Optional, and repeatable in order to send multiple identifiers for the same organization.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;RecordSourceIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;recordsourceidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Product}&gt;</li>
@@ -158,10 +138,6 @@ public class RecordSourceIdentifier
     private RecordSourceIDType recordSourceIDType = RecordSourceIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;RecordSourceIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public RecordSourceIDType recordSourceIDType() {
@@ -172,10 +148,6 @@ public class RecordSourceIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;RecordSourceIDType&gt; element. Mandatory in each occurrence of
-     * the &lt;RecordSourceIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -186,11 +158,6 @@ public class RecordSourceIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Used when, and only when, the code in the &lt;RecordSourceIDType&gt;
-     * element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

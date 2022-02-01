@@ -34,27 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Download terms</h1>
- * <p>
- * Text of any terms and conditions associated with a download file. Optional and non-repeating. This field may be sent
- * alone, or with the &lt;TextWithDownload&gt; element, or with any combination of the &lt;DownloadCaption&gt;,
- * &lt;DownloadCredit&gt;, and &lt;DownloadCopyrightNotice&gt; elements.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 500 characters (XHTML is enabled in this element - see ONIX for
- * Books - Product Information Message - XML Message Specification, Section 7)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DownloadTerms&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f122&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Download terms</h1><p>Text of any terms and conditions associated with a download file. Optional and
+ * non-repeating. This field may be sent alone, or with the &lt;TextWithDownload&gt; element, or with any combination of
+ * the &lt;DownloadCaption&gt;, &lt;DownloadCredit&gt;, and &lt;DownloadCopyrightNotice&gt; elements.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 500 characters
+ * (XHTML is enabled in this element - see ONIX for Books - Product Information Message - XML Message Specification,
+ * Section 7)</td></tr><tr><td>Reference name</td><td><tt>&lt;DownloadTerms&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;f122&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -65,8 +51,7 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MediaFile} ⯈ {@link DownloadTerms}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈ {@link DownloadTerms}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈
- * {@link DownloadTerms}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈ {@link DownloadTerms}</li>
  * </ul>
  */
 public class DownloadTerms implements OnixElement<String>, Serializable {
@@ -105,9 +90,7 @@ public class DownloadTerms implements OnixElement<String>, Serializable {
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length text, suggested maximum length 500 characters (XHTML is enabled in this element - see
-     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)<p> (type: XHTML)
      */
     public String value;
 

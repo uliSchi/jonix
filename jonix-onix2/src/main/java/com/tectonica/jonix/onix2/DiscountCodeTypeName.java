@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Discount code type name</h1>
- * <p>
- * A name which identifies a proprietary discount code when the code in the &lt;DiscountCodeType&gt; element indicates a
- * proprietary scheme, <em>eg</em> a wholesaler’s own code. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Free text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DiscountCodeTypeName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j378&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j378&gt;Ingram&lt;/j378&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Discount code type name</h1><p>A name which identifies a proprietary discount code when the code in the
+ * &lt;DiscountCodeType&gt; element indicates a proprietary scheme, <em>eg</em> a wholesaler’s own code. Optional and
+ * non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Free text, suggested maximum length 50
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;DiscountCodeTypeName&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j378&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j378&gt;Ingram&lt;/j378&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -65,10 +47,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link DiscountCoded} ⯈
- * {@link DiscountCodeTypeName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link DiscountCoded} ⯈ {@link DiscountCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link DiscountCoded} ⯈ {@link DiscountCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link DiscountCoded} ⯈ {@link DiscountCodeTypeName}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -108,9 +88,7 @@ public class DiscountCodeTypeName implements OnixElement<String>, Serializable {
      * This is the raw content of DiscountCodeTypeName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Free text, suggested maximum length 50 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Free text, suggested maximum length 50 characters<p> (type: NonEmptyString)
      */
     public String value;
 

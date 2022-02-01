@@ -34,30 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Percentage</h1>
- * <p>
- * The percentage of the unit value of the product that is assignable to a designated product classification. Optional
- * and non-repeating. Used when a mixed product (<em>eg</em> book and CD) belongs partly to two or more product
- * classifications.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Real decimal number in the range 0 to 100</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Percent&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b337&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b337&gt;66.67&lt;/b337&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Percentage</h1><p>The percentage of the unit value of the product that is assignable to a designated product
+ * classification. Optional and non-repeating. Used when a mixed product (<em>eg</em> book and CD) belongs partly to two
+ * or more product classifications.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Real decimal number in
+ * the range 0 to 100</td></tr><tr><td>Reference name</td><td><tt>&lt;Percent&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b337&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b337&gt;66.67&lt;/b337&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +87,7 @@ public class Percent implements OnixElement<String>, Serializable {
      * This is the raw content of Percent. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Real decimal number in the range 0 to 100
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Real decimal number in the range 0 to 100<p> (type: NonEmptyString)
      */
     public String value;
 

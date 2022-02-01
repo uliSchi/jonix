@@ -21,6 +21,7 @@ package com.tectonica.jonix.onix3;
 
 import com.tectonica.jonix.common.JPU;
 import com.tectonica.jonix.common.ListOfOnixDataCompositeWithKey;
+import com.tectonica.jonix.common.ListOfOnixElement;
 import com.tectonica.jonix.common.OnixComposite.OnixSuperComposite;
 import com.tectonica.jonix.common.codelist.NameIdentifierTypes;
 import com.tectonica.jonix.common.codelist.RecordSourceTypes;
@@ -33,27 +34,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product contact composite</h1>
- * <p>
- * An optional group of data elements which together specify an organization (which may or may not be the publisher)
- * responsible for dealing with enquiries related to the product. Repeatable in order to specify multiple responsible
- * organisations.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductContact&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;productcontact&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PublishingDetail}&gt;</li>
@@ -63,11 +43,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link ProductContact}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link ProductContact}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link ProductContact}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class ProductContact implements OnixSuperComposite, Serializable {
     private static final long serialVersionUID = 1L;
@@ -146,6 +123,10 @@ public class ProductContact implements OnixSuperComposite, Serializable {
                 case EmailAddress.shortname:
                     emailAddress = new EmailAddress(e);
                     break;
+                case TelephoneNumber.refname:
+                case TelephoneNumber.shortname:
+                    telephoneNumbers = JPU.addToList(telephoneNumbers, new TelephoneNumber(e));
+                    break;
                 default:
                     break;
             }
@@ -173,10 +154,6 @@ public class ProductContact implements OnixSuperComposite, Serializable {
     private ProductContactRole productContactRole = ProductContactRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the role played by the product contact in relation to the product – for example
-     * answering enquiries related to sales or to promotion.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ProductContactRole productContactRole() {
@@ -184,15 +161,10 @@ public class ProductContact implements OnixSuperComposite, Serializable {
         return productContactRole;
     }
 
-    private ListOfOnixDataCompositeWithKey<ProductContactIdentifier, JonixProductContactIdentifier,
-        NameIdentifierTypes> productContactIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<ProductContactIdentifier, JonixProductContactIdentifier, NameIdentifierTypes>
+        productContactIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together define an identifier of the product contact. The composite is optional,
-     * and repeatable if more than one identifier of different types is sent; but <em>either</em> a
-     * &lt;ProductContactName&gt; <em>or</em> a &lt;ProductContactIdentifier&gt; <em>must</em> be included.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<ProductContactIdentifier, JonixProductContactIdentifier, NameIdentifierTypes>
@@ -204,11 +176,6 @@ public class ProductContact implements OnixSuperComposite, Serializable {
     private ProductContactName productContactName = ProductContactName.EMPTY;
 
     /**
-     * <p>
-     * The name of the product contact organization, which should always be stated in a standard form. Optional and
-     * non-repeating; but <em>either</em> a &lt;ProductContactName&gt; element <em>or</em> a
-     * &lt;ProductContactIdentifier&gt; composite <em>must</em> be included.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ProductContactName productContactName() {
@@ -219,10 +186,6 @@ public class ProductContact implements OnixSuperComposite, Serializable {
     private ContactName contactName = ContactName.EMPTY;
 
     /**
-     * <p>
-     * Free text giving the name, department, phone number, <i>etc</i> for a contact person in the product contact
-     * organization who is responsible for the product. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ContactName contactName() {
@@ -233,14 +196,20 @@ public class ProductContact implements OnixSuperComposite, Serializable {
     private EmailAddress emailAddress = EmailAddress.EMPTY;
 
     /**
-     * <p>
-     * A text field giving the e-mail address for a contact person in the product contact organization who is
-     * responsible for the product. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public EmailAddress emailAddress() {
         _initialize();
         return emailAddress;
+    }
+
+    private ListOfOnixElement<TelephoneNumber, String> telephoneNumbers = ListOfOnixElement.empty();
+
+    /**
+     * Jonix-Comment: this list may be empty
+     */
+    public ListOfOnixElement<TelephoneNumber, String> telephoneNumbers() {
+        _initialize();
+        return telephoneNumbers;
     }
 }

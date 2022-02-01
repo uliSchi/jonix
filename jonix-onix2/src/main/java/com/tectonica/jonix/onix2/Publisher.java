@@ -36,22 +36,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Publisher composite</h1>
- * <p>
- * A repeatable group of data elements which together identify an entity which is associated with the publishing of a
- * product. The composite will allow additional publishing roles to be introduced without adding new fields. Each
- * occurrence of the composite must carry either a name code or a name or both.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Publisher&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;publisher&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Publisher composite</h1><p>A repeatable group of data elements which together identify an entity which is
+ * associated with the publishing of a product. The composite will allow additional publishing roles to be introduced
+ * without adding new fields. Each occurrence of the composite must carry either a name code or a name or
+ * both.</p><table border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;Publisher&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;publisher&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -184,11 +173,9 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private NameCodeType nameCodeType = NameCodeType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the value in the &lt;NameCodeValue&gt; element is taken.
+     * <p>An ONIX code which identifies the scheme from which the value in the &lt;NameCodeValue&gt; element is taken.
      * Optional and non-repeating, but mandatory if the &lt;Publisher&gt; composite does not carry a
-     * &lt;PublisherName&gt;.
-     * </p>
+     * &lt;PublisherName&gt;.</p>
      * Jonix-Comment: this field is required
      */
     public NameCodeType nameCodeType() {
@@ -199,10 +186,8 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private NameCodeValue nameCodeValue = NameCodeValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and only if
-     * &lt;NameCodeType&gt; is present, and non-repeating.
-     * </p>
+     * <p>A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and only if
+     * &lt;NameCodeType&gt; is present, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public NameCodeValue nameCodeValue() {
@@ -213,10 +198,8 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private PublishingRole publishingRole = PublishingRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies a role played by an entity in the publishing of a product. Optional and
-     * non-repeating. The default if the element is omitted is “publisher”.
-     * </p>
+     * <p>An ONIX code which identifies a role played by an entity in the publishing of a product. Optional and
+     * non-repeating. The default if the element is omitted is “publisher”.</p>
      * Jonix-Comment: this field is optional
      */
     public PublishingRole publishingRole() {
@@ -227,10 +210,8 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private PublisherName publisherName = PublisherName.EMPTY;
 
     /**
-     * <p>
-     * The name of an entity associated with the publishing of a product. Mandatory if there is no name code in an
-     * occurrence of the &lt;Publisher&gt; composite, and optional if a name code is included. Non-repeating.
-     * </p>
+     * <p>The name of an entity associated with the publishing of a product. Mandatory if there is no name code in an
+     * occurrence of the &lt;Publisher&gt; composite, and optional if a name code is included. Non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public PublisherName publisherName() {
@@ -241,10 +222,8 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private NameCodeTypeName nameCodeTypeName = NameCodeTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt; indicates a proprietary
-     * scheme, <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.
-     * </p>
+     * <p>A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt; indicates a proprietary
+     * scheme, <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public NameCodeTypeName nameCodeTypeName() {
@@ -255,10 +234,8 @@ public class Publisher implements OnixSuperComposite, Serializable {
     private ListOfOnixDataComposite<Website, JonixWebsite> websites = ListOfOnixDataComposite.empty();
 
     /**
-     * <p>
-     * A repeatable group of data elements which together identify and provide pointers to a website which is related to
-     * the publisher identified in an occurrence of the &lt;Publisher&gt; composite.
-     * </p>
+     * <p>A repeatable group of data elements which together identify and provide pointers to a website which is related
+     * to the publisher identified in an occurrence of the &lt;Publisher&gt; composite.</p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataComposite<Website, JonixWebsite> websites() {

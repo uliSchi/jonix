@@ -32,9 +32,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;MarketDate></code> and Onix3
- * <code>&lt;MarketDate></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;MarketDate></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code>
+ * method.
  */
 @SuppressWarnings("serial")
 public class JonixMarketDate implements JonixKeyedStruct<PublishingDateRoles>, Serializable {
@@ -46,8 +45,6 @@ public class JonixMarketDate implements JonixKeyedStruct<PublishingDateRoles>, S
     public PublishingDateRoles marketDateRole;
 
     /**
-     * Raw Format: As specified by the value in the dateformat attribute, in &lt;DateFormat&gt;, or the default YYYYMMDD
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String date;

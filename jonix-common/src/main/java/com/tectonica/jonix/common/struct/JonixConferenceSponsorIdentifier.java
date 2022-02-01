@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;ConferenceSponsorIdentifier></code> and
- * Onix3 <code>&lt;ConferenceSponsorIdentifier></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * Onix3 <code>&lt;ConferenceSponsorIdentifier></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixConferenceSponsorIdentifier implements JonixKeyedStruct<NameIdentifierTypes>, Serializable {
@@ -45,15 +44,11 @@ public class JonixConferenceSponsorIdentifier implements JonixKeyedStruct<NameId
     public NameIdentifierTypes conferenceSponsorIDType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idTypeName;
 
     /**
-     * Raw Format: According to the identifier type specified in &lt;SenderIDType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idValue;

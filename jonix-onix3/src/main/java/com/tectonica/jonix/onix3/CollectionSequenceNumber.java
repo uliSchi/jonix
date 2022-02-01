@@ -30,42 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Collection sequence number</h1>
- * <p>
- * A number which specifies the ordinal position of the product in a collection. The ordinal position may be a simple
- * number (1st, 2nd, 3rd <i>etc</i>) or may be multi-level (<i>eg</i> 3.2) if the collection has a multi-level structure
- * (<i>ie</i> there are both collection and sub-collection title elements). Mandatory and non-repeating within the
- * &lt;CollectionSequence&gt; composite.
- * </p>
- * <p>
- * <span style="color: deeppink; font-weight: bold">New in 3.0.4</span> A hyphen may be used in place of an integer
- * within a multi-level number, where a particular level of the hierarchy is unnumbered, for example -.3 where a product
- * is the third in a sub-collection, and the sub-collection is unnumbered within the collection.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length string of one or more positive integers or hyphens, each successive integer or hyphen being
- * separated by a period character, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CollectionSequenceNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x481&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;CollectionSequenceNumber&gt;2.4&lt;/CollectionSequenceNumber&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CollectionSequence}&gt;</li>
@@ -73,11 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈
- * {@link CollectionSequence} ⯈ {@link CollectionSequenceNumber}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link CollectionSequence} ⯈ {@link CollectionSequenceNumber}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class CollectionSequenceNumber implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -106,11 +67,8 @@ public class CollectionSequenceNumber implements OnixElement<String>, Serializab
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of CollectionSequenceNumber. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length string of one or more positive integers or hyphens, each successive integer or hyphen
-     * being separated by a period character, suggested maximum length 50 characters
+     * This is the raw content of CollectionSequenceNumber. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: dt.MultiLevelNumberOrHyphen)
      */

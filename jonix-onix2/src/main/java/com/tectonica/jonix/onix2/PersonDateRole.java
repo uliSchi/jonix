@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Person date role code</h1>
- * <p>
- * An ONIX code indicating the significance of the date in relation to the contributor name. Mandatory in each
- * occurrence of the &lt;PersonDate&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, three numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 75</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PersonDateRole&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b305&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;PersonDateRole&gt;007&lt;/PersonDateRole&gt;</tt> Date of birth</td>
- * </tr>
- * </table>
+ * <h1>Person date role code</h1><p>An ONIX code indicating the significance of the date in relation to the contributor
+ * name. Mandatory in each occurrence of the &lt;PersonDate&gt; composite.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, three numeric digits</td></tr><tr><td>Codelist</td><td>List
+ * 75</td></tr><tr><td>Reference name</td><td><tt>&lt;PersonDateRole&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b305&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;PersonDateRole&gt;007&lt;/PersonDateRole&gt;</tt>
+ * Date of birth</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,14 +50,10 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link PersonDateRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link PersonDateRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link PersonDateRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link PersonDateRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈
- * {@link PersonDateRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link PersonDateRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link PersonDateRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link PersonDateRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link PersonDate} ⯈ {@link PersonDateRole}</li>
  * </ul>
  *
  * @since Onix-2.1

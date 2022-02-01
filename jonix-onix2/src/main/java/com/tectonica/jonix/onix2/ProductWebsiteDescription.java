@@ -34,26 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product website description</h1>
- * <p>
- * Free text describing the nature of the website which is linked through &lt;ProductWebsiteLink&gt;. Optional and
- * non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see ONIX for
- * Books - Product Information Message - XML Message Specification, Section 7)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductWebsiteDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f170&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Product website description</h1><p>Free text describing the nature of the website which is linked through
+ * &lt;ProductWebsiteLink&gt;. Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * text, suggested maximum length 300 characters (XHTML is enabled in this element - see ONIX for Books - Product
+ * Information Message - XML Message Specification, Section 7)</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;ProductWebsiteDescription&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;f170&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -97,13 +82,11 @@ public class ProductWebsiteDescription implements OnixElement<String>, Serializa
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of ProductWebsiteDescription. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of ProductWebsiteDescription. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see
-     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)<p> (type: XHTML)
      */
     public String value;
 

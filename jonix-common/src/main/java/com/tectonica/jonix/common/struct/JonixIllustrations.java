@@ -30,9 +30,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;Illustrations></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;Illustrations></code>.<p>It can be retrieved from
+ * the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixIllustrations implements JonixKeyedStruct<IllustrationAndOtherContentTypes>, Serializable {
@@ -44,16 +43,12 @@ public class JonixIllustrations implements JonixKeyedStruct<IllustrationAndOther
     public IllustrationAndOtherContentTypes illustrationType;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 100 characters.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters. <p> (type: NonEmptyString)
      */
     public String illustrationTypeDescription;
 
     /**
-     * Raw Format: Variable-length integer, suggested maximum length 6 digits.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, suggested maximum length 6 digits. <p> (type: NonEmptyString)
      */
     public String number;
 

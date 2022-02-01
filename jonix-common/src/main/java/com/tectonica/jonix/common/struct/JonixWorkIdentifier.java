@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;WorkIdentifier></code> and Onix3
- * <code>&lt;WorkIdentifier></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;WorkIdentifier></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code>
+ * method.
  */
 @SuppressWarnings("serial")
 public class JonixWorkIdentifier implements JonixKeyedStruct<WorkIdentifierTypes>, Serializable {
@@ -45,15 +44,11 @@ public class JonixWorkIdentifier implements JonixKeyedStruct<WorkIdentifierTypes
     public WorkIdentifierTypes workIDType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idTypeName;
 
     /**
-     * Raw Format: According to the identifier type specified in &lt;SenderIDType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idValue;

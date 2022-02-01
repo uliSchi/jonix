@@ -34,29 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Reissue date</h1>
- * <p>
- * The date on which the product will be reissued, or (after reissue) the date when it was last reissued. Mandatory in
- * each occurrence of the &lt;Reissue&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Date as year, month, day (YYYYMMDD)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReissueDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j365&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ReissueDate&gt;20030616&lt;/ReissueDate&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Reissue date</h1><p>The date on which the product will be reissued, or (after reissue) the date when it was last
+ * reissued. Mandatory in each occurrence of the &lt;Reissue&gt; composite, and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Date as year, month, day (YYYYMMDD)</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;ReissueDate&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;j365&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;ReissueDate&gt;20030616&lt;/ReissueDate&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -105,9 +86,7 @@ public class ReissueDate implements OnixElement<String>, Serializable {
      * This is the raw content of ReissueDate. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Date as year, month, day (YYYYMMDD)
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Date as year, month, day (YYYYMMDD)<p> (type: NonEmptyString)
      */
     public String value;
 

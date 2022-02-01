@@ -34,29 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Message sequence number</h1>
- * <p>
- * A sequence number of the messages in a series sent between trading partners, to enable the receiver to check against
- * gaps and duplicates. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length integer,</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MessageNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;m180&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;m180&gt;1234&lt;/m180&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Message sequence number</h1><p>A sequence number of the messages in a series sent between trading partners, to
+ * enable the receiver to check against gaps and duplicates. Optional and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length integer,</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;MessageNumber&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;m180&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;m180&gt;1234&lt;/m180&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -103,9 +84,7 @@ public class MessageNumber implements OnixElement<String>, Serializable {
      * This is the raw content of MessageNumber. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length integer,
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer,<p> (type: NonEmptyString)
      */
     public String value;
 

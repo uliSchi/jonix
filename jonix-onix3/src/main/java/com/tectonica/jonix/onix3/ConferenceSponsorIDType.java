@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference sponsor identifier type</h1>
- * <p>
- * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Mandatory in
- * each occurrence of the &lt;ConferenceSponsorIdentifier&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 44</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferenceSponsorIDType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b391&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b391&gt;01&lt;/b391&gt;</tt> (Proprietary)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ConferenceSponsorIdentifier}&gt;</li>
@@ -70,13 +38,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈
- * {@link ConferenceSponsor} ⯈ {@link ConferenceSponsorIdentifier} ⯈ {@link ConferenceSponsorIDType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈ {@link ConferenceSponsor} ⯈ {@link ConferenceSponsorIdentifier} ⯈ {@link ConferenceSponsorIDType}</li>
  * </ul>
- *
- * @deprecated
  */
-@Deprecated
 public class ConferenceSponsorIDType implements OnixElement<NameIdentifierTypes>, Serializable {
     private static final long serialVersionUID = 1L;
 

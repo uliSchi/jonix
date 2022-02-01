@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Review rating composite</h1>
- * <p>
- * An optional group of data elements which together specify a ‘star rating’ awarded as part of a review of the
- * publication, used when &lt;TextType&gt; indicates the text is a review. Not repeatable.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReviewRating&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;reviewrating&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TextContent}&gt;</li>
@@ -60,17 +40,11 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈
- * {@link ReviewRating}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈
- * {@link ReviewRating}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈
- * {@link ReviewRating}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈
- * {@link ReviewRating}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈ {@link ReviewRating}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈ {@link ReviewRating}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈ {@link ReviewRating}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈ {@link ReviewRating}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class ReviewRating implements OnixDataComposite<JonixReviewRating>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -166,10 +140,6 @@ public class ReviewRating implements OnixDataComposite<JonixReviewRating>, Seria
     private Rating rating = Rating.EMPTY;
 
     /**
-     * <p>
-     * The ‘star rating’ awarded as part of a review of the publication. Mandatory within an occurrence of the
-     * &lt;ReviewRating&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Rating rating() {
@@ -180,10 +150,6 @@ public class ReviewRating implements OnixDataComposite<JonixReviewRating>, Seria
     private RatingLimit ratingLimit = RatingLimit.EMPTY;
 
     /**
-     * <p>
-     * The maximum possible rating that may be awarded as part of a review of the publication. Optional, but where used,
-     * it must be greater than or equal to the specified &lt;Rating&gt;.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public RatingLimit ratingLimit() {
@@ -194,11 +160,6 @@ public class ReviewRating implements OnixDataComposite<JonixReviewRating>, Seria
     private ListOfOnixElement<RatingUnits, String> ratingUnitss = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * The ‘units’ used by a rating, <i>eg</i> stars, tomatoes <i>etc</i>. Optional, and repeatable to provide the units
-     * in multiple languages. The <i>language</i> attribute is optional for a single instance of &lt;RatingUnits&gt;,
-     * but must be included in each instance if &lt;RatingUnits&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<RatingUnits, String> ratingUnitss() {

@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Start time</h1>
- * <p>
- * The time (relative to the beginning of the product’s audio or audiovisual content) of the beginning of a continuous
- * sequence of audiovisual content. Mandatory in each occurrence of the &lt;TimeRun&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;StartTime&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x542&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;StartTime&gt;0011206&lt;/StartTime&gt;</tt> (One hour, 12 minutes and six seconds)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TimeRun}&gt;</li>
@@ -65,11 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈
- * {@link TimeRun} ⯈ {@link StartTime}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈ {@link TimeRun} ⯈ {@link StartTime}</li>
  * </ul>
- *
- * @since Onix-3.05
  */
 public class StartTime implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -100,8 +69,6 @@ public class StartTime implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of StartTime. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)
      * <p>
      * (type: dt.TimeOrDuration)
      */

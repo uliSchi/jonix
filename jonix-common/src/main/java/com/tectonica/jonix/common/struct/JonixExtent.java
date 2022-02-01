@@ -32,9 +32,7 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Extent></code> and Onix3
- * <code>&lt;Extent></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Extent></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixExtent implements JonixKeyedStruct<ExtentTypes>, Serializable {
@@ -48,9 +46,6 @@ public class JonixExtent implements JonixKeyedStruct<ExtentTypes>, Serializable 
     public ExtentUnits extentUnit;
 
     /**
-     * Raw Format: Positive real number, with explicit decimal point when required, as appropriate for the units
-     * specified in &lt;ExtentUnit&gt;. Suggested maximum length 8 characters
-     * <p>
      * (type: dt.StrictPositiveDecimal)
      */
     public Double extentValue;

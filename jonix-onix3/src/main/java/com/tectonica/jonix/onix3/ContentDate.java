@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Content date composite</h1>
- * <p>
- * An optional group of data elements which together specify a date associated with the text carried in an occurrence of
- * the &lt;TextContent&gt; composite, <i>eg</i> date when quoted text was published. Repeatable to specify different
- * dates with their various roles.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ContentDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;contentdate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TextContent}&gt;</li>
@@ -62,19 +41,15 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈
- * {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TextContent} ⯈ {@link ContentDate}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link TextContent} ⯈ {@link ContentDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈
- * {@link ContentDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈
- * {@link ContentDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource}
- * ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈
- * {@link ResourceVersion} ⯈ {@link ContentDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link CitedContent} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link CitedContent} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link SupportingResource} ⯈ {@link ResourceVersion} ⯈ {@link ContentDate}</li>
  * </ul>
  */
 public class ContentDate implements OnixDataCompositeWithKey<JonixContentDate, ContentDateRoles>, Serializable {
@@ -171,10 +146,6 @@ public class ContentDate implements OnixDataCompositeWithKey<JonixContentDate, C
     private ContentDateRole contentDateRole = ContentDateRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the significance of the date in relation to the text content. Mandatory in each
-     * occurrence of the &lt;ContentDate&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ContentDateRole contentDateRole() {
@@ -185,12 +156,6 @@ public class ContentDate implements OnixDataCompositeWithKey<JonixContentDate, C
     private Date date = Date.EMPTY;
 
     /**
-     * <p>
-     * The date specified in the &lt;ContentDateRole&gt; field. Mandatory in each occurrence of the &lt;ContentDate&gt;
-     * composite, and non-repeating. &lt;Date&gt; may carry a <i>dateformat</i> attribute: if the attribute is missing,
-     * then &lt;DateFormat&gt; indicates the format of the date; if both <i>dateformat</i> attribute and
-     * &lt;DateFormat&gt; element are missing, the default format is YYYYMMDD.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Date date() {
@@ -201,11 +166,6 @@ public class ContentDate implements OnixDataCompositeWithKey<JonixContentDate, C
     private DateFormat dateFormat = DateFormat.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional in each occurrence of the
-     * &lt;ContentDate&gt; composite, and non-repeating. Deprecated – where possible, use the <i>dateformat</i>
-     * attribute on the &lt;Date&gt; element instead.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DateFormat dateFormat() {

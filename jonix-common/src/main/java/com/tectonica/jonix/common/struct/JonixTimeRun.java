@@ -28,24 +28,19 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;TimeRun></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;TimeRun></code>.<p>It can be retrieved from the
+ * composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixTimeRun implements JonixStruct, Serializable {
     public static final JonixTimeRun EMPTY = new JonixTimeRun();
 
     /**
-     * Raw Format: Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)
-     * <p>
      * (type: dt.TimeOrDuration)
      */
     public String startTime;
 
     /**
-     * Raw Format: Hours, minutes and seconds in the form HHHMMSS or HHHMMSScc (hundredths of a second)
-     * <p>
      * (type: dt.TimeOrDuration)
      */
     public String endTime;

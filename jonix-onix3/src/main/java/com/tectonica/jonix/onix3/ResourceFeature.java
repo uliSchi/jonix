@@ -33,26 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Resource feature composite</h1>
- * <p>
- * A group of data elements which together describe a feature of a supporting resource which is common to all versions
- * in which the resource is offered. Optional, and repeatable in order to describe multiple features of the resource.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ResourceFeature&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;resourcefeature&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupportingResource}&gt;</li>
@@ -60,12 +40,11 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource}
- * ⯈ {@link ResourceFeature}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈
- * {@link ResourceFeature}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link CollateralDetail} ⯈ {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link SupportingResource} ⯈ {@link ResourceFeature}</li>
  * </ul>
  */
 public class ResourceFeature
@@ -164,10 +143,6 @@ public class ResourceFeature
     private ResourceFeatureType resourceFeatureType = ResourceFeatureType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which specifies the feature described by an instance of the &lt;ResourceFeature&gt; composite.
-     * Mandatory in each occurrence of the composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ResourceFeatureType resourceFeatureType() {
@@ -178,11 +153,6 @@ public class ResourceFeature
     private FeatureValue featureValue = FeatureValue.EMPTY;
 
     /**
-     * <p>
-     * A controlled value that describes a resource feature. Presence or absence of this element depends on the
-     * &lt;ResourceFeatureType&gt;, since some features may not require an accompanying value, while others may require
-     * free text in &lt;FeatureNote&gt;; and others may have both code and free text. Non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public FeatureValue featureValue() {
@@ -193,13 +163,6 @@ public class ResourceFeature
     private ListOfOnixElement<FeatureNote, String> featureNotes = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * If the &lt;ResourceFeatureType&gt; requires free text rather than a code value, or if the code in
-     * &lt;FeatureValue&gt; does not adequately describe the feature, a short text note may be added. Optional, and
-     * repeatable when parallel notes are provided in multiple languages. The <i>language</i> attribute is optional for
-     * a single instance of &lt;FeatureNote&gt;, but must be included in each instance if &lt;FeatureNote&gt; is
-     * repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<FeatureNote, String> featureNotes() {

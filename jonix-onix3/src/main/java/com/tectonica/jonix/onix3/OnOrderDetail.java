@@ -31,32 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>On order detail composite</h1>
- * <p>
- * A repeatable group of data elements which together specify details of a stock shipment currently awaited, normally
- * from overseas. Optional and repeatable if more than a single shipment is outstanding.
- * </p>
- * <p>
- * Note that quantities in the &lt;OnOrderDetail&gt; composite must be included in any total quantity on order given in
- * P.26.37 &lt;OnOrder&gt;, and detail need not be given for all outstanding shipments (<i>ie</i> the P.26.37
- * &lt;OnOrder&gt; must be greater than or equal to the total of the &lt;OnOrder&gt; elements in repeats of the
- * composite).
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OnOrderDetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;onorderdetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Stock}&gt;</li>
@@ -64,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈
- * {@link OnOrderDetail}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Stock} ⯈ {@link OnOrderDetail}</li>
  * </ul>
  */
 public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Serializable {
@@ -162,10 +135,6 @@ public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Ser
     private OnOrder onOrder = OnOrder.EMPTY;
 
     /**
-     * <p>
-     * The quantity of stock on order in a particular shipment. Mandatory in each occurrence of the
-     * &lt;OnOrderDetail&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public OnOrder onOrder() {
@@ -176,10 +145,6 @@ public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Ser
     private ExpectedDate expectedDate = ExpectedDate.EMPTY;
 
     /**
-     * <p>
-     * The date on which a stock shipment is expected. Mandatory in each occurrence of the &lt;OnOrderDetail&gt;
-     * composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ExpectedDate expectedDate() {
@@ -190,9 +155,6 @@ public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Ser
     private Proximity proximity = Proximity.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which specifies the precision of the stock quantity in a shipment. Optional, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public Proximity proximity() {

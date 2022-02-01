@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Conference name</h1>
- * <p>
- * The name of a conference or conference series to which the product is related. This element is mandatory in each
- * occurrence of the &lt;Conference&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ConferenceName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b052&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b052&gt;United
- * Nations Climate Change Conference&lt;/b052&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Conference}&gt;</li>
@@ -71,13 +38,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈
- * {@link ConferenceName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Conference} ⯈ {@link ConferenceName}</li>
  * </ul>
- *
- * @deprecated
  */
-@Deprecated
 public class ConferenceName implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -109,8 +72,6 @@ public class ConferenceName implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ConferenceName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

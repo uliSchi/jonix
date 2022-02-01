@@ -33,27 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Copyright owner composite</h1>
- * <p>
- * A repeatable group of data elements which together name a copyright owner. Optional, but may be omitted only if
- * &lt;CopyrightYear&gt; is present. Each occurrence of the &lt;CopyrightOwner&gt; composite must carry a single name
- * (personal or corporate), or an identifier, or both.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CopyrightOwner&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;copyrightowner&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CopyrightStatement}&gt;</li>
@@ -61,8 +40,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈
- * {@link CopyrightOwner}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈ {@link CopyrightOwner}</li>
  * </ul>
  */
 public class CopyrightOwner implements OnixSuperComposite, Serializable {
@@ -158,15 +136,10 @@ public class CopyrightOwner implements OnixSuperComposite, Serializable {
     // MEMBERS
     /////////////////////////////////////////////////////////////////////////////////
 
-    private ListOfOnixDataCompositeWithKey<CopyrightOwnerIdentifier, JonixCopyrightOwnerIdentifier,
-        NameIdentifierTypes> copyrightOwnerIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<CopyrightOwnerIdentifier, JonixCopyrightOwnerIdentifier, NameIdentifierTypes>
+        copyrightOwnerIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together represent a coded identification of a copyright owner. Optional, and
-     * repeatable if sending more than one identifier of different types. May be sent either instead of or as well as a
-     * name.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<CopyrightOwnerIdentifier, JonixCopyrightOwnerIdentifier, NameIdentifierTypes>
@@ -178,11 +151,6 @@ public class CopyrightOwner implements OnixSuperComposite, Serializable {
     private PersonName personName = PersonName.EMPTY;
 
     /**
-     * <p>
-     * The name of a person, used here for a personal copyright owner. Optional and non-repeating. Each occurrence of
-     * the &lt;CopyrightOwner&gt; composite may carry a single name (personal or corporate), or an identifier, or both a
-     * name and an identifier.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PersonName personName() {
@@ -193,11 +161,6 @@ public class CopyrightOwner implements OnixSuperComposite, Serializable {
     private CorporateName corporateName = CorporateName.EMPTY;
 
     /**
-     * <p>
-     * The name of a corporate body, used here for a corporate copyright owner. Optional and non- repeating. Each
-     * occurrence of the &lt;CopyrightOwner&gt; composite may carry a single name (personal or corporate), or an
-     * identifier, or both a name and an identifier.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public CorporateName corporateName() {

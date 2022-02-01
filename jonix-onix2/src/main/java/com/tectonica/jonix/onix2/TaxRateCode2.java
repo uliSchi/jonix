@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Tax rate 2, coded</h1>
- * <p>
- * A code which specifies a value added tax rate applying to the amount of the price which is specified in
- * &lt;TaxableAmount2&gt;. See notes on &lt;TaxRateCode1&gt;.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, one letter.</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 62</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TaxRateCode2&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j157&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j157&gt;Z&lt;/j157&gt;</tt> Zero-rated</td>
- * </tr>
- * </table>
+ * <h1>Tax rate 2, coded</h1><p>A code which specifies a value added tax rate applying to the amount of the price which
+ * is specified in &lt;TaxableAmount2&gt;. See notes on &lt;TaxRateCode1&gt;.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, one letter.</td></tr><tr><td>Codelist</td><td>List
+ * 62</td></tr><tr><td>Reference name</td><td><tt>&lt;TaxRateCode2&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j157&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j157&gt;Z&lt;/j157&gt;</tt>
+ * Zero-rated</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,8 +50,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link TaxRateCode2}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link TaxRateCode2}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link TaxRateCode2}</li>
  * </ul>
  */
 public class TaxRateCode2 implements OnixElement<TaxRateTypes>, Serializable {

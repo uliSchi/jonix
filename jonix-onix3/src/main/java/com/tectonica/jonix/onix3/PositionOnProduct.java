@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Position on product</h1>
- * <p>
- * An ONIX code indicating a position on a product; in this case, the position in which a barcode appears. Required if
- * the &lt;BarcodeType&gt; element indicates that the barcode appears on the product, even if the position is ‘unknown’.
- * Omitted if the &lt;BarcodeType&gt; element specifies that the product does not carry a barcode. Non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 142</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PositionOnProduct&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x313&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x313&gt;01&lt;/x313&gt;</tt> (Cover 4 - the back cover of a book)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Barcode}&gt;</li>
@@ -73,10 +40,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Barcode} ⯈ {@link PositionOnProduct}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PositionOnProduct}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PositionOnProduct}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PositionOnProduct}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PositionOnProduct}</li>
  * </ul>
  */
 public class PositionOnProduct implements OnixElement<PositionOnProducts>, Serializable {

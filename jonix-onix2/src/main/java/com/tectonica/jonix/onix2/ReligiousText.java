@@ -37,24 +37,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Religious text composite</h1>
- * <p>
- * An optional, non-repeating, group of data elements which together describe features of the content of an edition of a
- * religious text, and intended to meet the special needs of religious publishers and booksellers. The
- * &lt;ReligiousText&gt; composite may carry either a &lt;Bible&gt; composite or a &lt;ReligiousTextID&gt; element
- * accompanied by multiple repeats of the &lt;ReligiousTextFeature&gt; composite. This approach is adopted to enable
- * other devotional texts to be included if need arises without requiring a new ONIX release.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReligiousText&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;religioustext&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Religious text composite</h1><p>An optional, non-repeating, group of data elements which together describe
+ * features of the content of an edition of a religious text, and intended to meet the special needs of religious
+ * publishers and booksellers. The &lt;ReligiousText&gt; composite may carry either a &lt;Bible&gt; composite or a
+ * &lt;ReligiousTextID&gt; element accompanied by multiple repeats of the &lt;ReligiousTextFeature&gt; composite. This
+ * approach is adopted to enable other devotional texts to be included if need arises without requiring a new ONIX
+ * release.</p><table border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;ReligiousText&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;religioustext&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -171,10 +160,8 @@ public class ReligiousText implements OnixSuperComposite, Serializable {
     private ReligiousTextID religiousTextID = ReligiousTextID.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating a religious text other than the Bible. Mandatory in each occurrence of the
-     * &lt;ReligiousText&gt; composite that does not include a &lt;Bible&gt; composite, and non-repeating.
-     * </p>
+     * <p>An ONIX code indicating a religious text other than the Bible. Mandatory in each occurrence of the
+     * &lt;ReligiousText&gt; composite that does not include a &lt;Bible&gt; composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public ReligiousTextID religiousTextID() {
@@ -182,13 +169,11 @@ public class ReligiousText implements OnixSuperComposite, Serializable {
         return religiousTextID;
     }
 
-    private ListOfOnixDataCompositeWithKey<ReligiousTextFeature, JonixReligiousTextFeature,
-        ReligiousTextFeatureTypes> religiousTextFeatures = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<ReligiousTextFeature, JonixReligiousTextFeature, ReligiousTextFeatureTypes>
+        religiousTextFeatures = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A repeatable group of data elements which together specify and describe a feature of a religious text.
-     * </p>
+     * <p>A repeatable group of data elements which together specify and describe a feature of a religious text.</p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<ReligiousTextFeature, JonixReligiousTextFeature, ReligiousTextFeatureTypes>
@@ -200,11 +185,9 @@ public class ReligiousText implements OnixSuperComposite, Serializable {
     private Bible bible = Bible.EMPTY;
 
     /**
-     * <p>
-     * A group of data elements which together describe features of an edition of the Bible or of a selected Biblical
+     * <p>A group of data elements which together describe features of an edition of the Bible or of a selected Biblical
      * text. Mandatory in each occurrence of the &lt;ReligiousText&gt; composite that does not include a
-     * &lt;ReligiousTextID&gt; element, and non-repeating.
-     * </p>
+     * &lt;ReligiousTextID&gt; element, and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public Bible bible() {

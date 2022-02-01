@@ -34,32 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Level sequence number</h1>
- * <p>
- * A number which specifies the position of an item in a set within a multi-level hierarchy of such items. Numbering
- * starts at the top level in the hierarchy, and the first item at the top level is numbered 1. Optional and
- * non-repeating. The purpose of this element is to make it possible to describe structured sets in a normalized way,
- * since enumeration carried as &lt;ItemNumberWithinSet&gt; may take a wide variety of forms.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length string of integers, each successive integer being separated by a full stop, suggested maximum
- * length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;LevelSequenceNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b284&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b284&gt;2.7&lt;/b284&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Level sequence number</h1><p>A number which specifies the position of an item in a set within a multi-level
+ * hierarchy of such items. Numbering starts at the top level in the hierarchy, and the first item at the top level is
+ * numbered 1. Optional and non-repeating. The purpose of this element is to make it possible to describe structured
+ * sets in a normalized way, since enumeration carried as &lt;ItemNumberWithinSet&gt; may take a wide variety of
+ * forms.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length string of integers, each
+ * successive integer being separated by a full stop, suggested maximum length 100 characters</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;LevelSequenceNumber&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;b284&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b284&gt;2.7&lt;/b284&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -113,9 +94,7 @@ public class LevelSequenceNumber implements OnixElement<String>, Serializable {
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length string of integers, each successive integer being separated by a full stop, suggested
-     * maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * maximum length 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

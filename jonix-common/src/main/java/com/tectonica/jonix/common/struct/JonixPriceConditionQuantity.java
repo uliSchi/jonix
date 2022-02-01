@@ -31,9 +31,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceConditionQuantity></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceConditionQuantity></code>.<p>It can be
+ * retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPriceConditionQuantity implements JonixKeyedStruct<PriceConditionQuantityTypes>, Serializable {
@@ -45,9 +44,6 @@ public class JonixPriceConditionQuantity implements JonixKeyedStruct<PriceCondit
     public PriceConditionQuantityTypes priceConditionQuantityType;
 
     /**
-     * Raw Format: Positive real number, with explicit decimal point when required, or zero, as appropriate for the
-     * units specified in &lt;EpubUsageUnit&gt;
-     * <p>
      * (type: dt.PositiveDecimal)
      */
     public Double quantity;

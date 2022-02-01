@@ -30,24 +30,19 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;ProfessionalAffiliation></code> and Onix3
- * <code>&lt;ProfessionalAffiliation></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;ProfessionalAffiliation></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixProfessionalAffiliation implements JonixStruct, Serializable {
     public static final JonixProfessionalAffiliation EMPTY = new JonixProfessionalAffiliation();
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 200 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String affiliation;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 100 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public List<String> professionalPositions;

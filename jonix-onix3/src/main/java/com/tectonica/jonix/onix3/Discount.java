@@ -31,27 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Discount composite</h1>
- * <p>
- * An optional group of data elements which together define a discount either as a percentage or as an absolute amount.
- * Repeatable in order to specify a more compex arrangement such as a progressive or tiered discount. Used only when an
- * ONIX message is sent within the context of a specific trading relationship.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Discount&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;discount&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -59,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link Discount}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link Discount}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link Discount}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link Discount}</li>
  * </ul>
  */
 public class Discount implements OnixDataComposite<JonixDiscount>, Serializable {
@@ -167,11 +144,6 @@ public class Discount implements OnixDataComposite<JonixDiscount>, Serializable 
     private DiscountPercent discountPercent = DiscountPercent.EMPTY;
 
     /**
-     * <p>
-     * A discount percentage applicable to the price carried in an occurrence of the &lt;Price&gt; composite. Optional
-     * and non-repeating; but either &lt;DiscountPercent&gt; or &lt;DiscountAmount&gt; or both must be present in each
-     * occurrence of the &lt;Discount&gt; composite.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public DiscountPercent discountPercent() {
@@ -182,10 +154,6 @@ public class Discount implements OnixDataComposite<JonixDiscount>, Serializable 
     private DiscountType discountType = DiscountType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a discount type or reason. Optional, and non-repeating. When omitted, the default is a
-     * simple or rising discount (the discount is applied to all units in a qualifying order).
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DiscountType discountType() {
@@ -196,11 +164,6 @@ public class Discount implements OnixDataComposite<JonixDiscount>, Serializable 
     private Quantity quantity = Quantity.EMPTY;
 
     /**
-     * <p>
-     * A minimum order quantity required to qualify for a specified discount. Optional, and non-repeating. Where
-     * omitted, the discount applies regardless of the order quantity (<i>ie</i> the minimum qualifying order quantity
-     * is 1).
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public Quantity quantity() {
@@ -211,12 +174,6 @@ public class Discount implements OnixDataComposite<JonixDiscount>, Serializable 
     private ToQuantity toQuantity = ToQuantity.EMPTY;
 
     /**
-     * <p>
-     * A maximum order quantity eligible for a specified discount, used only in the case of ‘progressive’ discounts.
-     * Optional, but where used, must be preceded by a minimum qualifying order quantity (even if that minimum is 1).
-     * For the special case where there is no maximum (<i>ie</i> in the repeat of the &lt;Discount&gt; composite that
-     * specifies the highest progressive discount), use zero.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ToQuantity toQuantity() {
@@ -227,12 +184,6 @@ public class Discount implements OnixDataComposite<JonixDiscount>, Serializable 
     private DiscountAmount discountAmount = DiscountAmount.EMPTY;
 
     /**
-     * <p>
-     * A discount expressed as an absolute amount per copy. Optional and non-repeating; but either
-     * &lt;DiscountPercent&gt; or &lt;DiscountAmount&gt; or both must be present in each occurrence of the
-     * &lt;Discount&gt; composite. Note that when both are present, they represent two different expressions of the same
-     * discount – the discounts are not cumulative.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DiscountAmount discountAmount() {

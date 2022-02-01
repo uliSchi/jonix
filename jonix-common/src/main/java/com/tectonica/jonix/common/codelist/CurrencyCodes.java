@@ -40,9 +40,8 @@ interface CodeList96 {
  * Description: Currency code - based on ISO 4217
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist96">ONIX
- *      Codelist 96 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist96">ONIX
+ * Codelist 96 in Reference Guide</a>
  */
 public enum CurrencyCodes implements OnixCodelist, CodeList96 {
     /**
@@ -985,7 +984,8 @@ public enum CurrencyCodes implements OnixCodelist, CodeList96 {
     Bol_var_("VEF", "Bolívar"),
 
     /**
-     * Venezuela (replaced VEF from August 2018 at rate of 100,000:1). For use in ONIX 3.0 only
+     * Venezuela (replaced VEF from August 2018 at rate of 100,000:1, and was redenominated by a further factor of
+     * 1,000,000:1 in late 2021). For use in ONIX 3.0 only
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */

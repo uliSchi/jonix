@@ -30,9 +30,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceIdentifier></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;PriceIdentifier></code>.<p>It can be retrieved
+ * from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPriceIdentifier implements JonixKeyedStruct<PriceIdentifierTypes>, Serializable {
@@ -44,15 +43,11 @@ public class JonixPriceIdentifier implements JonixKeyedStruct<PriceIdentifierTyp
     public PriceIdentifierTypes priceIDType;
 
     /**
-     * Raw Format: Variable length text, suggested maximum 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idTypeName;
 
     /**
-     * Raw Format: According to the identifier type specified in &lt;SenderIDType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String idValue;

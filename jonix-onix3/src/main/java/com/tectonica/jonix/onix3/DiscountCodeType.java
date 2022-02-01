@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Discount code type code</h1>
- * <p>
- * An ONIX code identifying the scheme from which the value in the &lt;DiscountCode&gt; element is taken. Mandatory in
- * each occurrence of the &lt;DiscountCoded&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 100</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DiscountCodeType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j363&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j363&gt;02&lt;/j363&gt;</tt> (Proprietary)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DiscountCoded}&gt;</li>
@@ -70,10 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link DiscountCoded} ⯈ {@link DiscountCodeType}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link DiscountCoded} ⯈ {@link DiscountCodeType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link DiscountCoded} ⯈ {@link DiscountCodeType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link DiscountCoded} ⯈ {@link DiscountCodeType}</li>
  * </ul>
  */
 public class DiscountCodeType implements OnixElement<DiscountCodeTypes>, Serializable {

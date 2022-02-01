@@ -34,32 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price amount</h1>
- * <p>
- * The amount of a unit price. This price amount element, outside of the &lt;Price&gt; composite, may be used if and
- * only if a default price type and currency have been specified in the message header, and only one price is to be
- * given. <strong>The element is retained for purposes of upwards compatibility only, and all new implementations should
- * use the &lt;Price&gt; composite.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length real number, with explicit decimal point when required, suggested maximum length 12
- * characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceAmount&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j151&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j151&gt;18.99&lt;/j151&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Price amount</h1><p>The amount of a unit price. This price amount element, outside of the &lt;Price&gt;
+ * composite, may be used if and only if a default price type and currency have been specified in the message header,
+ * and only one price is to be given. <strong>The element is retained for purposes of upwards compatibility only, and
+ * all new implementations should use the &lt;Price&gt; composite.</strong></p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable length real number, with explicit decimal point when required,
+ * suggested maximum length 12 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;PriceAmount&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j151&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;j151&gt;18.99&lt;/j151&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,8 +52,7 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link PriceAmount}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceAmount}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link PriceAmount}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceAmount}</li>
  * </ul>
  *
  * @deprecated
@@ -114,9 +94,7 @@ public class PriceAmount implements OnixElement<String>, Serializable {
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable length real number, with explicit decimal point when required, suggested maximum length 12
-     * characters
-     * <p>
-     * (type: NonEmptyString)
+     * characters<p> (type: NonEmptyString)
      */
     public String value;
 

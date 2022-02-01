@@ -31,42 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price part description</h1>
- * <p>
- * A name or description which identifies a part of the product price that is subject to the relevant tax, for example a
- * product part that may be taxed with a particular tax rate or amount (separately from other components), or a levy
- * added to a product price that is itself subject to tax. Optional, and repeatable to provide parallel descriptive text
- * in multiple languages. The <i>language</i> attribute is optional for a single instance of
- * &lt;PricePartDescription&gt;, but must be included in each instance if &lt;PricePartDescription&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PricePartDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x535&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x535
- * language=&quot;fre&quot;&gt;Eco-mobilier&lt;/x535&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Tax}&gt;</li>
@@ -74,13 +38,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link Tax} ⯈ {@link PricePartDescription}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link Tax} ⯈ {@link PricePartDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link Tax} ⯈ {@link PricePartDescription}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link Tax} ⯈ {@link PricePartDescription}</li>
  * </ul>
- *
- * @since Onix-3.04
  */
 public class PricePartDescription implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -113,8 +73,6 @@ public class PricePartDescription implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of PricePartDescription. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 100 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

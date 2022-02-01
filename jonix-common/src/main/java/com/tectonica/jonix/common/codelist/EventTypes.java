@@ -39,9 +39,8 @@ interface CodeList245 {
  * Jonix-Comment: Introduced in Onix3
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist245">ONIX
- *      Codelist 245 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist245">ONIX
+ * Codelist 245 in Reference Guide</a>
  */
 public enum EventTypes implements OnixCodelist, CodeList245 {
     Unspecified_see_description("00", "Unspecified – see description"),

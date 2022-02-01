@@ -40,14 +40,13 @@ interface CodeList74 {
  * Description: Language - based on ISO 639-2/B
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist74">ONIX
- *      Codelist 74 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist74">ONIX
+ * Codelist 74 in Reference Guide</a>
  */
 public enum Languages implements OnixCodelist, CodeList74 {
     Afar("aar", "Afar"),
 
-    Abkhaz("abk", "Abkhaz"),
+    Abkhazian("abk", "Abkhazian"),
 
     Achinese("ace", "Achinese"),
 
@@ -55,7 +54,10 @@ public enum Languages implements OnixCodelist, CodeList74 {
 
     Adangme("ada", "Adangme"),
 
-    Adygei("ady", "Adygei"),
+    /**
+     * (West Circassian)
+     */
+    Adygei_Adyghe("ady", "Adygei; Adyghe"),
 
     /**
      * Collective name
@@ -556,7 +558,14 @@ public enum Languages implements OnixCodelist, CodeList74 {
      */
     Guarani("grn", "Guarani"),
 
-    Swiss_German_Alemannic("gsw", "Swiss German; Alemannic"),
+    /**
+     * ONIX local code, equivalent to grt in ISO 639-3. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Garo("grt", "Garo"),
+
+    Swiss_German_Alemannic_Alsatian("gsw", "Swiss German; Alemannic; Alsatian"),
 
     Gujarati("guj", "Gujarati"),
 
@@ -567,7 +576,7 @@ public enum Languages implements OnixCodelist, CodeList74 {
      */
     Haida("hai", "Haida"),
 
-    Haitian_French_Creole("hat", "Haitian French Creole"),
+    Haitian_Haitian_Creole("hat", "Haitian; Haitian Creole"),
 
     Hausa("hau", "Hausa"),
 
@@ -711,7 +720,10 @@ public enum Languages implements OnixCodelist, CodeList74 {
 
     Kazakh("kaz", "Kazakh"),
 
-    Kabardian_Circassian("kbd", "Kabardian (Circassian)"),
+    /**
+     * (East Circassian)
+     */
+    Kabardian("kbd", "Kabardian"),
 
     /**
      * ONIX local code, equivalent to kdr in ISO 639-3
@@ -772,7 +784,7 @@ public enum Languages implements OnixCodelist, CodeList74 {
 
     Kurukh("kru", "Kurukh"),
 
-    Kuanyama("kua", "Kuanyama"),
+    Kuanyama_Kwanyama("kua", "Kuanyama; Kwanyama"),
 
     Kumyk("kum", "Kumyk"),
 
@@ -810,7 +822,7 @@ public enum Languages implements OnixCodelist, CodeList74 {
      */
     Ligurian("lij", "Ligurian"),
 
-    Limburgish("lim", "Limburgish"),
+    Limbergan_Limburger_Limburgish("lim", "Limbergan; Limburger; Limburgish"),
 
     Lingala("lin", "Lingala"),
 
@@ -974,7 +986,7 @@ public enum Languages implements OnixCodelist, CodeList74 {
 
     Nauruan("nau", "Nauruan"),
 
-    Navajo("nav", "Navajo"),
+    Navajo_Navaho("nav", "Navajo; Navaho"),
 
     Ndebele_South("nbl", "Ndebele, South"),
 
@@ -1162,7 +1174,16 @@ public enum Languages implements OnixCodelist, CodeList74 {
     Valencian("qav", "Valencian"),
 
     /**
-     * ONIX local code, distinct dialect of of Rusyn (not distinguished from rue by ISO 639-3). For use in ONIX 3.0 only
+     * ONIX local code, distinct variant of langue d'o&#239;l (old northern French) (not distinguished from fro, or from
+     * frm, fre, nrf by ISO 639-3). For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Gallo("qgl", "Gallo"),
+
+    /**
+     * ONIX local code, distinct dialect of of Rusyn (not distinguished from rue by ISO 639-3). For use in ONIX 3.0
+     * only
      * <p>
      * Jonix-Comment: Introduced in Onix3
      */
@@ -1294,6 +1315,13 @@ public enum Languages implements OnixCodelist, CodeList74 {
      */
     Sign_languages("sgn", "Sign languages"),
 
+    /**
+     * ONIX local code, equivalent to shi in ISO 639-3. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Tashelhit_Shilha("shi", "Tashelhit; Shilha"),
+
     Shan("shn", "Shan"),
 
     Sidamo("sid", "Sidamo"),
@@ -1359,6 +1387,13 @@ public enum Languages implements OnixCodelist, CodeList74 {
      * Macrolanguage
      */
     Sardinian("srd", "Sardinian"),
+
+    /**
+     * ONIX local code for Saramaccan language, equivalent to srm in ISO 639-3. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Saramaccan("srm", "Saramaccan"),
 
     Sranan_Tongo("srn", "Sranan Tongo"),
 
@@ -1484,6 +1519,13 @@ public enum Languages implements OnixCodelist, CodeList74 {
     Tuvinian("tyv", "Tuvinian"),
 
     /**
+     * ONIX local code, equivalent to tzm in ISO 639-3. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Central_Atlas_Tamazight("tzm", "Central Atlas Tamazight"),
+
+    /**
      * ONIX local code, equivalent to tzo in ISO 639-3
      */
     Tzotzil("tzo", "Tzotzil"),
@@ -1549,7 +1591,14 @@ public enum Languages implements OnixCodelist, CodeList74 {
 
     Wolof("wol", "Wolof"),
 
-    Kalmyk("xal", "Kalmyk"),
+    /**
+     * Vilamovian. ONIX local code, equivalent to wym in ISO 639-3. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Wymysorys("wym", "Wymysorys"),
+
+    Kalmyk_Oirat("xal", "Kalmyk; Oirat"),
 
     Xhosa("xho", "Xhosa"),
 

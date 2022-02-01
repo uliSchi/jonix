@@ -33,29 +33,6 @@ import java.util.List;
  */
 
 /**
- * <h1>Copyright statement composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together represent a copyright or neighbouring right
- * statement for the product. At least one &lt;CopyrightYear&gt; or one instance of the &lt;CopyrightOwner&gt; composite
- * must be sent within an instance of the composite, but it is recommended that all elements in the composite are
- * explicitly populated. The Copyright statement may be repeated to provide a full structured rights statement listing
- * year(s) and rights holder(s).
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CopyrightStatement&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;copyrightstatement&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PublishingDetail}&gt;</li>
@@ -161,11 +138,6 @@ public class CopyrightStatement implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<CopyrightYear, String> copyrightYears = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * The copyright year as it appears in a copyright statement on the product. Optional in each occurrence of the
-     * &lt;CopyrightStatement&gt; composite but may be omitted only if &lt;CopyrightOwner&gt; is present, and repeatable
-     * if several years or periods are listed.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixElement<CopyrightYear, String> copyrightYears() {
@@ -176,10 +148,6 @@ public class CopyrightStatement implements OnixSuperComposite, Serializable {
     private CopyrightType copyrightType = CopyrightType.EMPTY;
 
     /**
-     * <p>
-     * An optional ONIX code indicating the type of right covered by the statement, typically a copyright or
-     * neighbouring right. If omitted, the default is that the statement represents a copyright.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public CopyrightType copyrightType() {
@@ -190,11 +158,6 @@ public class CopyrightStatement implements OnixSuperComposite, Serializable {
     private List<CopyrightOwner> copyrightOwners = Collections.emptyList();
 
     /**
-     * <p>
-     * A repeatable group of data elements which together name a copyright owner. Optional, but may be omitted only if
-     * &lt;CopyrightYear&gt; is present. Each occurrence of the &lt;CopyrightOwner&gt; composite must carry a single
-     * name (personal or corporate), or an identifier, or both.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public List<CopyrightOwner> copyrightOwners() {

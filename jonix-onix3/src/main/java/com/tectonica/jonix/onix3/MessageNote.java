@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Message note</h1>
- * <p>
- * Free text giving additional information about the message. Optional, and repeatable in order to provide a note in
- * multiple languages. The <i>language</i> attribute is optional for a single instance of &lt;MessageNote&gt;, but must
- * be included in each instance if &lt;MessageNote&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum 500 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MessageNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;m183&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MessageNote&gt;Updates
- * for titles to be published September 2009&lt;/MessageNote&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Header}&gt;</li>
@@ -106,8 +72,6 @@ public class MessageNote implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of MessageNote. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum 500 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

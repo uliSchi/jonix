@@ -195,7 +195,9 @@ public class Parser {
                         if (sb.length() != 0) {
                             sb.append("\n");
                         }
-                        sb.append(line);
+                        // make sure that the line does not contain a "\n"
+                        // e.g. a line looked like: "\n           Nei Mongol Autonomous Region"
+                        sb.append(line.replaceAll("\n", "").trim());
                     }
                 });
                 return sb.length() > 0 ? sb.toString() : null;
@@ -473,13 +475,21 @@ public class Parser {
         Element complexTypeElem;
         Element contentElem;
         String contentType = "";
+        // an "xs:element" could have also "xs:annotation" and "xs:unique" items (ignore those...)
         try {
             complexTypeElem = DOM.firstElemChild(element);
+            if (complexTypeElem.getNodeName().equals("xs:annotation")) {    // ignore "xs:annotation"
+                complexTypeElem = DOM.nextElemChild(complexTypeElem);
+            }
             if (!complexTypeElem.getNodeName().equals("xs:complexType")) {
                 throw new RuntimeException("top-level xs:element is expected to be defined as a xs:complexType");
             }
 
-            if (DOM.nextElemChild(complexTypeElem) != null) {
+            Element nextElement = DOM.nextElemChild(complexTypeElem);
+            while (nextElement != null && nextElement.getNodeName().equals("xs:unique")) {    // ignore "xs:unique"
+                nextElement = DOM.nextElemChild(nextElement);
+            }
+            if (nextElement != null) {
                 throw new RuntimeException("top-level xs:element is expected contain exactly one xs:complexType");
             }
 
@@ -674,6 +684,9 @@ public class Parser {
             throw new RuntimeException("under content - couldn't find group " + groupName);
         }
         Element groupDefTopElem = DOM.firstElemChild(groupDefElem);
+        if (groupDefTopElem.getNodeName().equals("xs:annotation")) {    // ignore "xs:annotation"
+            groupDefTopElem = DOM.nextElemChild(groupDefTopElem);
+        }
         if (groupDefTopElem == null) {
             throw new RuntimeException("group " + groupName + " is empty");
         }

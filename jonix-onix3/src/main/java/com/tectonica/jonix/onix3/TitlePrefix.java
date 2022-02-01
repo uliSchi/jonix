@@ -33,42 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Title prefix</h1>
- * <p>
- * Text at the beginning of a title element which is to be ignored for alphabetical sorting. Optional and non-repeating;
- * can only be used when &lt;TitleText&gt; is omitted, and if the &lt;TitleWithoutPrefix&gt; element is also present.
- * These two elements may be used in combination in applications where it is necessary to distinguish an initial word or
- * character string which is to be ignored for filing purposes, <i>eg</i> in library systems and in some bookshop
- * databases.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum 20 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TitlePrefix&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b030&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>collationkey, language, textscript, textcase</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;TitlePrefix
- * language=&quot;eng&quot;&gt;The&lt;/TitlePrefix&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TitleElement}&gt;</li>
@@ -76,12 +40,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈
- * {@link TitlePrefix}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link TitlePrefix}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link TitlePrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link TitlePrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link TitlePrefix}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link TitlePrefix}</li>
  * </ul>
  */
 public class TitlePrefix implements OnixElement<String>, Serializable {
@@ -124,8 +85,6 @@ public class TitlePrefix implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of TitlePrefix. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum 20 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

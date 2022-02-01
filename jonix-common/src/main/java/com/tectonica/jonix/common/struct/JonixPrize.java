@@ -32,9 +32,7 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Prize></code> and Onix3
- * <code>&lt;Prize></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Prize></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPrize implements JonixStruct, Serializable {
@@ -45,23 +43,16 @@ public class JonixPrize implements JonixStruct, Serializable {
     public Countrys prizeCountry;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 500 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
-     * <p>
      * (type: XHTML)
      */
     public List<String> prizeJurys;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 100 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public List<String> prizeNames;
 
     /**
-     * Raw Format: Four digits, YYYY
-     * <p>
      * (type: dt.Year)
      */
     public String prizeYear;

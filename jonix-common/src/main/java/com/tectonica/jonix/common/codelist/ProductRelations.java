@@ -40,9 +40,8 @@ interface CodeList51 {
  * Description: Product relation
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist51">ONIX
- *      Codelist 51 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist51">ONIX
+ * Codelist 51 in Reference Guide</a>
  */
 public enum ProductRelations implements OnixCodelist, CodeList51 {
     /**
@@ -64,6 +63,14 @@ public enum ProductRelations implements OnixCodelist, CodeList51 {
      * &lt;Product&gt; replaces, or is new edition of, &lt;RelatedProduct&gt; (inverse of code 05)
      */
     Replaces("03", "Replaces"),
+
+    /**
+     * &lt;Product&gt; and &lt;RelatedProduct&gt; are companion products, intended to be used, or are usable, together
+     * (is own inverse). For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Has_companion_product("04", "Has companion product"),
 
     /**
      * &lt;Product&gt; is replaced by, or has new edition, &lt;RelatedProduct&gt; (inverse of code 03)
@@ -147,7 +154,8 @@ public enum ProductRelations implements OnixCodelist, CodeList51 {
     Is_prebound_edition_of("20", "Is prebound edition of"),
 
     /**
-     * &lt;Product&gt; is the regular edition of which &lt;RelatedProduct&gt; is a prebound edition (inverse of code 20)
+     * &lt;Product&gt; is the regular edition of which &lt;RelatedProduct&gt; is a prebound edition (inverse of code
+     * 20)
      */
     Is_original_of_prebound_edition("21", "Is original of prebound edition"),
 

@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;DiscountCoded></code> and Onix3
- * <code>&lt;DiscountCoded></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;DiscountCoded></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code>
+ * method.
  */
 @SuppressWarnings("serial")
 public class JonixDiscountCoded implements JonixKeyedStruct<DiscountCodeTypes>, Serializable {
@@ -45,15 +44,11 @@ public class JonixDiscountCoded implements JonixKeyedStruct<DiscountCodeTypes>, 
     public DiscountCodeTypes discountCodeType;
 
     /**
-     * Raw Format: According to the scheme specified in &lt;DiscountCodeType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String discountCode;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String discountCodeTypeName;

@@ -40,27 +40,6 @@ import java.util.List;
  */
 
 /**
- * <h1>Event occurrence</h1>
- * <p>
- * A group of data elements which together describe a single occurrence of the promotional event. At least one occurence
- * is mandatory within the &lt;PromotionalEvent&gt; composite, and &lt;EventOccurrence&gt; is repeatable in order to
- * list a group of more or less similar occurrences such as a series of book signings.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventOccurrence&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;eventoccurrence&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PromotionalEvent}&gt;</li>
@@ -68,11 +47,8 @@ import java.util.List;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class EventOccurrence implements OnixSuperComposite, Serializable {
     private static final long serialVersionUID = 1L;
@@ -170,6 +146,10 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
                 case EventDescription.shortname:
                     eventDescriptions = JPU.addToList(eventDescriptions, new EventDescription(e));
                     break;
+                case SupportingResource.refname:
+                case SupportingResource.shortname:
+                    supportingResources = JPU.addToList(supportingResources, new SupportingResource(e));
+                    break;
                 case EventSponsor.refname:
                 case EventSponsor.shortname:
                     eventSponsors = JPU.addToList(eventSponsors, new EventSponsor(e));
@@ -205,10 +185,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private EventStatus eventStatus = EventStatus.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which specifies the status of a particular occurrence of a promotional event occurrence. Mandatory
-     * within each instance of the &lt;EventOccurrence&gt; composite, and non-repeatable.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public EventStatus eventStatus() {
@@ -219,11 +195,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private CountryCode countryCode = CountryCode.EMPTY;
 
     /**
-     * <p>
-     * A code identifying a country within which an event occurrence takes place. Optional and non-repeatable. For a
-     * physical event, at least one of the &lt;CountryCode&gt; or &lt;RegionCode&gt; elements is required in each
-     * instance of &lt;EventOccurrence&gt;. For purely digital events, both must be omitted.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public CountryCode countryCode() {
@@ -231,15 +202,10 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
         return countryCode;
     }
 
-    private ListOfOnixDataCompositeWithKey<OccurrenceDate, JonixOccurrenceDate,
-        EventOccurrenceDateRoles> occurrenceDates = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<OccurrenceDate, JonixOccurrenceDate, EventOccurrenceDateRoles>
+        occurrenceDates = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together specify a date associated with the event occurrence. At least the date
-     * (and typically also the time) the event occurrence begins must be specified, and other dates related to the event
-     * occurrence can be sent in further repeats of the composite.
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<OccurrenceDate, JonixOccurrenceDate, EventOccurrenceDateRoles>
@@ -251,11 +217,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private RegionCode regionCode = RegionCode.EMPTY;
 
     /**
-     * <p>
-     * A code identifying a region within which an event occurrence takes place. Optional and non-repeatable. For a
-     * physical event, at least one of the &lt;CountryCode&gt; or &lt;RegionCode&gt; elements is required in each
-     * instance of &lt;EventOccurrence&gt;. For purely digital events, both must be omitted.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public RegionCode regionCode() {
@@ -266,10 +227,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private VenueName venueName = VenueName.EMPTY;
 
     /**
-     * <p>
-     * The name of the venue at which the event occurrence takes place, for example the name of the bookstore. Optional,
-     * but required for a physical event and omitted for a purely digital event.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public VenueName venueName() {
@@ -280,11 +237,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private StreetAddress streetAddress = StreetAddress.EMPTY;
 
     /**
-     * <p>
-     * The street address of the named venue. Optional, but typically required for physical events and omitted for a
-     * purely digital event. Do not repeat parts of the address specified in &lt;CountryCode&gt;, &lt;RegionCode&gt;,
-     * &lt;LocationName&gt; or &lt;VenueName&gt;.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public StreetAddress streetAddress() {
@@ -292,14 +244,10 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
         return streetAddress;
     }
 
-    private ListOfOnixDataCompositeWithKey<EventIdentifier, JonixEventIdentifier,
-        EventIdentifierTypes> eventIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<EventIdentifier, JonixEventIdentifier, EventIdentifierTypes>
+        eventIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * An optional group of data elements which together define an identifier for an event occurrence. The composite is
-     * repeatable in order to specify multiple identifiers for the same occurrence.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<EventIdentifier, JonixEventIdentifier, EventIdentifierTypes>
@@ -311,14 +259,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<LocationName, String> locationNames = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * The name of a city or town location within the specified country or region at which an event occurrence takes
-     * place. Optional, but required for a physical event and omitted for a purely digital event, and repeatable to
-     * provide parallel names for a single location in multiple languages (<i>eg</i> Baile Átha Cliath and Dublin, or
-     * Bruxelles and Brussel). It may if necessary include a postal code (<i>eg</i> 10680 Αθήνα, or 20090 Assago). The
-     * <i>language</i> attribute is optional for a single instance of &lt;LocationName&gt;, but must be included in each
-     * instance if &lt;LocationName&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<LocationName, String> locationNames() {
@@ -329,11 +269,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<VenueNote, String> venueNotes = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text of a short note related to the venue. Optional, and repeatable to provide parallel notes in multiple
-     * languages. The <i>language</i> attribute is optional for a single instance of &lt;VenueNote&gt;, but must be
-     * included in each instance if &lt;VenueNote&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<VenueNote, String> venueNotes() {
@@ -344,11 +279,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<EventDescription, String> eventDescriptions = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * Free text describing the promotional event occurrence. Optional, and repeatable to provide parallel text in
-     * multiple languages. The <i>language</i> attribute is optional for a single instance of &lt;EventDescription&gt;,
-     * but must be included in each instance if &lt;EventDescription&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<EventDescription, String> eventDescriptions() {
@@ -356,15 +286,19 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
         return eventDescriptions;
     }
 
+    private List<SupportingResource> supportingResources = Collections.emptyList();
+
+    /**
+     * Jonix-Comment: this list may be empty
+     */
+    public List<SupportingResource> supportingResources() {
+        _initialize();
+        return supportingResources;
+    }
+
     private List<EventSponsor> eventSponsors = Collections.emptyList();
 
     /**
-     * <p>
-     * An optional group of data elements which together identify an organizer or sponsor of an event occurrence. Either
-     * an &lt;EventSponsorIdentifier&gt;, or one or other of &lt;PersonName&gt; or &lt;CorporateName&gt;, or both an
-     * identifier and a name, must be present in each occurrence of the composite. The composite is repeatable in order
-     * to specify multiple organizers and sponsors.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public List<EventSponsor> eventSponsors() {
@@ -375,11 +309,6 @@ public class EventOccurrence implements OnixSuperComposite, Serializable {
     private ListOfOnixDataComposite<Website, JonixWebsite> websites = ListOfOnixDataComposite.empty();
 
     /**
-     * <p>
-     * An optional group of data elements which together identify and provide a pointers to a website which is related
-     * to the event occurrence – for example a website providing a ticketing service. Repeatable to provide links to
-     * multiple websites.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataComposite<Website, JonixWebsite> websites() {

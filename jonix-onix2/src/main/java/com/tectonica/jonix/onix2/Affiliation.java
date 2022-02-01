@@ -34,34 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Affiliation</h1>
- * <p>
- * An organisation to which a contributor to the product was affiliated at the time of its creation. Optional and
- * non-repeating. May only occur with a person name, not with a corporate name.
- * </p>
- * <p>
- * <strong>The &lt;ProfessionalAffiliation&gt; composite below provides a more general method of handling positions and
- * affiliations, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 100 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Affiliation&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b046&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;Affiliation&gt;Universidad de La
- * Laguna&lt;/Affiliation&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Affiliation</h1><p>An organisation to which a contributor to the product was affiliated at the time of its
+ * creation. Optional and non-repeating. May only occur with a person name, not with a corporate name.</p><p><strong>The
+ * &lt;ProfessionalAffiliation&gt; composite below provides a more general method of handling positions and
+ * affiliations, and is to be preferred.</strong></p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length
+ * text, suggested maximum length 100 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;Affiliation&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b046&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;Affiliation&gt;Universidad de La
+ * Laguna&lt;/Affiliation&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,16 +50,11 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈
- * {@link Affiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈
- * {@link Affiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈
- * {@link Affiliation}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈
- * {@link Affiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link ProfessionalAffiliation} ⯈ {@link Affiliation}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link Affiliation}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link Affiliation}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link Affiliation}</li>
@@ -126,9 +100,7 @@ public class Affiliation implements OnixElement<String>, Serializable {
      * This is the raw content of Affiliation. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters<p> (type: NonEmptyString)
      */
     public String value;
 

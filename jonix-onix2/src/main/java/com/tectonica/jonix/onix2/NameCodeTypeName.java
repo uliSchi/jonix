@@ -34,25 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Name code type name</h1>
- * <p>
- * A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt; indicates a proprietary scheme,
- * <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Free text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NameCodeTypeName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b242&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Name code type name</h1><p>A name which identifies a proprietary name code when the code in &lt;NameCodeType&gt;
+ * indicates a proprietary scheme, <em>eg</em> a bibliographic agency’s own code. Optional and non-repeating.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Free text, suggested maximum length 50
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;NameCodeTypeName&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b242&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -63,8 +49,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Publisher} ⯈ {@link NameCodeTypeName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Publisher} ⯈
- * {@link NameCodeTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link RelatedProduct} ⯈ {@link Publisher} ⯈ {@link NameCodeTypeName}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Publisher} ⯈ {@link NameCodeTypeName}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Publisher} ⯈ {@link NameCodeTypeName}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Imprint} ⯈ {@link NameCodeTypeName}</li>
@@ -105,9 +90,7 @@ public class NameCodeTypeName implements OnixElement<String>, Serializable {
      * This is the raw content of NameCodeTypeName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Free text, suggested maximum length 50 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Free text, suggested maximum length 50 characters<p> (type: NonEmptyString)
      */
     public String value;
 

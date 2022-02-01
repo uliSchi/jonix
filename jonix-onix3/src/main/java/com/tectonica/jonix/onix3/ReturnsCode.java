@@ -30,38 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Returns conditions code</h1>
- * <p>
- * A returns conditions code from the scheme specified in &lt;ReturnsCodeType&gt;. Mandatory in each occurrence of the
- * &lt;ReturnsConditions&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>According to the scheme specified in &lt;ReturnsCodeType&gt;</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>for values defined by BISAC for US use, see List 66. For other uses see List 204</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ReturnsCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j269&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;j269&gt;S&lt;/j269&gt;</tt> (Stripped cover returnable)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ReturnsConditions}&gt;</li>
@@ -69,8 +37,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link ReturnsConditions}
- * ⯈ {@link ReturnsCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link ReturnsConditions} ⯈ {@link ReturnsCode}</li>
  * </ul>
  */
 public class ReturnsCode implements OnixElement<String>, Serializable {
@@ -102,8 +69,6 @@ public class ReturnsCode implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ReturnsCode. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: According to the scheme specified in &lt;ReturnsCodeType&gt;
      * <p>
      * (type: dt.NonEmptyString)
      */

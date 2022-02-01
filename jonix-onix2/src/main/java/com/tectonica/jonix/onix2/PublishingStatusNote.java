@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Publishing status note</h1>
- * <p>
- * Free text that describes the status of a published product, when the code in &lt;PublishingStatus&gt; is
- * insufficient. Optional and non-repeating, but must be accompanied by the &lt;PublishingStatus&gt; element.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum 300 characters.</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PublishingStatusNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b395&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b395&gt;Lost contact with
- * publisher&lt;/b395&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Publishing status note</h1><p>Free text that describes the status of a published product, when the code in
+ * &lt;PublishingStatus&gt; is insufficient. Optional and non-repeating, but must be accompanied by the
+ * &lt;PublishingStatus&gt; element.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text,
+ * suggested maximum 300 characters.</td></tr><tr><td>Reference name</td><td><tt>&lt;PublishingStatusNote&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b395&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b395&gt;Lost contact with
+ * publisher&lt;/b395&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +88,7 @@ public class PublishingStatusNote implements OnixElement<String>, Serializable {
      * This is the raw content of PublishingStatusNote. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum 300 characters.
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum 300 characters.<p> (type: NonEmptyString)
      */
     public String value;
 

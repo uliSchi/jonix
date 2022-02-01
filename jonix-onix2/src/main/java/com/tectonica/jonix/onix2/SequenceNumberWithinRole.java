@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Contributor sequence number within role</h1>
- * <p>
- * A number which specifies the sequence of contributor names within a specified role, for applications which require
- * this form of numbering. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length integer, 1, 2, 3 etc, suggested maximum length 3 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SequenceNumberWithinRole&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b340&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;SequenceNumberWithinRole&gt;3&lt;/SequenceNumberWithinRole&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Contributor sequence number within role</h1><p>A number which specifies the sequence of contributor names within
+ * a specified role, for applications which require this form of numbering. Optional and non-repeating.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length integer, 1, 2, 3 etc, suggested maximum length 3
+ * digits</td></tr><tr><td>Reference name</td><td><tt>&lt;SequenceNumberWithinRole&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b340&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;SequenceNumberWithinRole&gt;3&lt;/SequenceNumberWithinRole&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -66,12 +48,10 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Contributor} ⯈ {@link SequenceNumberWithinRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link SequenceNumberWithinRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link SequenceNumberWithinRole}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link Contributor} ⯈ {@link SequenceNumberWithinRole}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link Contributor} ⯈ {@link SequenceNumberWithinRole}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈
- * {@link SequenceNumberWithinRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link Series} ⯈ {@link Contributor} ⯈ {@link SequenceNumberWithinRole}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -108,12 +88,10 @@ public class SequenceNumberWithinRole implements OnixElement<String>, Serializab
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of SequenceNumberWithinRole. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of SequenceNumberWithinRole. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length integer, 1, 2, 3 etc, suggested maximum length 3 digits
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, 1, 2, 3 etc, suggested maximum length 3 digits<p> (type: NonEmptyString)
      */
     public String value;
 

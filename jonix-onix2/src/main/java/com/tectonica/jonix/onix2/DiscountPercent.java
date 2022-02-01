@@ -34,30 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Discount percentage</h1>
- * <p>
- * The supplier’s discount percentage applicable to the price carried in an occurrence of the &lt;Price&gt; composite.
- * Optional and non-repeating. Use only when an ONIX message is sent within the context of a specific trading
- * relationship.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length numeric, including decimal point if required, suggested maximum length 6 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DiscountPercent&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j267&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;DiscountPercent&gt;37.5&lt;/DiscountPercent&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Discount percentage</h1><p>The supplier’s discount percentage applicable to the price carried in an occurrence of
+ * the &lt;Price&gt; composite. Optional and non-repeating. Use only when an ONIX message is sent within the context of
+ * a specific trading relationship.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length numeric,
+ * including decimal point if required, suggested maximum length 6 characters</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;DiscountPercent&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;j267&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;DiscountPercent&gt;37.5&lt;/DiscountPercent&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -67,8 +48,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link DiscountPercent}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link DiscountPercent}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link DiscountPercent}</li>
  * </ul>
  */
 public class DiscountPercent implements OnixElement<String>, Serializable {
@@ -106,9 +86,8 @@ public class DiscountPercent implements OnixElement<String>, Serializable {
      * This is the raw content of DiscountPercent. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length numeric, including decimal point if required, suggested maximum length 6 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length numeric, including decimal point if required, suggested maximum length 6
+     * characters<p> (type: NonEmptyString)
      */
     public String value;
 

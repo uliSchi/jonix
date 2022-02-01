@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Publication date of other text</h1>
- * <p>
- * The date on which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, was
- * published. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Date as four, six or eight digits (YYYY, YYYYMM, YYYYMMDD)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextPublicationDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;d109&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;d109&gt;20000504&lt;/d109&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Publication date of other text</h1><p>The date on which text sent in the &lt;Text&gt; element, or referenced in
+ * the &lt;TextLink&gt; element, was published. Optional and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Date as four, six or eight digits (YYYY, YYYYMM,
+ * YYYYMMDD)</td></tr><tr><td>Reference name</td><td><tt>&lt;TextPublicationDate&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;d109&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;d109&gt;20000504&lt;/d109&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -66,8 +48,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link OtherText} ⯈ {@link TextPublicationDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link OtherText} ⯈
- * {@link TextPublicationDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link OtherText} ⯈ {@link TextPublicationDate}</li>
  * <li>{@link ONIXMessage} ⯈ {@link SubSeriesRecord} ⯈ {@link OtherText} ⯈ {@link TextPublicationDate}</li>
  * <li>{@link ONIXMessage} ⯈ {@link MainSeriesRecord} ⯈ {@link OtherText} ⯈ {@link TextPublicationDate}</li>
  * </ul>
@@ -107,9 +88,7 @@ public class TextPublicationDate implements OnixElement<String>, Serializable {
      * This is the raw content of TextPublicationDate. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Date as four, six or eight digits (YYYY, YYYYMM, YYYYMMDD)
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Date as four, six or eight digits (YYYY, YYYYMM, YYYYMMDD)<p> (type: NonEmptyString)
      */
     public String value;
 

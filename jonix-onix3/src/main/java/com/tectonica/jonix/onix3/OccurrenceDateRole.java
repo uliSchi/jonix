@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Occurrence date role</h1>
- * <p>
- * An ONIX code indicating the significance of the date, <i>eg</i> the date of the occurrence, last date of ticket
- * availability <i>etc</i>. Mandatory in each instance of the &lt;OccurrenceDate&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 247</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OccurrenceDateRole&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x554&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x554&gt;01&lt;/x554&gt;</tt> (Date of occurrence)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link OccurrenceDate}&gt;</li>
@@ -70,11 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence} ⯈ {@link OccurrenceDate} ⯈ {@link OccurrenceDateRole}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link OccurrenceDate} ⯈ {@link OccurrenceDateRole}</li>
  * </ul>
- *
- * @since Onix-3.07
  */
 public class OccurrenceDateRole implements OnixElement<EventOccurrenceDateRoles>, Serializable {
     private static final long serialVersionUID = 1L;

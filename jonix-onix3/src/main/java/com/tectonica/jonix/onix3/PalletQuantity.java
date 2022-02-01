@@ -30,35 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Pallet quantity</h1>
- * <p>
- * The quantity (number of copies) on each complete pallet in stock currently held by the supplier. Optional and
- * non-repeating. Of course, orders do not have to be aligned to the pallet quantity, but for bulk orders, it may be
- * useful to know how many pallets will be required for a delivery.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Positive integer, suggested maximum length 7 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PalletQuantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x545&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;PalletQuantity&gt;960&lt;/PalletQuantity&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SupplyDetail}&gt;</li>
@@ -66,11 +37,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈
- * {@link PalletQuantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link PalletQuantity}</li>
  * </ul>
- *
- * @since Onix-3.05
  */
 public class PalletQuantity implements OnixElement<Integer>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -101,8 +69,6 @@ public class PalletQuantity implements OnixElement<Integer>, Serializable {
     /**
      * This is the raw content of PalletQuantity. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Positive integer, suggested maximum length 7 digits
      * <p>
      * (type: dt.StrictPositiveInteger)
      */

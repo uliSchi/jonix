@@ -29,32 +29,24 @@ import java.util.List;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ReviewRating></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ReviewRating></code>.<p>It can be retrieved from
+ * the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixReviewRating implements JonixStruct, Serializable {
     public static final JonixReviewRating EMPTY = new JonixReviewRating();
 
     /**
-     * Raw Format: Positive real number, with explicit decimal point when required, or zero, as appropriate for the
-     * limit specified in &lt;RatingLimit&gt;. Suggested maximum length 7 characters
-     * <p>
      * (type: dt.PositiveDecimal)
      */
     public Double rating;
 
     /**
-     * Raw Format: Positive integer number, suggested maximum length 4 digits
-     * <p>
      * (type: dt.PositiveInteger)
      */
     public Integer ratingLimit;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public List<String> ratingUnitss;

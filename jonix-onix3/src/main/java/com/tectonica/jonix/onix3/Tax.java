@@ -34,35 +34,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Tax composite</h1>
- * <p>
- * A repeatable group of data elements which together specify tax included within a price amount. Optional, and used
- * only when &lt;PriceType&gt; indicates an inc-tax price. For items to which different taxes or tax rates apply
- * (<i>eg</i> mixed media products in the UK which are partly taxed at standard rate and partly at zero rate), the
- * composite is repeated for each separate tax or tax rate. Although only one of &lt;TaxRatePercent&gt; or
- * &lt;TaxAmount&gt; is mandatory within the composite, it is recommended that all tax elements in the composite should
- * be explicitly populated.
- * </p>
- * <p>
- * If the tax regime requires separate tax rates and amounts linked explicitly to particular product parts (<i>eg</i> in
- * Germany), the &lt;ProductIdentifier&gt; composite may be included in each &lt;Tax&gt; composite. Where tax is payable
- * on multiple product parts, each should have its own instance of the &lt;Tax&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Tax&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;tax&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -70,10 +41,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link Tax}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link Tax}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link Tax}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link Tax}</li>
  * </ul>
  */
 public class Tax implements OnixSuperComposite, Serializable {
@@ -186,10 +155,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private TaxRatePercent taxRatePercent = TaxRatePercent.EMPTY;
 
     /**
-     * <p>
-     * A tax rate expressed numerically as a percentage. Optional and non-repeating; but either &lt;TaxRatePercent&gt;
-     * or &lt;TaxAmount&gt; or both must be present in each occurrence of the &lt;Tax&gt; composite.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public TaxRatePercent taxRatePercent() {
@@ -200,9 +165,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private TaxType taxType = TaxType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a tax type, <i>eg</i> VAT. Optional, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public TaxType taxType() {
@@ -213,9 +175,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private TaxRateCode taxRateCode = TaxRateCode.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which specifies a tax rate. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public TaxRateCode taxRateCode() {
@@ -226,11 +185,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private TaxableAmount taxableAmount = TaxableAmount.EMPTY;
 
     /**
-     * <p>
-     * The amount of the unit price of the product, excluding tax, which is taxable at the rate specified in an
-     * occurrence of the &lt;Tax&gt; composite. Optional and non-repeating; but required if tax is charged on part of
-     * the price. Omission of this element implies that tax is charged on the full amount of the price.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public TaxableAmount taxableAmount() {
@@ -241,11 +195,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private TaxAmount taxAmount = TaxAmount.EMPTY;
 
     /**
-     * <p>
-     * The amount of tax chargeable at the rate specified in an occurrence of the &lt;Tax&gt; composite. Optional and
-     * non-repeating; but either &lt;TaxRatePercent&gt; or &lt;TaxAmount&gt; or both must be present in each occurrence
-     * of the &lt;Tax&gt; composite.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public TaxAmount taxAmount() {
@@ -253,17 +202,10 @@ public class Tax implements OnixSuperComposite, Serializable {
         return taxAmount;
     }
 
-    private ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier,
-        ProductIdentifierTypes> productIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier, ProductIdentifierTypes>
+        productIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * Optional and repeatable group of data elements which together specify one or more identifiers of a product part
-     * in accordance with a specified scheme, used here only when it is necessary to link a particular tax rate or
-     * amount with a particular product part contained within a multiple-item product or a trade pack. All identifiers
-     * included here must also be included in an instance of &lt;ProductPart&gt;, and where multiple identifiers are
-     * provided in any one occurrence of the &lt;Tax&gt; composite, they must all identify the same product part.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier, ProductIdentifierTypes>
@@ -275,13 +217,6 @@ public class Tax implements OnixSuperComposite, Serializable {
     private ListOfOnixElement<PricePartDescription, String> pricePartDescriptions = ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * A name or description which identifies a part of the product price that is subject to the relevant tax, for
-     * example a product part that may be taxed with a particular tax rate or amount (separately from other components),
-     * or a levy added to a product price that is itself subject to tax. Optional, and repeatable to provide parallel
-     * descriptive text in multiple languages. The <i>language</i> attribute is optional for a single instance of
-     * &lt;PricePartDescription&gt;, but must be included in each instance if &lt;PricePartDescription&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<PricePartDescription, String> pricePartDescriptions() {

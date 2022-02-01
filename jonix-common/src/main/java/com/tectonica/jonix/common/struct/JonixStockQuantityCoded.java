@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;StockQuantityCoded></code> and Onix3
- * <code>&lt;StockQuantityCoded></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;StockQuantityCoded></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixStockQuantityCoded implements JonixKeyedStruct<StockQuantityCodeTypes>, Serializable {
@@ -45,15 +44,11 @@ public class JonixStockQuantityCoded implements JonixKeyedStruct<StockQuantityCo
     public StockQuantityCodeTypes stockQuantityCodeType;
 
     /**
-     * Raw Format: According to the scheme specified in &lt;StockQuantityCodeType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String stockQuantityCode;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 50 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String stockQuantityCodeTypeName;

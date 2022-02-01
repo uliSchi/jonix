@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product contact identifier composite</h1>
- * <p>
- * A group of data elements which together define an identifier of the product contact. The composite is optional, and
- * repeatable if more than one identifier of different types is sent; but <em>either</em> a &lt;ProductContactName&gt;
- * <em>or</em> a &lt;ProductContactIdentifier&gt; <em>must</em> be included.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductContactIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;productcontactidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductContact}&gt;</li>
@@ -60,13 +39,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link ProductContact} ⯈
- * {@link ProductContactIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link ProductContact} ⯈ {@link ProductContactIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link ProductContact} ⯈ {@link ProductContactIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link ProductContact} ⯈ {@link ProductContactIdentifier}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class ProductContactIdentifier
     implements OnixDataCompositeWithKey<JonixProductContactIdentifier, NameIdentifierTypes>, Serializable {
@@ -164,10 +139,6 @@ public class ProductContactIdentifier
     private ProductContactIDType productContactIDType = ProductContactIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a scheme from which an identifier in the &lt;IDValue&gt; element is taken. Mandatory in
-     * each occurrence of the &lt;ProductContactIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ProductContactIDType productContactIDType() {
@@ -178,10 +149,6 @@ public class ProductContactIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in the &lt;ProductContactIDType&gt; element. Mandatory in each occurrence of
-     * the &lt;ProductContactIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -192,11 +159,6 @@ public class ProductContactIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be included when, and only when, the code in the
-     * &lt;ProductContactIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

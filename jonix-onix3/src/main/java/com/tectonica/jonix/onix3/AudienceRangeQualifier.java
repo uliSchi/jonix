@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Audience range qualifier</h1>
- * <p>
- * An ONIX code specifying the attribute (age, school grade <i>etc</i>) which is measured by the value in the
- * &lt;AudienceRangeValue&gt; element. Mandatory in each occurrence of the &lt;AudienceRange&gt; composite, and
- * non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 30</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AudienceRangeQualifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b074&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b074&gt;11&lt;/b074&gt;</tt> (US school grade)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link AudienceRange}&gt;</li>
@@ -71,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AudienceRange} ⯈
- * {@link AudienceRangeQualifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AudienceRange} ⯈ {@link AudienceRangeQualifier}</li>
  * </ul>
  */
 public class AudienceRangeQualifier implements OnixElement<AudienceRangeQualifiers>, Serializable {

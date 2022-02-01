@@ -30,36 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product contact name</h1>
- * <p>
- * The name of the product contact organization, which should always be stated in a standard form. Optional and
- * non-repeating; but <em>either</em> a &lt;ProductContactName&gt; element <em>or</em> a
- * &lt;ProductContactIdentifier&gt; composite <em>must</em> be included.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductContactName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x484&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;ProductContactName&gt;Little
- * Brown Book Group&lt;/ProductContactName&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link ProductContact}&gt;</li>
@@ -67,13 +37,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link ProductContact} ⯈
- * {@link ProductContactName}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link ProductContact} ⯈ {@link ProductContactName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link ProductContact} ⯈ {@link ProductContactName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link ProductContact} ⯈ {@link ProductContactName}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class ProductContactName implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -104,8 +70,6 @@ public class ProductContactName implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of ProductContactName. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum 50 characters
      * <p>
      * (type: dt.NonEmptyString)
      */

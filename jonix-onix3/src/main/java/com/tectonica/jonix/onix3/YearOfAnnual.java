@@ -30,34 +30,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Year of annual</h1>
- * <p>
- * When the year of an annual is part of a title, this field should be used to carry the year (or, if required, a spread
- * of years such as 2009–2010). Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Year or range of years, in the format YYYY or YYYY-YYYY</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;YearOfAnnual&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b020&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b020&gt;2009&lt;/b020&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link TitleElement}&gt;</li>
@@ -65,12 +37,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈
- * {@link YearOfAnnual}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link YearOfAnnual}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈
- * {@link TitleElement} ⯈ {@link YearOfAnnual}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link YearOfAnnual}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link YearOfAnnual}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link TitleDetail} ⯈ {@link TitleElement} ⯈ {@link YearOfAnnual}</li>
  * </ul>
  */
 public class YearOfAnnual implements OnixElement<String>, Serializable {
@@ -102,8 +71,6 @@ public class YearOfAnnual implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of YearOfAnnual. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Year or range of years, in the format YYYY or YYYY-YYYY
      * <p>
      * (type: dt.YearOrYearRange)
      */

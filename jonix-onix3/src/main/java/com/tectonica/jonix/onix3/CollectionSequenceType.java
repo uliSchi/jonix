@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Collection sequence type</h1>
- * <p>
- * An ONIX code identifying the type of ordering used for the product’s sequence number within the collection. Mandatory
- * and non-repeating within the &lt;CollectionSequence&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 197</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CollectionSequenceType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x479&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x479&gt;03&lt;/x479&gt;</tt> (Order of publication)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CollectionSequence}&gt;</li>
@@ -70,11 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈
- * {@link CollectionSequence} ⯈ {@link CollectionSequenceType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link CollectionSequence} ⯈ {@link CollectionSequenceType}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class CollectionSequenceType implements OnixElement<CollectionSequenceTypes>, Serializable {
     private static final long serialVersionUID = 1L;

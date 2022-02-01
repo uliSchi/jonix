@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Currency zone</h1>
- * <p>
- * An ONIX code identifying a currency zone in which the price stated in an occurrence of the &lt;Price&gt; composite is
- * applicable. Optional and non-repeating. Deprecated – use Country or Region codes instead.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, three letters</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 172</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CurrencyZone&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x475&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x475&gt;EUR&lt;/x475&gt;</tt> (Eurozone)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -70,15 +38,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link CurrencyZone}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link CurrencyZone}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link CurrencyZone}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link CurrencyZone}</li>
  * </ul>
- *
- * @deprecated
  */
-@Deprecated
 public class CurrencyZone implements OnixElement<CurrencyZones>, Serializable {
     private static final long serialVersionUID = 1L;
 

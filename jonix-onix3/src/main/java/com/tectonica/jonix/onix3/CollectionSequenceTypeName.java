@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Collection sequence type name</h1>
- * <p>
- * A name which describes a proprietary order used for the product’s sequence number within the collection. Must be
- * included when, and only when, the code in the &lt;CollectionSequenceType&gt; field indicates a proprietary scheme.
- * Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 50 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CollectionSequenceTypeName&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x480&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x480&gt;Order
- * of TV series transmission&lt;/x480&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CollectionSequence}&gt;</li>
@@ -72,11 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈
- * {@link CollectionSequence} ⯈ {@link CollectionSequenceTypeName}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link CollectionSequence} ⯈ {@link CollectionSequenceTypeName}</li>
  * </ul>
- *
- * @since Onix-3.01
  */
 public class CollectionSequenceTypeName implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -107,10 +70,8 @@ public class CollectionSequenceTypeName implements OnixElement<String>, Serializ
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of CollectionSequenceTypeName. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 50 characters
+     * This is the raw content of CollectionSequenceTypeName. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * (type: dt.NonEmptyString)
      */

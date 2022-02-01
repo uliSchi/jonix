@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>AV item identifier composite</h1>
- * <p>
- * A group of data elements which together define an identifier of an audio or audiovisual content item in accordance
- * with a specified identifier scheme. The composite is optional, and repeatable in order to provide multiple
- * identifiers for the content item.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AVItemIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;avitemidentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link AVItem}&gt;</li>
@@ -60,11 +39,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈
- * {@link AVItemIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link AVItem} ⯈ {@link AVItemIdentifier}</li>
  * </ul>
- *
- * @since Onix-3.05
  */
 public class AVItemIdentifier
     implements OnixDataCompositeWithKey<JonixAVItemIdentifier, AvItemIdentifierTypes>, Serializable {
@@ -162,10 +138,6 @@ public class AVItemIdentifier
     private AVItemIDType avItemIDType = AVItemIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying the scheme from which the identifier in &lt;IDValue&gt; is taken. Mandatory in each
-     * occurrence of the &lt;AVItemIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public AVItemIDType avItemIDType() {
@@ -176,10 +148,6 @@ public class AVItemIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * An identifier of the type specified in &lt;AVItemIDType&gt;. Mandatory in each occurrence of the
-     * &lt;AVItemIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -190,11 +158,6 @@ public class AVItemIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme (<i>ie</i> a scheme which is not a standard and for which
-     * there is no individual ID type code). Must be used when, and only when, the code in &lt;AVItemIDType&gt;
-     * indicates a proprietary scheme, <i>eg</i> a publisher’s own code. Optional and non-repeating
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

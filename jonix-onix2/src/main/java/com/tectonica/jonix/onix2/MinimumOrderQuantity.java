@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Minimum order quantity</h1>
- * <p>
- * The minimum number of copies which must be ordered to obtain the price carried in an occurrence of the &lt;Price&gt;
- * composite. Optional and non-repeating. If the field is present, the price is a quantity price. If the field is
- * omitted, the price applies to a single unit.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length integer, suggested maximum length 4 digits</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MinimumOrderQuantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j263&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MinimumOrderQuantity&gt;50&lt;/MinimumOrderQuantity&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Minimum order quantity</h1><p>The minimum number of copies which must be ordered to obtain the price carried in
+ * an occurrence of the &lt;Price&gt; composite. Optional and non-repeating. If the field is present, the price is a
+ * quantity price. If the field is omitted, the price applies to a single unit.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length integer, suggested maximum length 4
+ * digits</td></tr><tr><td>Reference name</td><td><tt>&lt;MinimumOrderQuantity&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j263&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;MinimumOrderQuantity&gt;50&lt;/MinimumOrderQuantity&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -67,8 +49,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link MinimumOrderQuantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link MinimumOrderQuantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link MinimumOrderQuantity}</li>
  * </ul>
  */
 public class MinimumOrderQuantity implements OnixElement<String>, Serializable {
@@ -106,9 +87,7 @@ public class MinimumOrderQuantity implements OnixElement<String>, Serializable {
      * This is the raw content of MinimumOrderQuantity. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length integer, suggested maximum length 4 digits
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length integer, suggested maximum length 4 digits<p> (type: NonEmptyString)
      */
     public String value;
 

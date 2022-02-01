@@ -31,40 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Copyright year</h1>
- * <p>
- * The copyright year as it appears in a copyright statement on the product. Optional in each occurrence of the
- * &lt;CopyrightStatement&gt; composite but may be omitted only if &lt;CopyrightOwner&gt; is present, and repeatable if
- * several years or periods are listed.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>As specified by the value in the dateformat attribute, or the default of YYYY if the attribute is missing)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;CopyrightYear&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b087&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>dateformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b087
- * dateformat=&quot;11&quot;&gt;20032008&lt;/b087&gt;</tt> (2003-2008)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link CopyrightStatement}&gt;</li>
@@ -72,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈
- * {@link CopyrightYear}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link CopyrightStatement} ⯈ {@link CopyrightYear}</li>
  * </ul>
  */
 public class CopyrightYear implements OnixElement<String>, Serializable {
@@ -107,9 +72,6 @@ public class CopyrightYear implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of CopyrightYear. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: As specified by the value in the dateformat attribute, or the default of YYYY if the attribute is
-     * missing)
      * <p>
      * (type: dt.NonEmptyString)
      */

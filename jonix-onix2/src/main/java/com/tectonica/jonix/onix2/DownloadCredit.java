@@ -34,26 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Download credit</h1>
- * <p>
- * Text of a personal or corporate credit associated with a download file, and intended to be displayed whenever the
- * file content is used. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see ONIX for
- * Books - Product Information Message - XML Message Specification, Section 7)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DownloadCredit&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f120&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Download credit</h1><p>Text of a personal or corporate credit associated with a download file, and intended to be
+ * displayed whenever the file content is used. Optional and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 300 characters (XHTML is
+ * enabled in this element - see ONIX for Books - Product Information Message - XML Message Specification, Section
+ * 7)</td></tr><tr><td>Reference name</td><td><tt>&lt;DownloadCredit&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;f120&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -64,8 +50,7 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MediaFile} ⯈ {@link DownloadCredit}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈ {@link DownloadCredit}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈
- * {@link DownloadCredit}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈ {@link DownloadCredit}</li>
  * </ul>
  */
 public class DownloadCredit implements OnixElement<String>, Serializable {
@@ -104,9 +89,7 @@ public class DownloadCredit implements OnixElement<String>, Serializable {
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length text, suggested maximum length 300 characters (XHTML is enabled in this element - see
-     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * ONIX for Books - Product Information Message - XML Message Specification, Section 7)<p> (type: XHTML)
      */
     public String value;
 

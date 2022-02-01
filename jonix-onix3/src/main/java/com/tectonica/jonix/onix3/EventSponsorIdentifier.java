@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event sponsor identifier composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together carry a coded identifier for an organizer or sponsor
- * of an event.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventSponsorIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;eventsponsoridentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EventSponsor}&gt;</li>
@@ -59,15 +39,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Event} ⯈ {@link EventSponsor} ⯈
- * {@link EventSponsorIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈
- * {@link EventOccurrence} ⯈ {@link EventSponsor} ⯈ {@link EventSponsorIdentifier}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventSponsor}
- * ⯈ {@link EventSponsorIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Event} ⯈ {@link EventSponsor} ⯈ {@link EventSponsorIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventOccurrence} ⯈ {@link EventSponsor} ⯈ {@link EventSponsorIdentifier}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link EventSponsor} ⯈ {@link EventSponsorIdentifier}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class EventSponsorIdentifier
     implements OnixDataCompositeWithKey<JonixEventSponsorIdentifier, NameIdentifierTypes>, Serializable {
@@ -165,10 +140,6 @@ public class EventSponsorIdentifier
     private EventSponsorIDType eventSponsorIDType = EventSponsorIDType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Mandatory
-     * in each occurrence of the &lt;EventSponsorIdentifier&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public EventSponsorIDType eventSponsorIDType() {
@@ -179,10 +150,6 @@ public class EventSponsorIdentifier
     private IDValue idValue = IDValue.EMPTY;
 
     /**
-     * <p>
-     * A code value taken from the scheme specified in the &lt;EventSponsorIDType&gt; element. Mandatory in each
-     * occurrence of the composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public IDValue idValue() {
@@ -193,10 +160,6 @@ public class EventSponsorIdentifier
     private IDTypeName idTypeName = IDTypeName.EMPTY;
 
     /**
-     * <p>
-     * A name which identifies a proprietary identifier scheme when, and only when, the code in the
-     * &lt;EventSponsorIDType&gt; element indicates a proprietary scheme. Optional and non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public IDTypeName idTypeName() {

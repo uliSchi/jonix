@@ -34,30 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Text valid until date</h1>
- * <p>
- * The date until which text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element, is
- * intended to be used, <em>eg</em> for date-limited promotions. Optional and non-repeating, but either both or neither
- * of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, 8 numeric digits, YYYYMMDD</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EndDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b325&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EndDate&gt;20030704&lt;/EndDate&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Text valid until date</h1><p>The date until which text sent in the &lt;Text&gt; element, or referenced in the
+ * &lt;TextLink&gt; element, is intended to be used, <em>eg</em> for date-limited promotions. Optional and
+ * non-repeating, but either both or neither of &lt;StartDate&gt; and &lt;EndDate&gt; must be present.</p><table
+ * border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, 8 numeric digits, YYYYMMDD</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;EndDate&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;b325&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;EndDate&gt;20030704&lt;/EndDate&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -109,9 +90,7 @@ public class EndDate implements OnixElement<String>, Serializable {
      * This is the raw content of EndDate. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD<p> (type: NonEmptyString)
      */
     public String value;
 

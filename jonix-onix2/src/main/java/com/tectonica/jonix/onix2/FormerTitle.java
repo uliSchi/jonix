@@ -34,31 +34,13 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Former title</h1>
- * <p>
- * A different title under which the work was previously published, without abbreviation or abridgement. Optional, and
- * repeatable if the work has had more than one former title. <strong>The &lt;Title&gt; composite below provides a more
- * general method of handling all forms of title, and is to be preferred.</strong>
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;FormerTitle&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b033&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;FormerTitle&gt;English
- * English&lt;/FormerTitle&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Former title</h1><p>A different title under which the work was previously published, without abbreviation or
+ * abridgement. Optional, and repeatable if the work has had more than one former title. <strong>The &lt;Title&gt;
+ * composite below provides a more general method of handling all forms of title, and is to be
+ * preferred.</strong></p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested
+ * maximum length 300 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;FormerTitle&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b033&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;FormerTitle&gt;English
+ * English&lt;/FormerTitle&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -108,9 +90,7 @@ public class FormerTitle implements OnixElement<String>, Serializable {
      * This is the raw content of FormerTitle. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

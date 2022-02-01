@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>End date</h1>
- * <p>
- * The date until which a sales restriction is effective. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>As specified by the value in the dateformat attribute, or the default of YYYYMMDD if the attribute is
- * missing</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EndDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b325&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;1</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>dateformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b325
- * dateformat=&quot;00&quot;&gt;20090930&lt;/b325&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link SalesRestriction}&gt;</li>
@@ -71,15 +38,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈
- * {@link EndDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈
- * {@link EndDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction}
- * ⯈ {@link EndDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRestriction} ⯈ {@link EndDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link Market} ⯈ {@link SalesRestriction} ⯈ {@link EndDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link SalesRights} ⯈ {@link SalesRestriction} ⯈ {@link EndDate}</li>
  * </ul>
- *
- * @since Onix-3.02
  */
 public class EndDate implements OnixElement<String>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -112,9 +74,6 @@ public class EndDate implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of EndDate. Could be null if {@code exists() == false}. Use {@link #value()} instead if
      * you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: As specified by the value in the dateformat attribute, or the default of YYYYMMDD if the attribute is
-     * missing
      * <p>
      * (type: dt.NonEmptyString)
      */

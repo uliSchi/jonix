@@ -32,9 +32,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;OtherText></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;OtherText></code>.<p>It can be retrieved from the
+ * composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixOtherText implements JonixKeyedStruct<OtherTextTypes>, Serializable {
@@ -49,60 +48,44 @@ public class JonixOtherText implements JonixKeyedStruct<OtherTextTypes>, Seriali
 
     /**
      * Raw Format: Variable length text (XHTML is enabled in this element - see ONIX for Books - Product Information
-     * Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * Message - XML Message Specification, Section 7) <p> (type: XHTML)
      */
     public String text;
 
     public TextLinkTypes textLinkType;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters <p> (type: NonEmptyString)
      */
     public String textLink;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters <p> (type: NonEmptyString)
      */
     public String textAuthor;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 200 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 200 characters <p> (type: NonEmptyString)
      */
     public String textSourceCorporate;
 
     /**
-     * Raw Format: Variable-length text, suggested maximum length 100 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 100 characters <p> (type: NonEmptyString)
      */
     public String textSourceTitle;
 
     /**
-     * Raw Format: Date as four, six or eight digits (YYYY, YYYYMM, YYYYMMDD)
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Date as four, six or eight digits (YYYY, YYYYMM, YYYYMMDD) <p> (type: NonEmptyString)
      */
     public String textPublicationDate;
 
     /**
-     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD <p> (type: NonEmptyString)
      */
     public String startDate;
 
     /**
-     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD <p> (type: NonEmptyString)
      */
     public String endDate;
 

@@ -31,39 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Event role</h1>
- * <p>
- * An ONIX code which indicates the relationship between the product and an event to which it is related, <i>eg</i>
- * Proceedings of conference / Selected papers from conference / Programme for sporting event / Guide for art
- * exhibition. Mandatory and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 20</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EventRole&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x515&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;x515&gt;03&lt;/x515&gt;</tt> (Selected papers from conference)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Event}&gt;</li>
@@ -73,8 +40,6 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Event} ⯈ {@link EventRole}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class EventRole implements OnixElement<EventRoles>, Serializable {
     private static final long serialVersionUID = 1L;

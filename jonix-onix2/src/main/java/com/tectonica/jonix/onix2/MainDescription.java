@@ -34,35 +34,14 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Main description</h1>
- * <p>
- * Descriptive text about the product, audience unspecified. Optional and non-repeating.
- * </p>
- * <p>
- * <strong>The &lt;OtherText&gt; composite on the next page provides a more general method of handling descriptions, and
- * is to be preferred.</strong>
- * </p>
- * <p>
- * The &lt;MainDescription&gt; element may carry any of the following ONIX attributes: <i>textformat, language,
- * transliteration, textcase</i>.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum 2,000 characters (XHTML is enabled in this element - see ONIX for Books -
- * Product Information Message - XML Message Specification, Section 7)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MainDescription&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;d101&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MainDescription&gt;This volume tells the
+ * <h1>Main description</h1><p>Descriptive text about the product, audience unspecified. Optional and
+ * non-repeating.</p><p><strong>The &lt;OtherText&gt; composite on the next page provides a more general method of
+ * handling descriptions, and is to be preferred.</strong></p><p>The &lt;MainDescription&gt; element may carry any of
+ * the following ONIX attributes: <i>textformat, language, transliteration, textcase</i>.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum 2,000 characters (XHTML is enabled in
+ * this element - see ONIX for Books - Product Information Message - XML Message Specification, Section
+ * 7)</td></tr><tr><td>Reference name</td><td><tt>&lt;MainDescription&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;d101&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;MainDescription&gt;This volume tells the
  * story of Europe, East and West, from prehistory to the present day. It lays down the chronological and geographical
  * grid on which the dramas of European history have been played out. It zooms in from the distant focus of Chapter One,
  * which explores the first five million years of the continent's evolution, to the close focus of the last two
@@ -73,9 +52,7 @@ import java.io.Serializable;
  * prisms through which it can be viewed. Each chapter contains a selection of telephoto &#8220;capsules&#8221;,
  * illustrating narrower themes and topics that cut across the chronological flow. It then concludes with a wide-angle
  * &#8220;snapshot&#8221; of the whole continent as seen from one particular vantage
- * point.&lt;/MainDescription&gt;</tt></td>
- * </tr>
- * </table>
+ * point.&lt;/MainDescription&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -126,9 +103,7 @@ public class MainDescription implements OnixElement<String>, Serializable {
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
      * Raw Format: Variable-length text, suggested maximum 2,000 characters (XHTML is enabled in this element - see ONIX
-     * for Books - Product Information Message - XML Message Specification, Section 7)
-     * <p>
-     * (type: XHTML)
+     * for Books - Product Information Message - XML Message Specification, Section 7)<p> (type: XHTML)
      */
     public String value;
 

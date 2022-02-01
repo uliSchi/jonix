@@ -32,27 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Contributor date composite</h1>
- * <p>
- * A group of data elements which together specify a date associated with the person or organization identified in an
- * occurrence of the &lt;Contributor&gt; composite, <i>eg</i> birth or death. Optional, and repeatable to allow multiple
- * dates to be specified.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ContributorDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;contributordate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Contributor}&gt;</li>
@@ -60,14 +39,10 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Contributor} ⯈
- * {@link ContributorDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈
- * {@link ContributorDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor}
- * ⯈ {@link ContributorDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈
- * {@link ContributorDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Contributor} ⯈ {@link ContributorDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentDetail} ⯈ {@link ContentItem} ⯈ {@link Contributor} ⯈ {@link ContributorDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PromotionDetail} ⯈ {@link PromotionalEvent} ⯈ {@link Contributor} ⯈ {@link ContributorDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link Collection} ⯈ {@link Contributor} ⯈ {@link ContributorDate}</li>
  * </ul>
  */
 public class ContributorDate
@@ -166,10 +141,6 @@ public class ContributorDate
     private ContributorDateRole contributorDateRole = ContributorDateRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the significance of the date in relation to the contributor name. Mandatory in each
-     * occurrence of the &lt;ContributorDate&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ContributorDateRole contributorDateRole() {
@@ -180,12 +151,6 @@ public class ContributorDate
     private Date date = Date.EMPTY;
 
     /**
-     * <p>
-     * The date specified in the &lt;ContributorDateRole&gt; field. Mandatory in each occurrence of the
-     * &lt;ContributorDate&gt; composite, and non-repeating. &lt;Date&gt; may carry a <i>dateformat</i> attribute: if
-     * the attribute is missing, then &lt;DateFormat&gt; indicates the format of the date; if both <i>dateformat</i>
-     * attribute and &lt;DateFormat&gt; element are missing, the default format is YYYYMMDD.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Date date() {
@@ -196,10 +161,6 @@ public class ContributorDate
     private DateFormat dateFormat = DateFormat.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the format in which the date is given in &lt;Date&gt;. Optional and not repeatable.
-     * Deprecated – where possible, use the <i>dateformat</i> attribute instead.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public DateFormat dateFormat() {

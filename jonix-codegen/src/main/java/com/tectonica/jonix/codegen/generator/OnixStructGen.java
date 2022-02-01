@@ -79,13 +79,13 @@ public class OnixStructGen {
         p.printf("%s\n", Comments.Copyright);
         p.printf("package %s;\n", packageName);
         p.print("\n");
-        p.print("import java.io.Serializable;\n");
-        p.print("import java.util.List;\n");
-        p.print("\n");
 
         p.printf("import %s.%s;\n", COMMON_PACKAGE, structMarkerInterface);
         p.printf("import %s.JonixStruct;\n", COMMON_PACKAGE); // for javadocs
         p.printf("import %s.codelist.*;\n", COMMON_PACKAGE);
+        p.print("\n");
+        p.print("import java.io.Serializable;\n");
+        p.print("import java.util.List;\n");
         p.print("\n");
         p.printf("%s\n", Comments.AutoGen);
 

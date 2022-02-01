@@ -32,42 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Initial print run</h1>
- * <p>
- * In advance information about a new book, free text detailing the number of copies which will be printed and any
- * related aspects of the initial publishing effort. Optional, and repeatable if parallel text is provided in multiple
- * languages. The <i>language</i> attribute is optional for a single instance of &lt;InitialPrintRun&gt;, but must be
- * included in each instance if &lt;InitialPrintRun&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;InitialPrintRun&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;k167&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;InitialPrintRun&gt;450 numbered
- * copies&lt;/InitialPrintRun&gt;</tt></td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link MarketPublishingDetail}&gt;</li>
@@ -75,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link InitialPrintRun}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link InitialPrintRun}</li>
  * </ul>
  */
 public class InitialPrintRun implements OnixElement<String>, Serializable {
@@ -112,9 +75,6 @@ public class InitialPrintRun implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of InitialPrintRun. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 200 characters. XHTML is enabled in this element - see
-     * Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

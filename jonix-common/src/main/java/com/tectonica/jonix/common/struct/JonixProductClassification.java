@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;ProductClassification></code> and Onix3
- * <code>&lt;ProductClassification></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;ProductClassification></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixProductClassification implements JonixKeyedStruct<ProductClassificationTypes>, Serializable {
@@ -45,16 +44,11 @@ public class JonixProductClassification implements JonixKeyedStruct<ProductClass
     public ProductClassificationTypes productClassificationType;
 
     /**
-     * Raw Format: Real number between zero and 100 (inclusive), with explicit decimal point when required, suggested
-     * maximum length 7 characters
-     * <p>
      * (type: dt.PercentDecimal)
      */
     public Double percent;
 
     /**
-     * Raw Format: According to the identifier type specified in &lt;ProductClassificationType&gt;
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public String productClassificationCode;

@@ -34,30 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Media file date</h1>
- * <p>
- * The date when the image referenced by the &lt;MediaFileLink&gt; element was last changed. Optional and non-repeating.
- * This element is intended to allow the receiver of an updated ONIX record to determine whether it is necessary to
- * download a new copy of the file.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, 8 numeric digits, YYYYMMDD</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MediaFileDate&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f373&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;f373&gt;20030504&lt;/f373&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Media file date</h1><p>The date when the image referenced by the &lt;MediaFileLink&gt; element was last changed.
+ * Optional and non-repeating. This element is intended to allow the receiver of an updated ONIX record to determine
+ * whether it is necessary to download a new copy of the file.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Fixed-length, 8 numeric digits, YYYYMMDD</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;MediaFileDate&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;f373&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;f373&gt;20030504&lt;/f373&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -68,8 +49,7 @@ import java.io.Serializable;
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MediaFile} ⯈ {@link MediaFileDate}</li>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈ {@link MediaFileDate}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈
- * {@link MediaFileDate}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈ {@link MediaFileDate}</li>
  * </ul>
  *
  * @since Onix-2.1
@@ -109,9 +89,7 @@ public class MediaFileDate implements OnixElement<String>, Serializable {
      * This is the raw content of MediaFileDate. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Fixed-length, 8 numeric digits, YYYYMMDD<p> (type: NonEmptyString)
      */
     public String value;
 

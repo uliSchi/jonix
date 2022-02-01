@@ -31,26 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price constraint limit composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together specify a quantitative limit on a particular type of
- * contractual term or constraint.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceConstraintLimit&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;priceconstraintlimit&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PriceConstraint}&gt;</li>
@@ -58,13 +38,9 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceConstraint} ⯈ {@link PriceConstraintLimit}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceConstraint} ⯈ {@link PriceConstraintLimit}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class PriceConstraintLimit implements OnixDataComposite<JonixPriceConstraintLimit>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -157,10 +133,6 @@ public class PriceConstraintLimit implements OnixDataComposite<JonixPriceConstra
     private Quantity quantity = Quantity.EMPTY;
 
     /**
-     * <p>
-     * A numeric value representing the maximum permitted quantity or limit of a particular type of constraint.
-     * Mandatory in each occurrence of the &lt;PriceConstraintLimit&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Quantity quantity() {
@@ -171,10 +143,6 @@ public class PriceConstraintLimit implements OnixDataComposite<JonixPriceConstra
     private PriceConstraintUnit priceConstraintUnit = PriceConstraintUnit.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code for a unit in which a maximum permitted quantity or limit is stated. Mandatory in each occurrence of
-     * the &lt;PriceConstraintLimit&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public PriceConstraintUnit priceConstraintUnit() {

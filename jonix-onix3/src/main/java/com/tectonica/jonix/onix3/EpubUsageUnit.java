@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Usage unit (digital products)</h1>
- * <p>
- * An ONIX code for a unit in which a permitted usage quantity is stated. Mandatory in each occurrence of the
- * &lt;EpubUsageLimit&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 147</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubUsageUnit&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x321&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;EpubUsageUnit&gt;07&lt;/EpubUsageUnit&gt;</tt> (Maximum number of concurrent users)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link EpubUsageLimit}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈
- * {@link EpubUsageLimit} ⯈ {@link EpubUsageUnit}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link EpubUsageConstraint} ⯈ {@link EpubUsageLimit} ⯈ {@link EpubUsageUnit}</li>
  * </ul>
  */
 public class EpubUsageUnit implements OnixElement<UnitOfUsages>, Serializable {

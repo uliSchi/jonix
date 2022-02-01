@@ -34,29 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Last page number</h1>
- * <p>
- * The number of the page on which a text item ends in a paginated product. Optional and non-repeating, and can occur
- * only when &lt;FirstPageNumber&gt; is also present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length alphanumeric, suggested maximum length 20 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;LastPageNumber&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b287&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;LastPageNumber&gt;254&lt;/LastPageNumber&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Last page number</h1><p>The number of the page on which a text item ends in a paginated product. Optional and
+ * non-repeating, and can occur only when &lt;FirstPageNumber&gt; is also present.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length alphanumeric, suggested maximum length 20
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;LastPageNumber&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b287&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;LastPageNumber&gt;254&lt;/LastPageNumber&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -67,8 +49,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link LastPageNumber}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link PageRun} ⯈
- * {@link LastPageNumber}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link TextItem} ⯈ {@link PageRun} ⯈ {@link LastPageNumber}</li>
  * </ul>
  */
 public class LastPageNumber implements OnixElement<String>, Serializable {
@@ -106,9 +87,7 @@ public class LastPageNumber implements OnixElement<String>, Serializable {
      * This is the raw content of LastPageNumber. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length alphanumeric, suggested maximum length 20 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length alphanumeric, suggested maximum length 20 characters<p> (type: NonEmptyString)
      */
     public String value;
 

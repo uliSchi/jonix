@@ -52,6 +52,7 @@ import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_04_REF;
 import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_05_REF;
 import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_06_REF;
 import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_07_REF;
+import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_08_REF;
 import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_LATEST_REF;
 import static com.tectonica.jonix.codegen.util.OnixSpecs.SPECS_3_0_LATEST_SHORT;
 
@@ -94,6 +95,7 @@ public class MetadataDump {
         saveMetadata(SPECS_2_1_03_REF, SPECS_3_0_05_REF, new File(parent, "3.0.5"));
         saveMetadata(SPECS_2_1_03_REF, SPECS_3_0_06_REF, new File(parent, "3.0.6"));
         saveMetadata(SPECS_2_1_03_REF, SPECS_3_0_07_REF, new File(parent, "3.0.7"));
+        saveMetadata(SPECS_2_1_03_REF, SPECS_3_0_08_REF, new File(parent, "3.0.8"));
     }
 
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////

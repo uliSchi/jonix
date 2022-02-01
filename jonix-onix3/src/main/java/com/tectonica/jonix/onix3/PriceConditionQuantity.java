@@ -32,26 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price condition quantity composite</h1>
- * <p>
- * An optional and repeatable group of data elements which together specify a price condition quantity, for example a
- * minimum number of copies, or a period of time for which updates are supplied or must be purchased.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceConditionQuantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;priceconditionquantity&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link PriceCondition}&gt;</li>
@@ -59,10 +39,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link PriceCondition} ⯈ {@link PriceConditionQuantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceCondition} ⯈ {@link PriceConditionQuantity}</li>
  * </ul>
  */
 public class PriceConditionQuantity
@@ -161,10 +139,6 @@ public class PriceConditionQuantity
     private PriceConditionQuantityType priceConditionQuantityType = PriceConditionQuantityType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code identifying a type of price condition quantity. Mandatory in each occurrence of the
-     * &lt;PriceConditionQuantity&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public PriceConditionQuantityType priceConditionQuantityType() {
@@ -175,10 +149,6 @@ public class PriceConditionQuantity
     private Quantity quantity = Quantity.EMPTY;
 
     /**
-     * <p>
-     * A quantity associated with a price condition. Mandatory in each occurrence of the &lt;PriceConditionQuantity&gt;
-     * composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public Quantity quantity() {
@@ -189,10 +159,6 @@ public class PriceConditionQuantity
     private QuantityUnit quantityUnit = QuantityUnit.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code value specifying the unit in which a price condition quantity is stated. Mandatory in each
-     * occurrence of the &lt;PriceConditionQuantity&gt; composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public QuantityUnit quantityUnit() {

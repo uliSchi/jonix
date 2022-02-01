@@ -34,25 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Name code value</h1>
- * <p>
- * A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and only if &lt;NameCodeType&gt;
- * is present, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Determined by the scheme specified in &lt;NameCodeType&gt;</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;NameCodeValue&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b243&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Name code value</h1><p>A code value taken from the scheme specified in &lt;NameCodeType&gt;. Mandatory if and
+ * only if &lt;NameCodeType&gt; is present, and non-repeating.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Determined by the scheme specified in &lt;NameCodeType&gt;</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;NameCodeValue&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;b243&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -104,9 +89,7 @@ public class NameCodeValue implements OnixElement<String>, Serializable {
      * This is the raw content of NameCodeValue. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Determined by the scheme specified in &lt;NameCodeType&gt;
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Determined by the scheme specified in &lt;NameCodeType&gt;<p> (type: NonEmptyString)
      */
     public String value;
 

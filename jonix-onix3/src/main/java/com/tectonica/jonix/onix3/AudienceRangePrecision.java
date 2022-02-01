@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Audience range precision (1)</h1>
- * <p>
- * An ONIX code specifying the ‘precision’ of the value in the &lt;AudienceRangeValue&gt; element which follows (from,
- * to, exact). Mandatory in each occurrence of the &lt;AudienceRange&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 31</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;AudienceRangePrecision&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b075&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b075&gt;03&lt;/b075&gt;</tt> (From)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link AudienceRange}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AudienceRange} ⯈
- * {@link AudienceRangePrecision}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link AudienceRange} ⯈ {@link AudienceRangePrecision}</li>
  * </ul>
  */
 public class AudienceRangePrecision implements OnixElement<AudienceRangePrecisions>, Serializable {

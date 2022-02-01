@@ -33,27 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Product form feature composite</h1>
- * <p>
- * An optional group of data elements which together describe an aspect of product form that is too specific to be
- * covered in the &lt;ProductForm&gt; and &lt;ProductFormDetail&gt; elements. Repeatable in order to describe different
- * aspects of the product form.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ProductFormFeature&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;productformfeature&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link DescriptiveDetail}&gt;</li>
@@ -63,8 +42,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductFormFeature}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈
- * {@link ProductFormFeature}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link DescriptiveDetail} ⯈ {@link ProductPart} ⯈ {@link ProductFormFeature}</li>
  * </ul>
  */
 public class ProductFormFeature
@@ -164,10 +142,6 @@ public class ProductFormFeature
     private ProductFormFeatureType productFormFeatureType = ProductFormFeatureType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which specifies the feature described by an instance of the &lt;ProductFormFeature&gt; composite,
-     * <i>eg</i> binding color. Mandatory in each occurrence of the composite, and non-repeating.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public ProductFormFeatureType productFormFeatureType() {
@@ -178,12 +152,6 @@ public class ProductFormFeature
     private ProductFormFeatureValue productFormFeatureValue = ProductFormFeatureValue.EMPTY;
 
     /**
-     * <p>
-     * A controlled value that describes a product form feature. Presence or absence of this element depends on the
-     * &lt;ProductFormFeatureType&gt;, since some product form features (<i>eg</i> thumb index) do not require an
-     * accompanying value, while others (<i>eg</i> text font) require free text in
-     * &lt;ProductFormFeatureDescription&gt;; and others may have both code and free text. Non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public ProductFormFeatureValue productFormFeatureValue() {
@@ -195,13 +163,6 @@ public class ProductFormFeature
         ListOfOnixElement.empty();
 
     /**
-     * <p>
-     * If the &lt;ProductFormFeatureType&gt; requires free text rather than a code value, or if the code in
-     * &lt;ProductFormFeatureValue&gt; does not adequately describe the feature, a short text description may be added.
-     * Optional, and repeatable to provide parallel descriptive text in multiple languages. The <i>language</i>
-     * attribute is optional for a single instance of &lt;ProductFormFeatureDescription&gt;, but must be included in
-     * each instance if &lt;ProductFormFeatureDescription&gt; is repeated.
-     * </p>
      * Jonix-Comment: this list may be empty
      */
     public ListOfOnixElement<ProductFormFeatureDescription, String> productFormFeatureDescriptions() {

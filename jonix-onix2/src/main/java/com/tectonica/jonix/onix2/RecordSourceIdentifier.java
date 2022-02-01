@@ -34,25 +34,11 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Record source identifier</h1>
- * <p>
- * An identifier for the party which issued the record, from the scheme specified in &lt;RecordSourceIdentifierType&gt;.
- * Optional and non-repeating, but &lt;RecordSourceIdentifierType&gt; must also be present if this field is present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Defined by the identifier scheme specified in &lt;RecordSourceIdentifierType&gt;</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;RecordSourceIdentifier&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;a196&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Record source identifier</h1><p>An identifier for the party which issued the record, from the scheme specified in
+ * &lt;RecordSourceIdentifierType&gt;. Optional and non-repeating, but &lt;RecordSourceIdentifierType&gt; must also be
+ * present if this field is present.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Defined by the
+ * identifier scheme specified in &lt;RecordSourceIdentifierType&gt;</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;RecordSourceIdentifier&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;a196&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -100,12 +86,11 @@ public class RecordSourceIdentifier implements OnixElement<String>, Serializable
     /////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * This is the raw content of RecordSourceIdentifier. Could be null if {@code exists() == false}. Use
-     * {@link #value()} instead if you want to get this as an {@link java.util.Optional}.
+     * This is the raw content of RecordSourceIdentifier. Could be null if {@code exists() == false}. Use {@link
+     * #value()} instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Defined by the identifier scheme specified in &lt;RecordSourceIdentifierType&gt;
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Defined by the identifier scheme specified in &lt;RecordSourceIdentifierType&gt;<p> (type:
+     * NonEmptyString)
      */
     public String value;
 

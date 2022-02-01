@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Epublication type note</h1>
- * <p>
- * A free text description of features of a product which are specific to its appearance as a particular epublication
- * type. Optional and non-repeatable, and can occur only if the &lt;EpubType&gt; field is present.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum 200 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;EpubTypeNote&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b277&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;b277&gt;First appearance of this title in
- * Microsoft Reader format&lt;/b277&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Epublication type note</h1><p>A free text description of features of a product which are specific to its
+ * appearance as a particular epublication type. Optional and non-repeatable, and can occur only if the &lt;EpubType&gt;
+ * field is present.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum
+ * 200 characters</td></tr><tr><td>Reference name</td><td><tt>&lt;EpubTypeNote&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b277&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;b277&gt;First appearance of this title in
+ * Microsoft Reader format&lt;/b277&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -106,9 +88,7 @@ public class EpubTypeNote implements OnixElement<String>, Serializable {
      * This is the raw content of EpubTypeNote. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum 200 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum 200 characters<p> (type: NonEmptyString)
      */
     public String value;
 

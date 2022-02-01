@@ -34,34 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Default language of text</h1>
- * <p>
- * An ISO standard code indicating the default language which is assumed for the text of products listed in the message,
- * unless explicitly stated otherwise by sending a “language of text” element in the product record. This default will
- * be assumed for all product records which do not specify a language in Group PR.11. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, three letters.</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 74</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;DefaultLanguageOfText&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;m184&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;m184&gt;eng&lt;/m184&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Default language of text</h1><p>An ISO standard code indicating the default language which is assumed for the
+ * text of products listed in the message, unless explicitly stated otherwise by sending a “language of text” element in
+ * the product record. This default will be assumed for all product records which do not specify a language in Group
+ * PR.11. Optional and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, three
+ * letters.</td></tr><tr><td>Codelist</td><td>List 74</td></tr><tr><td>Reference name</td><td><tt>&lt;DefaultLanguageOfText&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;m184&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;m184&gt;eng&lt;/m184&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>

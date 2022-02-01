@@ -21,6 +21,9 @@ package com.tectonica.jonix.common.codelist;
 
 import com.tectonica.jonix.common.OnixCodelist;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  * NOTE: THIS IS AN AUTO-GENERATED FILE, DO NOT EDIT MANUALLY
  */
@@ -37,9 +40,8 @@ interface CodeList57 {
  * Description: Unpriced item type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist57">ONIX
- *      Codelist 57 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist57">ONIX
+ * Codelist 57 in Reference Guide</a>
  */
 public enum UnpricedItemTypes implements OnixCodelist, CodeList57 {
     Free_of_charge("01", "Free of charge"),
@@ -66,7 +68,24 @@ public enum UnpricedItemTypes implements OnixCodelist, CodeList57 {
     /**
      * Unpriced, but available via a pre-determined revenue share agreement
      */
-    Revenue_share("06", "Revenue share");
+    Revenue_share("06", "Revenue share"),
+
+    /**
+     * Price calculated as sum of individual prices of components listed as Product parts. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Calculated_from_contents("07", "Calculated from contents"),
+
+    /**
+     * The supplier does not operate, or does not offer this product, in this part of the market, as indicated by
+     * &lt;Territory&gt;. Use when other prices apply in different parts of the market (eg when the market is global,
+     * but the particular supplier does not operate outside its domestic territory). Use code 04 when the supplier does
+     * supply but has not set a price for part of the market. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Supplier_does_not_supply("08", "Supplier does not supply");
 
     public final String code;
     public final String description;
@@ -86,15 +105,29 @@ public enum UnpricedItemTypes implements OnixCodelist, CodeList57 {
         return description;
     }
 
+    private static volatile Map<String, UnpricedItemTypes> map;
+
+    private static Map<String, UnpricedItemTypes> map() {
+        Map<String, UnpricedItemTypes> result = map;
+        if (result == null) {
+            synchronized (UnpricedItemTypes.class) {
+                result = map;
+                if (result == null) {
+                    result = new HashMap<>();
+                    for (UnpricedItemTypes e : values()) {
+                        result.put(e.code, e);
+                    }
+                    map = result;
+                }
+            }
+        }
+        return result;
+    }
+
     public static UnpricedItemTypes byCode(String code) {
         if (code == null || code.isEmpty()) {
             return null;
         }
-        for (UnpricedItemTypes e : values()) {
-            if (e.code.equals(code)) {
-                return e;
-            }
-        }
-        return null;
+        return map().get(code);
     }
 }

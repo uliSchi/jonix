@@ -33,46 +33,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Comparison product price composite</h1>
- * <p>
- * Optional group of data elements that together define a price for a directly comparable product, to facilitate supply
- * of price data to retailers who do not receive a full ONIX record for that comparable product. This is primarily
- * intended for use within a &lt;Product&gt; record for a digital product, to provide a price for a comparable physical
- * product. The composite is repeatable in order to define multiple comparison prices.
- * </p>
- * <p>
- * Those using this composite should be wary of the volatile nature of product prices: special note should be taken of
- * the risk of stale data being stored in data recipients’ systems when prices for the comparison product are updated,
- * as those updates to the comparison product may occur outside the context of the main product being described in the
- * &lt;Product&gt; record. Because of this, ONIX suppliers are cautioned of the risk of contradictory data in separate
- * data feeds. <em>This composite should not be supplied unless specifically requested by a particular recipient.</em>
- * </p>
- * <p>
- * The inclusion of a comparison price in itself implies nothing about the availability or status of the comparable
- * product. However, there may be legal requirements in particular territories relating to the use of comparison prices
- * in promotion that users of this data must comply with.
- * </p>
- * <p>
- * Note that the comparison product price composite does not include all the features of the &lt;Price&gt; composite:
- * for example, &lt;PriceQualifier&gt; is not included. Thus data providers should ensure that any conditions attached
- * to the comparison product price are such that it is directly comparable to the price of the main product being
- * described.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;ComparisonProductPrice&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;comparisonproductprice&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link Price}&gt;</li>
@@ -80,10 +40,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈
- * {@link Price} ⯈ {@link ComparisonProductPrice}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈
- * {@link ComparisonProductPrice}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link ComparisonProductPrice}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link ComparisonProductPrice}</li>
  * </ul>
  */
 public class ComparisonProductPrice implements OnixSuperComposite, Serializable {
@@ -185,10 +143,6 @@ public class ComparisonProductPrice implements OnixSuperComposite, Serializable 
     private PriceAmount priceAmount = PriceAmount.EMPTY;
 
     /**
-     * <p>
-     * The amount of the comparison product price. Mandatory and non-repeating within any occurrence of the
-     * &lt;ComparisonProductPrice&gt; composite.
-     * </p>
      * Jonix-Comment: this field is required
      */
     public PriceAmount priceAmount() {
@@ -196,22 +150,10 @@ public class ComparisonProductPrice implements OnixSuperComposite, Serializable 
         return priceAmount;
     }
 
-    private ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier,
-        ProductIdentifierTypes> productIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
+    private ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier, ProductIdentifierTypes>
+        productIdentifiers = ListOfOnixDataCompositeWithKey.emptyKeyed();
 
     /**
-     * <p>
-     * A group of data elements which together define an identifier for a comparison product in accordance with a
-     * specified scheme. At least one &lt;ProductIdentifier&gt; composite is mandatory within an occurrence of
-     * &lt;ComparisonProductPrice&gt;, to identify the product to which the comparison price applies. Repeatable with
-     * different identifiers for the same product.
-     * </p>
-     * <p>
-     * It is strongly advised that the relationship between the comparison product and the product described in the
-     * &lt;Product&gt; record is defined in a &lt;RelatedProduct&gt; composite in P.23 – typically this might be
-     * &lt;ProductRelationCode&gt; 06 (related product is alternative format with same content as product) and may in
-     * many circumstances also be 13 (product is e-publication based on related product).
-     * </p>
      * Jonix-Comment: this list is required to contain at least one item
      */
     public ListOfOnixDataCompositeWithKey<ProductIdentifier, JonixProductIdentifier, ProductIdentifierTypes>
@@ -223,11 +165,6 @@ public class ComparisonProductPrice implements OnixSuperComposite, Serializable 
     private PriceType priceType = PriceType.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code indicating the type of the comparison price in the &lt;PriceAmount&gt; element within the
-     * &lt;ComparisonProductPrice&gt; composite. Optional if a &lt;DefaultPriceType&gt; has been specified in the
-     * message header, otherwise mandatory. Non-repeating.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public PriceType priceType() {
@@ -238,12 +175,6 @@ public class ComparisonProductPrice implements OnixSuperComposite, Serializable 
     private CurrencyCode currencyCode = CurrencyCode.EMPTY;
 
     /**
-     * <p>
-     * An ISO standard code identifying the currency in which the &lt;PriceAmount&gt; in an occurrence of the
-     * &lt;ComparisonProductPrice&gt; composite is stated. Optional and non-repeating, but required if the currency is
-     * not the default currency for the ONIX message. To avoid any possible ambiguity, it is strongly recommended that
-     * the currency should be stated here.
-     * </p>
      * Jonix-Comment: this field is optional
      */
     public CurrencyCode currencyCode() {

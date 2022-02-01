@@ -34,28 +34,10 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Price effective until</h1>
- * <p>
- * The date until which a price remains effective. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Date as year, month, day (YYYYMMDD)</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PriceEffectiveUntil&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j162&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;PriceEffectiveUntil&gt;20000615&lt;/PriceEffectiveUntil&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Price effective until</h1><p>The date until which a price remains effective. Optional and
+ * non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Date as year, month, day
+ * (YYYYMMDD)</td></tr><tr><td>Reference name</td><td><tt>&lt;PriceEffectiveUntil&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;j162&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;PriceEffectiveUntil&gt;20000615&lt;/PriceEffectiveUntil&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -65,8 +47,7 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Price} ⯈ {@link PriceEffectiveUntil}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈
- * {@link PriceEffectiveUntil}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link Price} ⯈ {@link PriceEffectiveUntil}</li>
  * </ul>
  */
 public class PriceEffectiveUntil implements OnixElement<String>, Serializable {
@@ -104,9 +85,7 @@ public class PriceEffectiveUntil implements OnixElement<String>, Serializable {
      * This is the raw content of PriceEffectiveUntil. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Date as year, month, day (YYYYMMDD)
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Date as year, month, day (YYYYMMDD)<p> (type: NonEmptyString)
      */
     public String value;
 

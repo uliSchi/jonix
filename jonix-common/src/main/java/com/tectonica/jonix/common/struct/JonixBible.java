@@ -37,9 +37,7 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;Bible></code> and Onix3
- * <code>&lt;Bible></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;Bible></code>.<p>It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixBible implements JonixStruct, Serializable {

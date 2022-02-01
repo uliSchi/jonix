@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Image/audio/video file format code</h1>
- * <p>
- * An ONIX code which identifies the format of the image/audio/video file which is linked by the &lt;MediaFileLink&gt;
- * element. For image files, JPEG, GIF and TIF are supported. Optional and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 39</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MediaFileFormatCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f115&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;f115&gt;02&lt;/f115&gt;</tt> GIF</td>
- * </tr>
- * </table>
+ * <h1>Image/audio/video file format code</h1><p>An ONIX code which identifies the format of the image/audio/video file
+ * which is linked by the &lt;MediaFileLink&gt; element. For image files, JPEG, GIF and TIF are supported. Optional and
+ * non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric
+ * digits</td></tr><tr><td>Codelist</td><td>List 39</td></tr><tr><td>Reference name</td><td><tt>&lt;MediaFileFormatCode&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;f115&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;f115&gt;02&lt;/f115&gt;</tt>
+ * GIF</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,10 +50,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MediaFile} ⯈ {@link MediaFileFormatCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈
- * {@link MediaFileFormatCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈
- * {@link MediaFileFormatCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈ {@link MediaFileFormatCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈ {@link MediaFileFormatCode}</li>
  * </ul>
  */
 public class MediaFileFormatCode implements OnixElement<ImageAudioVideoFileFormats>, Serializable {

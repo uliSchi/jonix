@@ -34,30 +34,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Author of other text</h1>
- * <p>
- * The name of the author of text sent in the &lt;Text&gt; element, or referenced in the &lt;TextLink&gt; element,
- * <em>eg</em> if it is a review or promotional quote.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable-length text, suggested maximum length 300 characters</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;TextAuthor&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;d107&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;TextAuthor&gt;Martin
- * Amis&lt;/TextAuthor&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Author of other text</h1><p>The name of the author of text sent in the &lt;Text&gt; element, or referenced in the
+ * &lt;TextLink&gt; element, <em>eg</em> if it is a review or promotional quote.</p><table border='1'
+ * cellpadding='3'><tr><td>Format</td><td>Variable-length text, suggested maximum length 300
+ * characters</td></tr><tr><td>Reference name</td><td><tt>&lt;TextAuthor&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;d107&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;TextAuthor&gt;Martin
+ * Amis&lt;/TextAuthor&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -107,9 +89,7 @@ public class TextAuthor implements OnixElement<String>, Serializable {
      * This is the raw content of TextAuthor. Could be null if {@code exists() == false}. Use {@link #value()} instead
      * if you want to get this as an {@link java.util.Optional}.
      * <p>
-     * Raw Format: Variable-length text, suggested maximum length 300 characters
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: Variable-length text, suggested maximum length 300 characters<p> (type: NonEmptyString)
      */
     public String value;
 

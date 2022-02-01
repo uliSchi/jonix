@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Image/audio/video file link type</h1>
- * <p>
- * An ONIX code which identifies the type of link which is given in the &lt;MediaFileLink&gt; element, for example a
- * URL, DOI, filename <em>etc</em>. Mandatory in each occurrence of the &lt;MediaFile&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 40</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MediaFileLinkTypeCode&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;f116&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MediaFileLinkTypeCode&gt;05&lt;/MediaFileLinkTypeCode&gt;</tt> FTP address</td>
- * </tr>
- * </table>
+ * <h1>Image/audio/video file link type</h1><p>An ONIX code which identifies the type of link which is given in the
+ * &lt;MediaFileLink&gt; element, for example a URL, DOI, filename <em>etc</em>. Mandatory in each occurrence of the
+ * &lt;MediaFile&gt; composite, and non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length,
+ * two numeric digits</td></tr><tr><td>Codelist</td><td>List 40</td></tr><tr><td>Reference
+ * name</td><td><tt>&lt;MediaFileLinkTypeCode&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;f116&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;MediaFileLinkTypeCode&gt;05&lt;/MediaFileLinkTypeCode&gt;</tt>
+ * FTP address</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -71,10 +50,8 @@ import java.io.Serializable;
  * Possible placements within ONIX message:
  * <ul>
  * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link MediaFile} ⯈ {@link MediaFileLinkTypeCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈
- * {@link MediaFileLinkTypeCode}</li>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈
- * {@link MediaFileLinkTypeCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ContentItem} ⯈ {@link MediaFile} ⯈ {@link MediaFileLinkTypeCode}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SupplyDetail} ⯈ {@link Reissue} ⯈ {@link MediaFile} ⯈ {@link MediaFileLinkTypeCode}</li>
  * </ul>
  */
 public class MediaFileLinkTypeCode implements OnixElement<ImageAudioVideoFileLinkTypes>, Serializable {

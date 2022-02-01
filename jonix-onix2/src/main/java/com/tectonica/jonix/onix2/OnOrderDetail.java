@@ -35,21 +35,9 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>On order detail composite</h1>
- * <p>
- * A repeatable group of data elements which together specify details of a stock shipment currently awaited, normally
- * from overseas. Optional.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;OnOrderDetail&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;onorderdetail&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>On order detail composite</h1><p>A repeatable group of data elements which together specify details of a stock
+ * shipment currently awaited, normally from overseas. Optional.</p><table border='1' cellpadding='3'><tr><td>Reference
+ * name</td><td><tt>&lt;OnOrderDetail&gt;</tt></td></tr><tr><td>Short tag</td><td><tt>&lt;onorderdetail&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -162,10 +150,8 @@ public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Ser
     private OnOrder onOrder = OnOrder.EMPTY;
 
     /**
-     * <p>
-     * The quantity of stock on order. Mandatory in each occurrence of the &lt;OnOrderDetail&gt; composite, and
-     * non-repeating.
-     * </p>
+     * <p>The quantity of stock on order. Mandatory in each occurrence of the &lt;OnOrderDetail&gt; composite, and
+     * non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public OnOrder onOrder() {
@@ -176,10 +162,8 @@ public class OnOrderDetail implements OnixDataComposite<JonixOnOrderDetail>, Ser
     private ExpectedDate expectedDate = ExpectedDate.EMPTY;
 
     /**
-     * <p>
-     * The date on which a stock shipment is expected. Mandatory in each occurrence of the &lt;OnOrderDetail&gt;
-     * composite, and non-repeating.
-     * </p>
+     * <p>The date on which a stock shipment is expected. Mandatory in each occurrence of the &lt;OnOrderDetail&gt;
+     * composite, and non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public ExpectedDate expectedDate() {

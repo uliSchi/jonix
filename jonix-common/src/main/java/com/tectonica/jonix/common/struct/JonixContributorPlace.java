@@ -32,9 +32,8 @@ import java.util.List;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ContributorPlace></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix3 <code>&lt;ContributorPlace></code>.<p>It can be retrieved
+ * from the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixContributorPlace implements JonixStruct, Serializable {
@@ -47,8 +46,6 @@ public class JonixContributorPlace implements JonixStruct, Serializable {
     public Regions regionCode;
 
     /**
-     * Raw Format: Variable length text, suggested maximum length 100 characters
-     * <p>
      * (type: dt.NonEmptyString)
      */
     public List<String> locationNames;

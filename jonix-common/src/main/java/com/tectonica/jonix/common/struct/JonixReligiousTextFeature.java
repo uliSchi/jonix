@@ -33,9 +33,8 @@ import java.util.List;
 
 /**
  * This class is a {@link JonixStruct} that represents both Onix2 <code>&lt;ReligiousTextFeature></code> and Onix3
- * <code>&lt;ReligiousTextFeature></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * <code>&lt;ReligiousTextFeature></code>.<p>It can be retrieved from the composite by invoking its
+ * <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixReligiousTextFeature implements JonixKeyedStruct<ReligiousTextFeatureTypes>, Serializable {
@@ -49,9 +48,6 @@ public class JonixReligiousTextFeature implements JonixKeyedStruct<ReligiousText
     public ReligiousTextFeatures religiousTextFeatureCode;
 
     /**
-     * Raw Format: Variable length text, suggested maximum 100 characters. XHTML is enabled in this element - see Using
-     * XHTML, HTML or XML with ONIX text fields
-     * <p>
      * (type: XHTML)
      */
     public List<String> religiousTextFeatureDescriptions;

@@ -40,9 +40,8 @@ interface CodeList79 {
  * Description: Product form feature type
  *
  * @see <a href="https://www.editeur.org/14/Code-Lists/">About ONIX Codelists</a>
- * @see <a href=
- *      "https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist79">ONIX
- *      Codelist 79 in Reference Guide</a>
+ * @see <a href="https://www.editeur.org/files/ONIX%20for%20books%20-%20code%20lists/ONIX_BookProduct_Codelists_Issue_49.html#codelist79">ONIX
+ * Codelist 79 in Reference Guide</a>
  */
 public enum ProductFormFeatureTypes implements OnixCodelist, CodeList79 {
     /**
@@ -57,8 +56,9 @@ public enum ProductFormFeatureTypes implements OnixCodelist, CodeList79 {
 
     /**
      * The principal font used for body text, when this is a significant aspect of product description, eg for some
-     * Bibles, and for large print product. The accompanying Product Form Feature Description is text specifying font
-     * size and, if desired, typeface
+     * Bibles, and for large print product. The accompanying &lt;ProductFormFeatureDescription&gt; is text specifying
+     * the typeface name. The font size may be specified with the font name, but is preferred separately (in points) in
+     * &lt;ProductFormFeatureValue&gt;
      */
     Text_font("03", "Text font"),
 
@@ -106,11 +106,11 @@ public enum ProductFormFeatureTypes implements OnixCodelist, CodeList79 {
     E_publication_format_version("10", "E-publication format version"),
 
     /**
-     * Hazard warning required by US Consumer Product Safety Improvement Act (CPSIA) of 2008 or other US legislation.
-     * Required, when applicable, for products sold in the US. The Product Form Feature Value is a code from List 143.
-     * Further explanation may be given in Product Form Feature Description
+     * Hazard warning required by US Consumer Product Safety Improvement Act (CPSIA) of 2008 or other US or
+     * international legislation. Required, when applicable, for products sold in the US. The Product Form Feature Value
+     * is a code from List 143. Further explanation may be given in Product Form Feature Description
      */
-    CPSIA_or_other_US_hazard_warning("12", "CPSIA or other US hazard warning"),
+    US_CPSIA_or_other_international_hazard_warning("12", "US CPSIA or other international hazard warning"),
 
     /**
      * Product carries hazard warning required by EU Toy Safety Directive. The Product Form Feature Value is a code from
@@ -207,6 +207,16 @@ public enum ProductFormFeatureTypes implements OnixCodelist, CodeList79 {
     Game_play_time("24", "Game play time"),
 
     /**
+     * Personal data required for registration or use of the product. This can be coded in
+     * &lt;ProductFormFeatureValue&gt; (for example using a URI from SCOLOM list 044 - see
+     * http://data.education.fr/voc/scolomfr/scolomfr-voc-044) - and/or described in
+     * &lt;ProductFormFeatureDescription&gt;. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    Personal_data_requirements("25", "Personal data requirements"),
+
+    /**
      * Product does not carry FSC or PEFC logo. The Product Form Feature Value element is not used. The Product Form
      * Feature Description element may carry free text indicating the grade or type of paper. The product record may
      * also still carry a claimed Pre- and Post-Consumer Waste (PCW) percentage value (type code 37) in a separate
@@ -281,6 +291,23 @@ public enum ProductFormFeatureTypes implements OnixCodelist, CodeList79 {
      * 30
      */
     Claimed_Pre_and_Post_Consumer_Waste_PCW("37", "Claimed Pre- and Post-Consumer Waste (PCW) percentage"),
+
+    /**
+     * Vegetable-based or other environmentally-conscious inks and varnishes. &lt;ProductFormFeatureDescription&gt; may
+     * carry free text with a more detailed statement. For use in ONIX 3.0 only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    _Green_inks("38", "‘Green’ inks"),
+
+    /**
+     * Product binding uses environmentally-concious adhesives and other binding materials.
+     * &lt;ProductFormFeatureDescription&gt; may carry free text with a more detailed statement. For use in ONIX 3.0
+     * only
+     * <p>
+     * Jonix-Comment: Introduced in Onix3
+     */
+    _Green_adhesives("39", "‘Green’ adhesives"),
 
     /**
      * Product made from paper produced using environmentally-conscious technology.

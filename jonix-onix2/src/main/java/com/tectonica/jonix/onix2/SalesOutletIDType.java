@@ -35,33 +35,12 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Sales outlet identifier type</h1>
- * <p>
- * An ONIX code which identifies the scheme from which the value in the &lt;IDValue&gt; element is taken. Mandatory in
- * each occurrence of the &lt;SalesOutletIdentifier&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed-length, two numeric digits.</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 102</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;SalesOutletIDType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;b393&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;SalesOutletIDType&gt;03&lt;/SalesOutletIDType&gt;</tt> ONIX sales outlet ID</td>
- * </tr>
- * </table>
+ * <h1>Sales outlet identifier type</h1><p>An ONIX code which identifies the scheme from which the value in the
+ * &lt;IDValue&gt; element is taken. Mandatory in each occurrence of the &lt;SalesOutletIdentifier&gt; composite, and
+ * non-repeating.</p><table border='1' cellpadding='3'><tr><td>Format</td><td>Fixed-length, two numeric
+ * digits.</td></tr><tr><td>Codelist</td><td>List 102</td></tr><tr><td>Reference name</td><td><tt>&lt;SalesOutletIDType&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;b393&gt;</tt></td></tr><tr><td>Example</td><td><tt>&lt;SalesOutletIDType&gt;03&lt;/SalesOutletIDType&gt;</tt>
+ * ONIX sales outlet ID</td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -70,8 +49,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SalesRestriction} ⯈ {@link SalesOutlet} ⯈
- * {@link SalesOutletIdentifier} ⯈ {@link SalesOutletIDType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link SalesRestriction} ⯈ {@link SalesOutlet} ⯈ {@link SalesOutletIdentifier} ⯈ {@link SalesOutletIDType}</li>
  * </ul>
  *
  * @since Onix-2.1

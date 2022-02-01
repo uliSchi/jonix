@@ -32,36 +32,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Promotion campaign information</h1>
- * <p>
- * Free text describing the promotion and adverting campaign for the product. Optional, and repeatable if parallel text
- * is provided in multiple languages. The <i>language</i> attribute is optional for a single instance of
- * &lt;PromotionCampaign&gt;, but must be included in each instance if &lt;PromotionCampaign&gt; is repeated.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Variable length text, suggested maximum length 1,000 characters. XHTML is enabled in this element - see Using
- * XHTML, HTML or XML with ONIX text fields</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;PromotionCampaign&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;k165&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>0&#8230;n</td>
- * </tr>
- * <tr>
- * <td>Attributes</td>
- * <td>language, textformat</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link MarketPublishingDetail}&gt;</li>
@@ -69,8 +39,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link PromotionCampaign}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link PromotionCampaign}</li>
  * </ul>
  */
 public class PromotionCampaign implements OnixElement<String>, Serializable {
@@ -106,9 +75,6 @@ public class PromotionCampaign implements OnixElement<String>, Serializable {
     /**
      * This is the raw content of PromotionCampaign. Could be null if {@code exists() == false}. Use {@link #value()}
      * instead if you want to get this as an {@link java.util.Optional}.
-     * <p>
-     * Raw Format: Variable length text, suggested maximum length 1,000 characters. XHTML is enabled in this element -
-     * see Using XHTML, HTML or XML with ONIX text fields
      * <p>
      * (type: XHTML)
      */

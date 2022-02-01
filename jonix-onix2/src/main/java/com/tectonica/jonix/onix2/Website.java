@@ -36,21 +36,10 @@ import java.util.Arrays;
  */
 
 /**
- * <h1>Website composite</h1>
- * <p>
- * A repeatable group of data elements which together identify and provide pointers to a website which is related to the
- * work identified in an occurrence of the &lt;WorkIdentifier&gt; composite.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;Website&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;website&gt;</tt></td>
- * </tr>
- * </table>
+ * <h1>Website composite</h1><p>A repeatable group of data elements which together identify and provide pointers to a
+ * website which is related to the work identified in an occurrence of the &lt;WorkIdentifier&gt; composite.</p><table
+ * border='1' cellpadding='3'><tr><td>Reference name</td><td><tt>&lt;Website&gt;</tt></td></tr><tr><td>Short
+ * tag</td><td><tt>&lt;website&gt;</tt></td></tr></table>
  * <p/>
  * This tag may be included in the following composites:
  * <ul>
@@ -188,9 +177,8 @@ public class Website implements OnixDataComposite<JonixWebsite>, Serializable {
     private WebsiteLink websiteLink = WebsiteLink.EMPTY;
 
     /**
-     * <p>
-     * The URL for the website. Mandatory in each occurrence of the &lt;Website&gt; composite, and non-repeating.
-     * </p>
+     * <p>The URL for the website. Mandatory in each occurrence of the &lt;Website&gt; composite, and
+     * non-repeating.</p>
      * Jonix-Comment: this field is required
      */
     public WebsiteLink websiteLink() {
@@ -201,10 +189,8 @@ public class Website implements OnixDataComposite<JonixWebsite>, Serializable {
     private WebsiteRole websiteRole = WebsiteRole.EMPTY;
 
     /**
-     * <p>
-     * An ONIX code which identifies the role or purpose of the website which is linked through the &lt;WebsiteLink&gt;
-     * element. Optional and non-repeating.
-     * </p>
+     * <p>An ONIX code which identifies the role or purpose of the website which is linked through the
+     * &lt;WebsiteLink&gt; element. Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public WebsiteRole websiteRole() {
@@ -215,10 +201,8 @@ public class Website implements OnixDataComposite<JonixWebsite>, Serializable {
     private WebsiteDescription websiteDescription = WebsiteDescription.EMPTY;
 
     /**
-     * <p>
-     * Free text describing the nature of the website which is linked through the &lt;WebsiteLink&gt; element. Optional
-     * and non-repeating.
-     * </p>
+     * <p>Free text describing the nature of the website which is linked through the &lt;WebsiteLink&gt; element.
+     * Optional and non-repeating.</p>
      * Jonix-Comment: this field is optional
      */
     public WebsiteDescription websiteDescription() {

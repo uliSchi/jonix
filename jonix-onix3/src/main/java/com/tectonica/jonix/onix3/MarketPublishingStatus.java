@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Market publishing status</h1>
- * <p>
- * An ONIX code which identifies the status of a published product in a specified market. Mandatory in each occurrence
- * of the &lt;MarketPublishingDetail&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 68</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;MarketPublishingStatus&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;j407&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;MarketPublishingStatus&gt;02&lt;/MarketPublishingStatus&gt;</tt> (Forthcoming)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link MarketPublishingDetail}&gt;</li>
@@ -70,8 +38,7 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈
- * {@link MarketPublishingStatus}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link ProductSupply} ⯈ {@link MarketPublishingDetail} ⯈ {@link MarketPublishingStatus}</li>
  * </ul>
  */
 public class MarketPublishingStatus implements OnixElement<MarketPublishingStatuss>, Serializable {

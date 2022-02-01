@@ -31,9 +31,8 @@ import java.io.Serializable;
  */
 
 /**
- * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;PersonDate></code>.
- * <p>
- * It can be retrieved from the composite by invoking its <code>asStruct()</code> method.
+ * This class is a {@link JonixStruct} that represents Onix2 <code>&lt;PersonDate></code>.<p>It can be retrieved from
+ * the composite by invoking its <code>asStruct()</code> method.
  */
 @SuppressWarnings("serial")
 public class JonixPersonDate implements JonixKeyedStruct<PersonDateRoles>, Serializable {
@@ -47,9 +46,7 @@ public class JonixPersonDate implements JonixKeyedStruct<PersonDateRoles>, Seria
     public DateFormats dateFormat;
 
     /**
-     * Raw Format: As specified by the value in &lt;DateFormat&gt;: default YYYYMMDD
-     * <p>
-     * (type: NonEmptyString)
+     * Raw Format: As specified by the value in &lt;DateFormat&gt;: default YYYYMMDD <p> (type: NonEmptyString)
      */
     public String date;
 

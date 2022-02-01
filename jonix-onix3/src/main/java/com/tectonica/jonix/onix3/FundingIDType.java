@@ -31,38 +31,6 @@ import java.io.Serializable;
  */
 
 /**
- * <h1>Funding identifier type code</h1>
- * <p>
- * An ONIX code identifying the scheme from which the identifier in the &lt;IDValue&gt; element is taken. Mandatory in
- * each occurrence of the &lt;FundingIdentifier&gt; composite, and non-repeating.
- * </p>
- * <table border='1' cellpadding='3'>
- * <tr>
- * <td>Format</td>
- * <td>Fixed length, two digits</td>
- * </tr>
- * <tr>
- * <td>Codelist</td>
- * <td>List 228</td>
- * </tr>
- * <tr>
- * <td>Reference name</td>
- * <td><tt>&lt;FundingIDType&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Short tag</td>
- * <td><tt>&lt;x523&gt;</tt></td>
- * </tr>
- * <tr>
- * <td>Cardinality</td>
- * <td>1</td>
- * </tr>
- * <tr>
- * <td>Example</td>
- * <td><tt>&lt;FundingIDType&gt;01&lt;/FundingIDType&gt;</tt> (proprietary)</td>
- * </tr>
- * </table>
- * <p/>
  * This tag may be included in the following composites:
  * <ul>
  * <li>&lt;{@link FundingIdentifier}&gt;</li>
@@ -70,11 +38,8 @@ import java.io.Serializable;
  * <p/>
  * Possible placements within ONIX message:
  * <ul>
- * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link Publisher} ⯈ {@link Funding} ⯈
- * {@link FundingIdentifier} ⯈ {@link FundingIDType}</li>
+ * <li>{@link ONIXMessage} ⯈ {@link Product} ⯈ {@link PublishingDetail} ⯈ {@link Publisher} ⯈ {@link Funding} ⯈ {@link FundingIdentifier} ⯈ {@link FundingIDType}</li>
  * </ul>
- *
- * @since Onix-3.03
  */
 public class FundingIDType implements OnixElement<GrantIdentifierTypes>, Serializable {
     private static final long serialVersionUID = 1L;
