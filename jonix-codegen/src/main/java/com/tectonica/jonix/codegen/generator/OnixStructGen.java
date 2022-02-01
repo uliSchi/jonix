@@ -109,22 +109,21 @@ public class OnixStructGen {
         p.printf(" * %s\n", structComment);
         p.printf(" */\n");
         p.printf("@SuppressWarnings(\"serial\")\n");
-        p.printf("public class %s implements %s%s, Serializable\n", structName, structMarkerInterface,
+        p.printf("public class %s implements %s%s, Serializable {\n", structName, structMarkerInterface,
             structKeyQualifier);
-        p.printf("{\n");
 
-        p.printf("   public static final %s EMPTY = new %s();\n", structName, structName);
+        p.printf("    public static final %s EMPTY = new %s();\n", structName, structName);
         p.print("\n");
 
         // declare key
         if (struct.isKeyed()) {
-            p.printf("   /**\n");
-            p.printf("    * the key of this struct (by which it can be looked up)\n");
+            p.printf("    /**\n");
+            p.printf("     * the key of this struct (by which it can be looked up)\n");
             if (keyTypeInfo.comment != null) {
-                p.printf("    * <p>%s\n", keyTypeInfo.comment);
+                p.printf("     * <p>%s\n", keyTypeInfo.comment);
             }
-            p.printf("    */\n");
-            p.printf("   public %s %s;\n", keyTypeInfo.javaType, keyField);
+            p.printf("     */\n");
+            p.printf("    public %s %s;\n", keyTypeInfo.javaType, keyField);
             p.print("\n");
         }
 
@@ -167,22 +166,24 @@ public class OnixStructGen {
                 firstField = false;
             }
             if (comment != null) {
-                p.printf("   /**\n");
-                p.printf("    * %s\n", comment);
-                p.printf("    */\n");
+                p.printf("    /**\n");
+                p.printf("     * %s\n", comment);
+                p.printf("     */\n");
             }
             if (member.cardinality.singular) {
-                p.printf("   public %s %s;\n", javaType, field);
+                p.printf("    public %s %s;\n", javaType, field);
             } else {
-                p.printf("   public List<%s> %ss;\n", javaType, field);
+                p.printf("    public List<%s> %ss;\n", javaType, field);
             }
         }
 
         // declare key
         if (struct.isKeyed()) {
             p.printf("\n");
-            p.printf("   @Override\n");
-            p.printf("   public %s key() { return %s; }\n", keyTypeInfo.javaType, keyField);
+            p.printf("    @Override\n");
+            p.printf("    public %s key() {\n", keyTypeInfo.javaType);
+            p.printf("        return %s;\n", keyField);
+            p.printf("    }\n");
         }
 
         p.print("}\n");

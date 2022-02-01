@@ -109,8 +109,7 @@ public class OnixEnumGen {
         p.printf(" * @see <a href=\"%s\">ONIX Codelist %s in Reference Guide</a>\n", link, codelistNum);
         p.printf(" */\n");
 
-        p.printf("public enum " + enumType.enumName + " implements OnixCodelist, CodeList%s\n", codelistNum);
-        p.printf("{\n");
+        p.printf("public enum " + enumType.enumName + " implements OnixCodelist, CodeList%s {\n", codelistNum);
 
         Set<String> tokens = new HashSet<>();
         boolean first = true;
@@ -127,95 +126,86 @@ public class OnixEnumGen {
                 p.printf(",\n%s\n", disableCheckstyle ? "   // CHECKSTYLE:ON\n" : "");
             }
             if (ev.description != null || ev.comment != null) {
-                p.printf("   /**\n");
+                p.printf("    /**\n");
                 if (ev.description != null) {
-                    p.printf("    * %s\n", XML.escape(ev.description));
+                    p.printf("     * %s\n", XML.escape(ev.description));
                 }
                 if (ev.comment != null && ev.description != null) {
-                    p.printf("    * <p>\n");
+                    p.printf("     * <p>\n");
                 }
                 if (ev.comment != null) {
-                    p.printf("    * Jonix-Comment: %s\n", XML.escape(ev.comment));
+                    p.printf("     * Jonix-Comment: %s\n", XML.escape(ev.comment));
                 }
-                p.printf("    */\n");
+                p.printf("     */\n");
             }
             disableCheckstyle = token.length() >= 114 || ev.name.length() >= 107;
             if (disableCheckstyle) {
-                p.print("   // CHECKSTYLE:OFF\n");
+                p.print("    // CHECKSTYLE:OFF\n");
             }
-            p.printf("   %s(\"%s\", \"%s\")", token, ev.value, ev.name);
+            p.printf("    %s(\"%s\", \"%s\")", token, ev.value, ev.name);
         }
         p.printf(";\n%s", disableCheckstyle ? "// CHECKSTYLE:ON\n" : "");
 
         p.print("\n");
-        p.printf("   public final String code;\n");
-        p.printf("   public final String description;\n");
+        p.printf("    public final String code;\n");
+        p.printf("    public final String description;\n");
         p.print("\n");
-        p.printf("   %s(String code, String description)\n", enumType.enumName);
-        p.printf("   {\n");
-        p.printf("      this.code = code;\n");
-        p.printf("      this.description = description;\n");
-        p.printf("   }\n");
+        p.printf("    %s(String code, String description) {\n", enumType.enumName);
+        p.printf("        this.code = code;\n");
+        p.printf("        this.description = description;\n");
+        p.printf("    }\n");
 
         p.print("\n");
-        p.print("   @Override\n");
-        p.print("   public String getCode()\n");
-        p.print("   {\n");
-        p.print("      return code;\n");
-        p.print("   }\n");
+        p.print("    @Override\n");
+        p.print("    public String getCode() {\n");
+        p.print("        return code;\n");
+        p.print("    }\n");
         p.print("\n");
-        p.print("   @Override\n");
-        p.print("   public String getDescription()\n");
-        p.print("   {\n");
-        p.print("      return description;\n");
-        p.print("   }\n");
+        p.print("    @Override\n");
+        p.print("    public String getDescription() {\n");
+        p.print("        return description;\n");
+        p.print("    }\n");
 
         if (enumType.enumValues.size() < MIN_FOR_MAP) {
             p.print("\n");
-            p.printf("   public static %s byCode(String code)\n", enumType.enumName);
-            p.printf("   {\n");
-            p.printf("      if (code == null || code.isEmpty()) {\n");
-            p.printf("         return null;\n");
-            p.printf("      }\n");
-            p.printf("      for (%s e : values()) {\n", enumType.enumName);
-            p.printf("         if (e.code.equals(code)) {\n");
-            p.printf("            return e;\n");
-            p.printf("         }\n");
-            p.printf("      }\n");
-            p.printf("      return null;\n");
-            p.printf("   }\n");
+            p.printf("    public static %s byCode(String code) {\n", enumType.enumName);
+            p.printf("        if (code == null || code.isEmpty()) {\n");
+            p.printf("            return null;\n");
+            p.printf("        }\n");
+            p.printf("        for (%s e : values()) {\n", enumType.enumName);
+            p.printf("            if (e.code.equals(code)) {\n");
+            p.printf("                return e;\n");
+            p.printf("            }\n");
+            p.printf("        }\n");
+            p.printf("        return null;\n");
+            p.printf("    }\n");
         } else {
             p.print("\n");
-            p.printf("   private static volatile Map<String, %s> map;\n", enumType.enumName);
+            p.printf("    private static volatile Map<String, %s> map;\n", enumType.enumName);
             p.print("\n");
-            p.printf("   private static Map<String, %s> map()\n", enumType.enumName);
-            p.printf("   {\n");
-            p.printf("      Map<String, %s> result = map;\n", enumType.enumName);
-            p.printf("      if (result == null)\n");
-            p.printf("      {\n");
-            p.printf("         synchronized(%s.class)\n", enumType.enumName);
-            p.printf("         {\n");
-            p.printf("            result = map;\n");
-            p.printf("            if (result == null)\n");
-            p.printf("            {\n");
-            p.printf("               result = new HashMap<>();\n");
-            p.printf("               for (%s e : values()) {\n", enumType.enumName);
-            p.printf("                  result.put(e.code, e);\n");
-            p.printf("               }\n");
-            p.printf("               map = result;\n");
+            p.printf("    private static Map<String, %s> map() {\n", enumType.enumName);
+            p.printf("        Map<String, %s> result = map;\n", enumType.enumName);
+            p.printf("        if (result == null) {\n");
+            p.printf("            synchronized(%s.class) {\n", enumType.enumName);
+            p.printf("                result = map;\n");
+            p.printf("                if (result == null) {\n");
+            p.printf("                    result = new HashMap<>();\n");
+            p.printf("                    for (%s e : values()) {\n", enumType.enumName);
+            p.printf("                        result.put(e.code, e);\n");
+            p.printf("                    }\n");
+            p.printf("                    map = result;\n");
+            p.printf("                }\n");
             p.printf("            }\n");
-            p.printf("         }\n");
-            p.printf("      }\n");
-            p.printf("      return result;\n");
-            p.printf("   }\n");
+            p.printf("        }\n");
+            p.printf("        return result;\n");
+            p.printf("    }\n");
             p.print("\n");
-            p.printf("   public static %s byCode(String code)\n", enumType.enumName);
-            p.printf("   {\n");
-            p.printf("      if (code == null || code.isEmpty()) {\n");
-            p.printf("         return null;\n");
-            p.printf("      }\n");
-            p.printf("      return map().get(code);\n");
-            p.printf("   }\n");
+            p.printf("    public static %s byCode(String code) {\n", enumType.enumName);
+            p.printf("        if (code == null || code.isEmpty()) {\n");
+            p.printf("            return null;\n");
+            p.printf("        }\n");
+            p.printf("        return map().get(code);\n");
+            p.printf("    }\n");
         }
 
         p.print("}\n");
